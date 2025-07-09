@@ -1,0 +1,10 @@
+#;Oggetto;# Fixed on ;# Fixed also on ;# Major release
+39984;Problema su switch in Twill;6.95.1;6.96.1;6.97.0
+39980;Problema in fase di gestione dei documenti di raccomandazione;6.95.1;6.96.1;6.97.0
+39891;Ottimizzazione performance;;;6.89.0
+39760;New Ghost;;;6.89.0
+39753;Cancellazione raccomandazione non consolidata;;;6.97.0
+38941;Integrazione automatica flusso EMT con Cabel (rif #38940);;;6.89.0
+37592;Adeguamento flusso TTIANA (attuale disallineamento);;;6.90.0
+37286;Gestione definitiva;;;6.89.0
+36650;Gestione Libretti di deposito;;;6.89.0
