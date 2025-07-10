@@ -1,10 +1,140 @@
 #;Oggetto;# Fixed on ;# Fixed also on ;# Major release
+39752;Gestione apertura contratto in applicazione FA/GOV (GT-like) - WAVE 1;;;NEXT (per FPB da 6.90.0)
+39989;Provincia di nascita non impostata su Form Polizze quando il cliente è nato all'estero ;;;6.97.0
 39984;Problema su switch in Twill;6.95.1;6.96.1;6.97.0
 39980;Problema in fase di gestione dei documenti di raccomandazione;6.95.1;6.96.1;6.97.0
+39753;Cancellazione raccomandazione non consolidata;;;6.97.0
+39979;Anomalia in fase di firma del contratto;;;6.96.0
+39809;Revisione monitoragggio . rappresentazione aggregata delle anomalie;;;6.96.0
+39975;Report Ai - Fine tuning Nuovo Rendiconto (W1) fix bug UAT;;;6.95.0
+39973;"Imposazione UNIQA-2GS in Batch ROPRS per watch-list su isin fittizzi come ""Selezionati""";;;6.94.0
+39972;Report Ai - Fine tuning Nuovo Rendiconto (W1);;;6.94.0
+39960;Report Ai - Fine tuning Nuovo Rendiconto (W1);;;6.93.0
+39959;Modifica testo mail (#39901);6.89.2;;6.93.0
+39904;Aggiornamento MODULISTICA ITALIANA ASSICURAZIONI;;;6.93.0
+35049;Flexible persone giuridiche;;;6.93.0
+36595;Amministrato - attivazione Target Market per Azioni/Obbligazioni;;;6.92.0
+39513;Eliminare allegato da contratto GT;;;6.91.0 (Tech-la) e 1.9.0 (Applicazioni Banca)
+39955;Report Ai - Fine tuning Nuovo Rendiconto (W1);;;6.91.0
+39954;BATCH STAMPA FASCICOLO CONSIGLIO E MODULO ORDINE IN ERRORE;6.89.2;6.90.1;6.91.0
+39899;Demand IT 1558396 Estensione del blocco alle vendite in Target Market Negativo per Gestioni Patrimoniali FPB e ETP, con relativa modifica del disclaimer attualmente in vigore;;;6.90.0
+39826;Report Ai - Fine tuning Nuovo Rendiconto (W1);;;6.90.0
+37592;Adeguamento flusso TTIANA (attuale disallineamento);;;6.90.0
+39943;Ottimizzazione Performance;;;6.89.0
+39936;AGGIORNA_TGPDEX con aggiunta WITH (NOLOCK);6.84.3;;6.89.0
+39929;Revisione Polizze Italiana - Fix Layout e flusso post UAT;6.88.2;;6.89.0
 39891;Ottimizzazione performance;;;6.89.0
 39760;New Ghost;;;6.89.0
-39753;Cancellazione raccomandazione non consolidata;;;6.97.0
 38941;Integrazione automatica flusso EMT con Cabel (rif #38940);;;6.89.0
-37592;Adeguamento flusso TTIANA (attuale disallineamento);;;6.90.0
+38873;Posizioni professionali cointestate;;;6.89.0
 37286;Gestione definitiva;;;6.89.0
 36650;Gestione Libretti di deposito;;;6.89.0
+39932;Revisione logica estrazione contratti per batch rendiconti periodici;;;6.88.0
+39928;Costi-Benefici errore su costi ISIN in entrata;6.84.2;;6.88.0
+39920;Revisione Documenti XFORM Polizze Italiana - Fix Layout post UAT;6.86.4;;6.88.0
+39919;Errore invio messaggi mail dopo rilascio 6.84.0 (v 2.0 servizi Cabel);6.84.1;;6.88.0
+39916;Revisioni CR UAT Polizze MultiAsset/2GS;6.86.3;;6.88.0
+39914;Programma POULI;;;6.88.0
+39906;Acquisizione Titolare Effettivo;6.86.2;;6.88.0
+39905;Verifica sottoscrizione con FEA;6.82.3;6.84.1;6.88.0
+39901;DEMAND 1661740 - DIR ORGANIZZAZIONE Modifica testo mail inviata al cliente per le sottoscrizioni in FEA da TWILL;;;6.88.0
+39893;Sezione Dettaglio obbligazioni in errore su cliente 000569648;6.82.3;6.84.1;6.88.0
+39892;File Aggiorna_strutturarete.sql - gestione chiave doppia;;;6.88.0
+39889;Forzare la ripartizione sulle gestioni separate polizza 2GS;6.86.1;;6.88.0
+39888;Gestione 2GS fix sottostanti e documenti;6.86.1;;6.88.0
+39887;Integrazione modulo d'ordine - Raccolta Istruzioni Specifiche;6.84.1;6.84.1;6.88.0
+39810;1661740 - Modifica testo mail inviata al cliente;;;6.88.0
+39751;Funzione confronta fondi target;;;6.88.0
+39705;Trasferimento documenti di Adeguata Veifica Italiana;;;6.86.0
+39454;Revisione Documenti XFORM Polizze Italiana - Riscatto;;;6.86.0
+39453;Revisione Documenti XFORM Polizze Italiana - Versamento aggiuntivo;;;6.86.0
+39426;Revisione Documenti XFORM Polizze Italiana - Prima Sottoscrizione;;;6.86.0
+37392;Gestione nuovo flusso TTIFIL;;;6.86.0
+39839;Adeguata verifica mostra numero contratto e non codice esterno polizza di Italiana;6.83.1;;6.85.0
+38824;Produzione fascicoli di contratto periodici;;;6.85.0
+38562;Acquisizione e popolamento dati anagrafica polizze da flusso giornaliero;;;6.85.0
+38470;(segue da #38332) -> esecuzione giornaliera fase recupero anagrafiche polizze;;;6.85.0
+39815;Anagrafica strumenti finanziari in giornata (ripristino funzionalità);;;6.84.0
+39700;Report Ai complessivo della posizione contratto;;;6.84.0
+39769;Segnalazione post test per costi fondo (rif. #36342);6.82.2;;6.83.0
+39761;ITALIANA FLEX - gestione assicurando diverso da Contraente;6.82.1;;6.83.0
+39755;modifica calcoli consulenza evoluta;6.82.1;;6.83.0
+39732;ERRORE PRODUZIONE POSIZIONE CONSULENZA;6.82.1;;6.83.0
+39717;Errata produzione Rimborso Parziale;;;6.83.0
+39716;Configurazione Namirial Prod;;;6.83.0
+39704;Controvalore errato su sottostanti polizza;;;6.83.0
+39570;ITALIANA campo beneficiari caso morte;6.82.1;;6.83.0
+39569;"Errore campo ""limite singola transazione""  modulo Servizio MITO(Multichannel Internet Trading Online) Attivazione - Modifica - Conferimento Delega Virtuale - Gestione Documentazione On Line";6.82.1;;6.83.0
+39415;PROD | Gestione Polizze per Persone Giuridiche (ex Campo P. Iva non compilabile);;;6.83.0
+39325;Gestione ragione sociale ditta Individuale per Polizza;;;6.83.0
+39082;ESG - preferenza e obiettivo cointestazione non valorizzati anche a fronte di cointestatari che hanno la nuova scheda;6.76.2;6.82.1;6.83.0
+38025;Mancata esposizione minus su stampa posizione consulenza;6.82.1;;6.83.0
+36638;Adeguamenti per calcolo performance;;;6.83.0
+36342;dati file emt;6.82.1;;6.83.0
+36077;Adeguamento Servizi dispositivi cabel v3 per SSO;;;6.83.0
+39680;Applicazioni Banca - Revisioni / Tuning (rif. #39210);6.80.1 (Tech-la) e 1.6.2 (PBCT);;6.82.0 (Tech-la) e 1.7.0 (PBCT)
+39703;"Visualizzazione ""Saldi Conti Correnti e Depositi Titoli"" per operatore DCI";;;6.82.0
+39698;Rimozione grafico andamentale Reportistica DCI;;;6.82.0
+39654;Report Ai complessivo della posizione contratto;;;6.82.0
+39571;CAMPI NON COMPILATI IN SOTTOSCRIZIONE ITALIANA;6.76.2;;6.82.0
+39631;FTP Flussi Italiana;6.77.2;;6.81.0
+39650;Ripristino utilizzo per FPB versione 1.0 servizi Cabel (RIF #35633);;;6.80.0
+39608;Report Ai complessivo della posizione contratto;;;6.80.0
+39580;Acquisizione Codice Italiana;6.77.1;;6.79.0
+39567;Report Ai complessivo della posizione contratto;;;6.79.0
+35633;Anagrafica strumenti finanziari in giornata;;;6.79.0
+39525;Report Ai complessivo della posizione contratto;;;6.78.0
+39210;Revisione iter operativo apertura contratti DCI;;;6.78.0
+39553;Carico oggetti contratti e ptf anche con saldo a ZERO;6.76.1;;6.77.0
+39550;Gestione flusso Italiana e configurazione multiramo;;;6.77.0
+39130;Gestione polizze DOPPIA GS;;;6.77.0
+39498;Campo professione non compilabile in un consiglio;6.74.1;;6.76.0
+39492;Report Ai complessivo della posizione contratto;;;6.76.0
+39388;Report Ai complessivo della posizione contratto;;;6.75.0
+39435;Promozione Cash Back;;;6.74.0
+39395; Tuning sul batch per la produzione del flusso per Italiana;6.72.2;;6.74.0
+39323;CCFRU - Rendiconti annuali;6.69.6;6.73.1;6.74.0
+39177;Iniziativa Cliente Fondi in Diretta;;;6.74.0
+36551;Attivazione FEA Anima SGR(richiesta di stima);;;6.74.0
+39387;Report Ai complessivo della posizione contratto;;;6.73.0
+39381;Adeguamenti report DCI - v.2 - Change request;6.72.2;;6.73.0
+39077;Riscatto totale polizza - prodotto modulo riscatto parziale;6.72.2;;6.73.0
+38847;"modifica modulo ""Servizio MITO(Multichannel Internet Trading Online) Attivazione - Modifica - Conferimento Delega Virtuale - Gestione Documentazione On Line""";;;6.73.0
+38678; Tuning sul batch per la produzione del flusso per Italiana;6.72.1;;6.73.0
+38407;POULI - mancato aggiornamento campo RTEIMP in TPOCNT;6.72.1;;6.73.0
+35366;BIMFREE - verifica programma di caricamento a fronte cambio C/C;;;6.73.0
+39182;Revisioni reportistica DCI;6.69.4;;6.72.0
+39086;Ottimizzazione quantità calcolo oggetti di contratto e portafoglio;6.71.1;;6.72.0
+39062;Ottimizzazione POULI aggiornamento TPOCNE (segue da #38909);6.69.5;;6.72.0
+39055;POULI in errore in aggiornamento TPOCNE;6.69.5;;6.72.0
+39036;TGPDEX carico in errore;6.70.2 e 6.71.1;;6.72.0
+38912;Aggiornamento logo Twill --> Tech-la;;;6.72.0
+38904;Adeguamenti report DCI - v.2 - GRAFICO e calcolo media ponderata indici (rif #38868);6.69.3;;6.72.0
+38595;"PROD | Alert su posizioni singole in cui è stato ""eliminato"" il cc COI";6.71.2;;6.72.0
+38593;PROD | Conto Corrente COI ancora valorizzato nella scheda contratto della posizione singola;6.70.2 e 6.71.1;;6.72.0
+38349;PROD | Gestione Polizze per Persone Giuridiche (ex Campo P. Iva non compilabile);;;6.72.0
+35506;VERIFICA DISCLAIMER MODULO ORDINE - ADEGUATEZZA ORDINE;6.67.3 e 6.69.3;;6.72.0
+38870;Modifica ricezione eseguiti (ROTEM) e supporto (segue #38420);6.67.3 e 6.69.2 e 6.69.4;;6.71.0 e 6.72.0
+38909;RECORD TPOCNA NON REGISTRATI ALL'ATTO DI UNA PRIMA SOTTOSCRIZIONE AZIONE BONUS;6.67.3 e 6.69.3;;6.71.0
+38886;Ordini amministrato rimangono in Invio in Corso;6.69.2 e 6.70.1;;6.71.0
+38868;Adeguamenti report DCI - v.2 (rif #35632);6.69.2;;6.71.0
+38768;PROD | Errore aggiornamento MiFID per CL 002672681;6.70.1;;6.71.0
+38764;Adeguamenti report DCI (rif #35632);6.69.1;;6.71.0
+38578;verifica accesso alla posizione del cliente da twill clienti;6.67.2;;6.71.0
+36639;Recupero dati per Calcolo performance;;;6.71.0
+38574;Numero di polizza non corrispondente al Contratto;;;6.70.0
+38579;Download di documenti firmati da altri clienti;;;6.69.0
+38497;MODIFICA POZRI;6.67.2;;6.69.0
+38000;Accesso Ghost - estrazione utenti cancellati / disattivi;;;6.69.0
+37351;PROD | Scheda contratto - Dettaglio GP ;6.67.2;;6.69.0
+35632;Reportistica DCI;;;6.69.0
+30888;Integrazione modulo d'ordine - Raccolta Istruzioni Specifiche;;;6.69.0
+38478;Rimozione legame CC su Dossier in presenza di differente intestazione;;;6.68.0
+38420;Modifica ricezione eseguiti (ROTEM) e supporto;6.67.2;;6.68.0
+38414;ERRORE SEGNALAZIONE NON COERENZA PER HP;6.67.2;;6.68.0
+38408;Nuovo processo di controllo / verifica pre Pubblicazione Dati;;;6.68.0
+38406;ORDINI GESTITI NON SI AGGIORNA STAO NONOSTANTE XML OK;6.67.2;;6.68.0
+38404;"Soglia ptf 30% Eltif 2.0 non deve generare la ""presa visione"" (rif #37607)";6.67.1;;6.68.0
+38399;File polizze output Twill vs Cabel;;;6.68.0
+38353;Firma Grafometrica - segnalazioni di mancate firme;;;6.68.0
+37607;Sottoscrizione Eltif (2.0) - fase 1;;;6.67.0
