@@ -64,17 +64,33 @@ class CSVFilterGUI:
         self.setup_drag_and_drop()
 
     def setup_ui(self):
-        # Frame centrale con larghezza massima
-        center_frame = tk.Frame(self.root, bg='#f0f0f0')
-        center_frame.grid(row=0, column=0, sticky='nsew')
+        # Container con scroll
+        container = tk.Frame(self.root)
+        container.grid(row=0, column=0, sticky="nsew")
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
-        center_frame.grid_propagate(False)
-        center_frame.config(width=900)
-        main_frame = ttk.Frame(center_frame, padding="10 10 10 10")
-        main_frame.pack(expand=True, fill='y')
-        main_frame.columnconfigure(1, weight=1)
 
+        canvas = tk.Canvas(container, bg='#f0f0f0')
+        scrollbar = ttk.Scrollbar(container, orient="vertical", command=canvas.yview)
+        canvas.configure(yscrollcommand=scrollbar.set)
+
+        scrollbar.pack(side="right", fill="y")
+        canvas.pack(side="left", fill="both", expand=True)
+
+        # Frame scrollabile dentro al canvas
+        scrollable_frame = ttk.Frame(canvas)
+        scrollable_frame.bind(
+            "<Configure>",
+            lambda e: canvas.configure(scrollregion=canvas.bbox("all"))
+        )
+        canvas.create_window((0, 0), window=scrollable_frame, anchor="nw")
+
+        self.scrollable_frame = scrollable_frame
+        main_frame = scrollable_frame
+        main_frame.columnconfigure(1, weight=1)
+        main_frame.rowconfigure(2, weight=1)
+
+        # --- Contenuto UI come prima ---
         title_label = ttk.Label(main_frame, text="🔧 CSV Filter", font=('Arial', 16, 'bold'))
         title_label.grid(row=0, column=0, columnspan=4, pady=(0, 10))
 
@@ -190,20 +206,35 @@ class CSVFilterGUI:
         self.col_header_label = col_header_label
 
     def create_preview_section(self, parent):
-        # Splitter tra preview e log
-        paned = ttk.Panedwindow(parent, orient=tk.VERTICAL)
-        paned.grid(row=2, column=0, columnspan=4, sticky="ew", pady=(0, 10))
-        preview_frame = ttk.Labelframe(paned, text="👁 Anteprima CSV (prime N righe)", padding="10")
-        paned.add(preview_frame, weight=1)
+        # Frame di anteprima
+        preview_frame = ttk.Labelframe(parent, text="👁 Anteprima CSV (prime N righe)", padding="10")
+        preview_frame.grid(row=2, column=0, columnspan=4, sticky="nsew", pady=(0, 10))
+
+        # Layout flessibile
+        parent.rowconfigure(2, weight=1)
         preview_frame.columnconfigure(0, weight=1)
+        preview_frame.columnconfigure(1, weight=0)
+        preview_frame.columnconfigure(2, weight=1)
+        preview_frame.rowconfigure(1, weight=1)
+
+        # Label + Spinbox
         ttk.Label(preview_frame, text="N righe da mostrare:").grid(row=0, column=0, sticky=tk.W)
-        spin = ttk.Spinbox(preview_frame, from_=1, to=100, textvariable=self.preview_n, width=5, command=self.update_preview)
+        spin = ttk.Spinbox(preview_frame, from_=1, to=100, textvariable=self.preview_n, width=7, command=self.update_preview)
         spin.grid(row=0, column=1, sticky=tk.W, padx=(5, 20))
-        self.preview_table = scrolledtext.ScrolledText(preview_frame, height=8, width=110, state='disabled', font=('Consolas', 10))
-        self.preview_table.grid(row=1, column=0, columnspan=5, sticky="ew")
+
+        # Area anteprima (espandibile)
+        self.preview_table = scrolledtext.ScrolledText(
+            preview_frame,
+            height=8,
+            state='disabled',
+            font=('Consolas', 10),
+            wrap="none"
+        )
+        self.preview_table.grid(row=1, column=0, columnspan=3, sticky="nsew")
+
+        # Tooltip
         Tooltip(spin, "Numero di righe da mostrare in anteprima")
         Tooltip(self.preview_table, "Anteprima del contenuto CSV")
-        self.paned = paned
 
     def update_preview(self):
         self.preview_table.config(state='normal')
@@ -273,18 +304,21 @@ class CSVFilterGUI:
         self.open_output_btn.pack(side=tk.LEFT, padx=(10, 0))
 
     def create_log_section(self, parent):
-        # Usa lo stesso panedwindow per log
-        log_frame = ttk.Labelframe(self.paned, text="📋 Log", padding="10")
-        self.paned.add(log_frame, weight=1)
+        log_frame = ttk.Labelframe(parent, text="📜 Log", padding="10")
+        log_frame.grid(row=3, column=0, columnspan=4, sticky="nsew", pady=(0, 10))
+        parent.rowconfigure(3, weight=1)
+
         log_frame.columnconfigure(0, weight=1)
         log_frame.rowconfigure(0, weight=1)
-        parent.rowconfigure(6, weight=1)
-        self.log_text = scrolledtext.ScrolledText(log_frame, height=10, width=110)
+
+        self.log_text = scrolledtext.ScrolledText(
+            log_frame,
+            height=6,
+            state='disabled',
+            font=('Consolas', 10),
+            wrap="word"
+        )
         self.log_text.grid(row=0, column=0, sticky="nsew")
-        self.log_text.tag_config('success', foreground='green')
-        self.log_text.tag_config('error', foreground='red')
-        self.log_text.tag_config('info', foreground='blue')
-        Tooltip(self.log_text, "Log delle operazioni e messaggi di errore")
 
     def browse_input_file(self):
         filename = filedialog.askopenfilename(

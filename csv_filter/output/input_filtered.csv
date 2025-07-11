@@ -1,0 +1,7 @@
+#;Oggetto;# Fixed on ;# Fixed also on ;# Major release
+39989;Provincia di nascita non impostata su Form Polizze quando il cliente è nato all'estero ;;;6.97.0
+39984;Problema su switch in Twill;6.95.1;6.96.1;6.97.0
+39980;Problema in fase di gestione dei documenti di raccomandazione;6.95.1;6.96.1;6.97.0
+39753;Cancellazione raccomandazione non consolidata;;;6.97.0
+39979;Anomalia in fase di firma del contratto;;;6.96.0
+39809;Revisione monitoragggio . rappresentazione aggregata delle anomalie;;;6.96.0
