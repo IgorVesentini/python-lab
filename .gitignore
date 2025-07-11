@@ -1,0 +1,3 @@
+# Cache di Python
+__pycache__/
+*.pyc
