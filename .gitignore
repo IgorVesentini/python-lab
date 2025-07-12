@@ -1,3 +1,5 @@
 # Cache di Python
 __pycache__/
 *.pyc
+# Altro
+*.log
