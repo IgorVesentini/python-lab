@@ -1,348 +1,726 @@
 #;Oggetto;# Fixed on ;# Fixed also on ;# Major release
-29466;Riprofilatura Opportunistica - sospensione controllo per clienti migrati;_v.6.12.0;"";_v.6.12.0
-29433;PSK ADDON - Sezione aggiuntiva con relativo punto firma per dichiarazione su KIID;_V.6.12.0;"";_v.6.12.0
-29432;PSK ADDON - Visualizzazione documenti KIID in portale cliente;_V.6.12.0;"";_v.6.12.0
-29431;PSK ADDON - Visualizzazione documenti firmati con FEA in portale cliente;_V.6.12.0;"";_v.6.12.0
-29430;PSK ADDON - Revisione mail con link per i singoli moduli;_V.6.12.0;"";_v.6.12.0
-29429;PSK ADDON - Gestione firma per accettazione in modalità cartacea e FEA;_V.6.12.0;"";_v.6.12.0
-29428;PSK ADDON - Gestione callback per registrazione firma FEA;_V.6.12.0;"";_v.6.12.0
-29427;PSK ADDON - Gestione produzione documenti via batch;_V.6.12.0;"";_v.6.12.0
-29426;PSK ADDON - Carico xform e definizione punti firma (per circa 20 modelli);_v.6.12.0;"";_v.6.12.0
-29126;Migrazione Unica SIM - censimento utenze e definizione contratti evoluta;_V.6.12.0;"";_V.6.12.0
-29098;PSK - Revisione testo mail per comprendere una nuova dicitura dinamica;_V.6.12.0;"";_v.6.12.0
-29097;PSK - Gestione allegati per modulo prima sottoscrizione, fascicolo di consiglio;_V.6.12.0;"";_v.6.12.0
-29096;PSK - Gestione produzione documenti via batch (ROSDR);_V.6.12.0;"";_v.6.12.0
-29095;PSK - Integrazione con postino;_V.6.12.0;"";_v.6.12.0
-29094;PSK - Revisione iter di firma considerando presenza documenti di prima sottoscrizione che NON sono da firmare;_V.6.12.0;"";_v.6.12.0
-29093;PSK - Tutti i documenti devono essere prima scaricati prima delle firme;_V.6.12.0;"";_v.6.12.0
-29092;PSK - Gestione nuovi PUBTIP per considerare se il doc.to è per download o per firma;_V.6.12.0;"";_v.6.12.0
-29091;PSK - Prepopolamento nuovo documento NON scaricabile;_V.6.12.0;"";_v.6.12.0
-29090;PSK - Nuovo link a fianco dell'operazione con accesso KIID;_V.6.12.0;"";_v.6.12.0
-29089;PSK - Gestione array allegati su attuale framework;_V.6.12.0;"";_v.6.12.0
-29088;PSK - Metodo per riconoscere se fondo è già nel ptf;_V.6.12.0;"";_v.6.12.0
-29087;PSK - Utilizzo parametrico per gestione pdf editabili per Fondi;_V.6.12.0;"";_v.6.12.0
-29086;PSK - Completamento attività su Morgan Stanley;_V.6.12.0;"";_v.6.12.0
-29364;Adeguamento per IF del flusso TCLANA per informazioni ESG (segue #28238);_v.6.11.1;"";_V.6.11.1
-29109;FIA - Manleva: funzione Twill Office;_v.6.11.0;"";_v.6.11.0
-29103;"FIA - revisione controlli concentrazione per ""Tipologia"" e rimozione limite 500.000 per FIA";_v.6.10.1;"";_v.6.11.0
-29005;aggiornamento scadenza questionario Mifid;_V.6.11.0;"";_V.6.11.0
-28914;Unicapem - verifica valori;_V.6.11.0;"";_V.6.11.0
-26918;CTR - Definizione e studio oggetti per porting;_v.6.11.0;"";_v.6.11.0
-39752;Gestione apertura contratto in applicazione FA/GOV (GT-like) - WAVE 1;"";"";NEXT (per FPB da 6.90.0)
-38661;Rimozione funzione di scheda cliente contratto da ACM (deve essere common);"";"";NEXT
-37855;PROD | Dettaglio Time Deposit;"";"";NEXT
+39992;RIchiesta eliminare titolo da GTC;"";"";""
+39991;Malfunzionamento raccomandazione ;"";"";""
+39990;Modifica testo mail (#39901) - rettifica (segue da #39959);"";"";6.97.0
 39989;Provincia di nascita non impostata su Form Polizze quando il cliente è nato all'estero ;"";"";6.97.0
+39988;Malfunzionamento in fase di inserimento di raccomandazione per sottoscrizione polizza;"";"";""
+39987;Errore in fase di generazione della documentazione prodotto assicurativo Azione Bonus;6.95.1;6.96.1;6.97.0
+39986;SAL Interni per richieste di Demand;"";"";""
+39985;Batch elaborazione dati Analysis - Main Estrazione Flussi Analysis IMG;"";"";""
 39984;Problema su switch in Twill;6.95.1;6.96.1;6.97.0
+39983;Inserimento dati relativi a profilo rischio;"";"";""
+39982;Estrazione dati relativi per ufficio Risk e Advisory;"";"";""
+39981;Verifica quantità cifre decimali canone Consulenza;"";"";""
 39980;Problema in fase di gestione dei documenti di raccomandazione;6.95.1;6.96.1;6.97.0
-39753;Cancellazione raccomandazione non consolidata;"";"";6.97.0
 39979;Anomalia in fase di firma del contratto;"";"";6.96.0
-39809;Revisione monitoragggio . rappresentazione aggregata delle anomalie;"";"";6.96.0
+39978;Segnalazione malfunzionamento in TWILL nella gestione dei titoli zero coupon in posizione;"";"";""
+39977;Rendiconto non corretto;"";"";""
+39976;Malfunzionamento FEA;"";"";""
 39975;Report Ai - Fine tuning Nuovo Rendiconto (W1) fix bug UAT;"";"";6.95.0
+39974;Documento prima sottoscrizione Azione bonus/Flexible solution in errore in UAT;"";"";6.95.0
 39973;"Imposazione UNIQA-2GS in Batch ROPRS per watch-list su isin fittizzi come ""Selezionati""";"";"";6.94.0
 39972;Report Ai - Fine tuning Nuovo Rendiconto (W1);"";"";6.94.0
+39971;Punteggio appropriatezza ordinante x PG;"";"";""
+39969;URGENTE - ERRORE CALCOLO PERFORMANCE;6.95.1;6.96.1;6.97.0
+39968;INCIDENT REPORTING REQUEST;"";"";""
+39967;Problemi in fase di switch tra fondi;"";"";""
+39966;Problemi con ordini bloccati in raccomandazione 493629;"";"";""
+39965;Apertura utente in ambiente UAT per finalità di test;"";"";""
+39964;Errore in accesso dati portafoglio;"";"";""
+39963;Malfunzionamento in fase di cambio password in TWILL utente Silvia Caputo;"";"";""
+39962;DEMAND IT 1715960 - Predisposizione di un'area FTP per ricezione di flussi da compagnia GamaLife verso sistema TWILL;"";"";""
+39961;"Modifica Function ""SKFun_AutorizzaInvioOrdine""";"";"";""
 39960;Report Ai - Fine tuning Nuovo Rendiconto (W1);"";"";6.93.0
 39959;Modifica testo mail (#39901);6.89.2;"";6.93.0
-39904;Aggiornamento MODULISTICA ITALIANA ASSICURAZIONI;"";"";6.93.0
-35049;Flexible persone giuridiche;"";"";6.93.0
-36595;Amministrato - attivazione Target Market per Azioni/Obbligazioni;"";"";6.92.0
-39513;Eliminare allegato da contratto GT;"";"";6.91.0 (Tech-la) e 1.9.0 (Applicazioni Banca)
+39957;DEMAND 1714956 -  MODIFICA ADAPTION;"";"";""
 39955;Report Ai - Fine tuning Nuovo Rendiconto (W1);"";"";6.91.0
 39954;BATCH STAMPA FASCICOLO CONSIGLIO E MODULO ORDINE IN ERRORE;6.89.2;6.90.1;6.91.0
-39899;Demand IT 1558396 Estensione del blocco alle vendite in Target Market Negativo per Gestioni Patrimoniali FPB e ETP, con relativa modifica del disclaimer attualmente in vigore;"";"";6.90.0
-39826;Report Ai - Fine tuning Nuovo Rendiconto (W1);"";"";6.90.0
-37592;Adeguamento flusso TTIANA (attuale disallineamento);"";"";6.90.0
+39953;BLOCCO FASE GO-LIVE;"";"";""
+39952;Sezione Esecutore non autocompilata in contraenza giuridica e luogo/data su adeguata verifica;6.88.3;"";""
+39951;Documento unico di fascicoli precontrattuali/kid/dip polizze;"";"";""
+39950;Documento nuovo unico per gli allegati polizze (3 + 4);"";"";""
+39949;Documenti prodotti da Tech-La --> quali su ViaCart e su che classi documentali vanno a finire;"";"";""
+39948;ERRORE ACCESSO LISTA CLIENTI - Su tutti i clienti e FA;"";"";""
+39947;DEMAND 1712356 - Distruzione cedola su fondo;"";"";""
+39946;DEMAND 1712006 - Implentazione flusso API ANAGRAFICA TITOLI;"";"";""
+39945;accesso twill clienti;"";"";""
+39944;Gestione ragione sociale ditta Individuale per Polizza in anagrafica Real Time;"";"";""
 39943;Ottimizzazione Performance;"";"";6.89.0
+39942;URGENTE - ERRORE CALCOLO PERFORMANCE;"";"";""
+39941;Gestione apertura contratto in applicazione FA/GOV (GT-like) - WAVE 2;"";"";""
+39940;Accertamento preventivo su eventuali impatti nella rendicontazione patrimoniale complessiva di un cliente (report POSIZIONE CONSULENZA) a seguito di un iter operativo nuovo da seguire nella concessione di un credito Lombard.;"";"";""
+39939;NDG per rendiconti periodici Cambiano;"";"";""
+39938;Errore carico TASVAL_SA 06/06/2025;"";"";""
+39937;% marco asset class non corretta;"";"";""
 39936;AGGIORNA_TGPDEX con aggiunta WITH (NOLOCK);6.84.3;"";6.89.0
-39929;Revisione Polizze Italiana - Fix Layout e flusso post UAT;6.88.2;"";6.89.0
-39891;Ottimizzazione performance;"";"";6.89.0
-39760;New Ghost;"";"";6.89.0
-38941;Integrazione automatica flusso EMT con Cabel (rif #38940);"";"";6.89.0
-38873;Posizioni professionali cointestate;"";"";6.89.0
-37286;Gestione definitiva;"";"";6.89.0
-36650;Gestione Libretti di deposito;"";"";6.89.0
+39934;ERRORE ACCESSO POSIZIONE;"";"";""
 39932;Revisione logica estrazione contratti per batch rendiconti periodici;"";"";6.88.0
+39931;Blocco operatività da Delegato;"";"";""
+39930;Errore su Costi-Benefici in CE x GP + modulo d'ordine;"";"";""
+39929;Revisione Polizze Italiana - Fix Layout e flusso post UAT;6.88.2;"";6.89.0
 39928;Costi-Benefici errore su costi ISIN in entrata;6.84.2;"";6.88.0
+39927;GHOST - utenza dispositiva da inviare a Cabel;"";"";""
+39926;Altra anomalia;"";"";""
+39925;INFO RACCOLTA DIRETTA;"";"";""
+39924;ANOMALIA CALCOLO PERFORMANCE;"";"";""
+39923;R: Controvalore BTP Italia Errato;"";"";""
+39922;FEA non funzionante;"";"";""
+39921;IMPOSTAZIONI PARAMETRI ORDINE PER UN COLLOCAMENTO BTP Italia;"";"";""
 39920;Revisione Documenti XFORM Polizze Italiana - Fix Layout post UAT;6.86.4;"";6.88.0
 39919;Errore invio messaggi mail dopo rilascio 6.84.0 (v 2.0 servizi Cabel);6.84.1;"";6.88.0
+39918;ERRORE MESSAGGISTICA DOPO RILASCIO VERSIONE 6.84;"";"";""
+39917;Anomalia modulo fea;"";"";""
 39916;Revisioni CR UAT Polizze MultiAsset/2GS;6.86.3;"";6.88.0
+39915; DEMAND IT 1701802 ATTIVAZIONE FEA ELEVA CAPITAL;"";"";""
 39914;Programma POULI;"";"";6.88.0
+39913;Ordinante minore;"";"";""
+39912;Delgati senza Mifid che riescono ad operare ;"";"";""
+39911;IMPOSTAZIONI MONITORAGGIO - VERIFICA;"";"";""
+39910;abilitazione Twill governance;"";"";""
+39909;"Raccomandazione per rimborso polizza rimane ""Da completare""";6.83.1;6.86.2;""
+39908;Log4j - upgrade;"";"";""
+39907;NDG con zeri indesiderati su anagrafica assicurati ;6.86.2;"";""
 39906;Acquisizione Titolare Effettivo;6.86.2;"";6.88.0
 39905;Verifica sottoscrizione con FEA;6.82.3;6.84.1;6.88.0
+39904;Aggiornamento MODULISTICA ITALIANA ASSICURAZIONI;"";"";6.93.0
+39903;DEMAND IT 1636607 - Riprofilatura opportunistica a livello di singolo strumento e non di portafoglio come adeguatezza ;"";"";""
+39902;1636578 | DEMAND IT  - DIR WEALTH MANAGEMENT |  Automazione e integrazione schede di adesione;"";"";""
 39901;DEMAND 1661740 - DIR ORGANIZZAZIONE Modifica testo mail inviata al cliente per le sottoscrizioni in FEA da TWILL;"";"";6.88.0
+39900;1636557- DEMAND IT Dir Wealth Management- Informazioni ESG su scheda contratto e raccomandazione-Richiesta (3);"";"";""
+39899;Demand IT 1558396 Estensione del blocco alle vendite in Target Market Negativo per Gestioni Patrimoniali FPB e ETP, con relativa modifica del disclaimer attualmente in vigore;"";"";6.90.0
+39898;1648025 - RISK -  Risk Monitor Ptf Trading;"";"";""
+39897;DEMAND MARKETING & PRODOTTI - Nuovo modello di pricing conto correnti;"";"";""
+39896;1684190 | DEMAND IT  - DIR COMMERCIALE FPB |  ATTIVAZIONE FEA JANUS;"";"";""
+39895;DEMAND 1696039 - DIR INVESTIMENTI-  Evoluzione controlli adeguatezza sostenibilità - ESG;"";"";""
+39894;Mancata produzione partita prenotata su Azione Bonus;"";"";""
 39893;Sezione Dettaglio obbligazioni in errore su cliente 000569648;6.82.3;6.84.1;6.88.0
 39892;File Aggiorna_strutturarete.sql - gestione chiave doppia;"";"";6.88.0
+39891;Ottimizzazione performance;"";"";6.89.0
+39890;Conto affidato - mancata visualizzazione saldo disponibile;"";"";""
 39889;Forzare la ripartizione sulle gestioni separate polizza 2GS;6.86.1;"";6.88.0
 39888;Gestione 2GS fix sottostanti e documenti;6.86.1;"";6.88.0
 39887;Integrazione modulo d'ordine - Raccolta Istruzioni Specifiche;6.84.1;6.84.1;6.88.0
-39810;1661740 - Modifica testo mail inviata al cliente;"";"";6.88.0
-39751;Funzione confronta fondi target;"";"";6.88.0
-39705;Trasferimento documenti di Adeguata Veifica Italiana;"";"";6.86.0
-39454;Revisione Documenti XFORM Polizze Italiana - Riscatto;"";"";6.86.0
-39453;Revisione Documenti XFORM Polizze Italiana - Versamento aggiuntivo;"";"";6.86.0
-39426;Revisione Documenti XFORM Polizze Italiana - Prima Sottoscrizione;"";"";6.86.0
-37392;Gestione nuovo flusso TTIFIL;"";"";6.86.0
+39886;Amministrato - attivazione controlli ESG;"";"";""
+39885;Modulo ADV Italiana errato in caso di riscatto totale ;"";"";""
+39884;ERRORE PUOLI;"";"";""
+39883;ERRORE SU ESTRAZIONE DATI ;"";"";""
+39882;Utilizzo nuovo flusso TTIFIL (rif #37392);"";"";""
+39859;"Correttiva su funzione ""Confronta fondi target""";"";"";""
+39855;Verifica dati consulenza evo per rendiconto;"";"";""
+39854;Attività di upgrade infrastrutturale;"";"";""
 39839;Adeguata verifica mostra numero contratto e non codice esterno polizza di Italiana;6.83.1;"";6.85.0
-38824;Produzione fascicoli di contratto periodici;"";"";6.85.0
-38562;Acquisizione e popolamento dati anagrafica polizze da flusso giornaliero;"";"";6.85.0
-38470;(segue da #38332) -> esecuzione giornaliera fase recupero anagrafiche polizze;"";"";6.85.0
+39826;Report Ai - Fine tuning Nuovo Rendiconto (W1);"";"";6.90.0
 39815;Anagrafica strumenti finanziari in giornata (ripristino funzionalità);"";"";6.84.0
-39700;Report Ai complessivo della posizione contratto;"";"";6.84.0
+39810;1661740 - Modifica testo mail inviata al cliente;"";"";6.88.0
+39809;Revisione monitoragggio . rappresentazione aggregata delle anomalie;"";"";6.96.0
+39785;Riprofilatura opportunistica a livello di singolo SF e non di PTF;"";"";""
+39784;Attivazione FEA Fondi Janus;"";"";""
+39782;Informazioni ESG su scheda contratto e raccomandazione-Richiesta;"";"";""
 39769;Segnalazione post test per costi fondo (rif. #36342);6.82.2;"";6.83.0
+39768;Gestione Flusso Polizze per Persone Giuridiche;"";"";""
 39761;ITALIANA FLEX - gestione assicurando diverso da Contraente;6.82.1;"";6.83.0
+39760;New Ghost;"";"";6.89.0
 39755;modifica calcoli consulenza evoluta;6.82.1;"";6.83.0
+39754;Rapporti e saldi in tempo reale;"";"";""
+39753;Cancellazione raccomandazione non consolidata;"";"";6.97.0
+39752;Gestione apertura contratto in applicazione FA/GOV (GT-like) - WAVE 1;"";"";NEXT (per FPB da 6.90.0)
+39751;Funzione confronta fondi target;"";"";6.88.0
+39749;Gestione importo operatività polizza con riponderazione sui limiti sottastanti;"";"";""
+39747;Applicazioni Banca - mancata assegnazione patrimonio per ptf con saldo a 0 (rif. #39210);"";"";1.8.0
 39732;ERRORE PRODUZIONE POSIZIONE CONSULENZA;6.82.1;"";6.83.0
+39723;Applicazioni Banca - % con tre decimali in lista ricerca contratti (rif. #39210);1.7.1;"";1.8.0
+39720;Rimozione da cassetti sottoscrivibili linee GP non più collocabili;"";"";""
 39717;Errata produzione Rimborso Parziale;"";"";6.83.0
 39716;Configurazione Namirial Prod;"";"";6.83.0
+39705;Trasferimento documenti di Adeguata Veifica Italiana;"";"";6.86.0
 39704;Controvalore errato su sottostanti polizza;"";"";6.83.0
-39570;ITALIANA campo beneficiari caso morte;6.82.1;"";6.83.0
-39569;"Errore campo ""limite singola transazione""  modulo Servizio MITO(Multichannel Internet Trading Online) Attivazione - Modifica - Conferimento Delega Virtuale - Gestione Documentazione On Line";6.82.1;"";6.83.0
-39415;PROD | Gestione Polizze per Persone Giuridiche (ex Campo P. Iva non compilabile);"";"";6.83.0
-39325;Gestione ragione sociale ditta Individuale per Polizza;"";"";6.83.0
-39082;ESG - preferenza e obiettivo cointestazione non valorizzati anche a fronte di cointestatari che hanno la nuova scheda;6.76.2;6.82.1;6.83.0
-38025;Mancata esposizione minus su stampa posizione consulenza;6.82.1;"";6.83.0
-36638;Adeguamenti per calcolo performance;"";"";6.83.0
-36342;dati file emt;6.82.1;"";6.83.0
-36077;Adeguamento Servizi dispositivi cabel v3 per SSO;"";"";6.83.0
-39680;Applicazioni Banca - Revisioni / Tuning (rif. #39210);6.80.1 (Tech-la) e 1.6.2 (PBCT);"";6.82.0 (Tech-la) e 1.7.0 (PBCT)
 39703;"Visualizzazione ""Saldi Conti Correnti e Depositi Titoli"" per operatore DCI";"";"";6.82.0
+39700;Report Ai complessivo della posizione contratto;"";"";6.84.0
 39698;Rimozione grafico andamentale Reportistica DCI;"";"";6.82.0
+39680;Applicazioni Banca - Revisioni / Tuning (rif. #39210);6.80.1 (Tech-la) e 1.6.2 (PBCT);"";6.82.0 (Tech-la) e 1.7.0 (PBCT)
+39677;SISTR - nuovi problemi di associazione struttura;"";"";""
+39671;Gestione log garante 2;"";"";""
+39657;Indisponibilità servizi Cabel;"";"";""
+39655;Campo note ;"";"";""
 39654;Report Ai complessivo della posizione contratto;"";"";6.82.0
-39571;CAMPI NON COMPILATI IN SOTTOSCRIZIONE ITALIANA;6.76.2;"";6.82.0
-39631;FTP Flussi Italiana;6.77.2;"";6.81.0
 39650;Ripristino utilizzo per FPB versione 1.0 servizi Cabel (RIF #35633);"";"";6.80.0
+39644;Applicazioni Banca - Documento Contratto - tuning (rif. #39210);1.6.1;"";1.7.0
+39631;FTP Flussi Italiana;6.77.2;"";6.81.0
+39615;verifica limite di concentrazione ELITF;"";"";""
+39610;(rif #39210) - Applicazioni Banca - ambiente Test - segnalazione importo canone in deroga non numerico;1.6.1;"";1.7.0
 39608;Report Ai complessivo della posizione contratto;"";"";6.80.0
 39580;Acquisizione Codice Italiana;6.77.1;"";6.79.0
+39571;CAMPI NON COMPILATI IN SOTTOSCRIZIONE ITALIANA;6.76.2;"";6.82.0
+39570;ITALIANA campo beneficiari caso morte;6.82.1;"";6.83.0
+39569;"Errore campo ""limite singola transazione""  modulo Servizio MITO(Multichannel Internet Trading Online) Attivazione - Modifica - Conferimento Delega Virtuale - Gestione Documentazione On Line";6.82.1;"";6.83.0
 39567;Report Ai complessivo della posizione contratto;"";"";6.79.0
-35633;Anagrafica strumenti finanziari in giornata;"";"";6.79.0
-39525;Report Ai complessivo della posizione contratto;"";"";6.78.0
-39210;Revisione iter operativo apertura contratti DCI;"";"";6.78.0
 39553;Carico oggetti contratti e ptf anche con saldo a ZERO;6.76.1;"";6.77.0
 39550;Gestione flusso Italiana e configurazione multiramo;"";"";6.77.0
-39130;Gestione polizze DOPPIA GS;"";"";6.77.0
+39531;W2 - Report Ai complessivo della posizione contratto;"";"";""
+39525;Report Ai complessivo della posizione contratto;"";"";6.78.0
+39513;Eliminare allegato da contratto GT;"";"";6.91.0 (Tech-la) e 1.9.0 (Applicazioni Banca)
 39498;Campo professione non compilabile in un consiglio;6.74.1;"";6.76.0
 39492;Report Ai complessivo della posizione contratto;"";"";6.76.0
-39388;Report Ai complessivo della posizione contratto;"";"";6.75.0
+39483;ROPRS - Adattamento per gestione righe vuote;"";"";""
+39454;Revisione Documenti XFORM Polizze Italiana - Riscatto;"";"";6.86.0
+39453;Revisione Documenti XFORM Polizze Italiana - Versamento aggiuntivo;"";"";6.86.0
+39441;ERRORE GENERALE CONSIGLIO PRODUZIONE;"";"";""
 39435;Promozione Cash Back;"";"";6.74.0
+39432;IMPORTANTE PRIVACY - posizioni colleghi da mascherare in TWILL ;"";"";""
+39426;Revisione Documenti XFORM Polizze Italiana - Prima Sottoscrizione;"";"";6.86.0
+39422;Disclosure_modifica modulo d'ordine polizze e illiquidi;"";"";""
+39421;Modifica ricezione eseguiti (ROTEM) e supporto;"";"";""
+39420;Supporti a Installazione Finint;"";"";""
+39419;Reportistica DCI;"";"";""
+39416;Recupero dati per Calcolo performance;"";"";""
+39415;PROD | Gestione Polizze per Persone Giuridiche (ex Campo P. Iva non compilabile);"";"";6.83.0
+39414;CAMBIANO varie;"";"";""
+39413;Supporti a Installazioni Cambiano;"";"";""
+39412;Supporti a Conduzione Progetto;"";"";""
 39395; Tuning sul batch per la produzione del flusso per Italiana;6.72.2;"";6.74.0
-39323;CCFRU - Rendiconti annuali;6.69.6;6.73.1;6.74.0
-39177;Iniziativa Cliente Fondi in Diretta;"";"";6.74.0
-36551;Attivazione FEA Anima SGR(richiesta di stima);"";"";6.74.0
+39388;Report Ai complessivo della posizione contratto;"";"";6.75.0
 39387;Report Ai complessivo della posizione contratto;"";"";6.73.0
 39381;Adeguamenti report DCI - v.2 - Change request;6.72.2;"";6.73.0
-39077;Riscatto totale polizza - prodotto modulo riscatto parziale;6.72.2;"";6.73.0
-38847;"modifica modulo ""Servizio MITO(Multichannel Internet Trading Online) Attivazione - Modifica - Conferimento Delega Virtuale - Gestione Documentazione On Line""";"";"";6.73.0
-38678; Tuning sul batch per la produzione del flusso per Italiana;6.72.1;"";6.73.0
-38407;POULI - mancato aggiornamento campo RTEIMP in TPOCNT;6.72.1;"";6.73.0
-35366;BIMFREE - verifica programma di caricamento a fronte cambio C/C;"";"";6.73.0
+39331;Attivazione FEA ESALOGO E OPEN Anima;"";"";""
+39326;Codici ATECO non censiti in TGVUNQ;"";"";""
+39325;Gestione ragione sociale ditta Individuale per Polizza;"";"";6.83.0
+39323;CCFRU - Rendiconti annuali;6.69.6;6.73.1;6.74.0
+39317;comunicazione da Cabel;"";"";""
+39263;ERRORE OPERAZIONE SWITCH GP;"";"";""
+39238;Errore recupero lista clienti ;"";"";""
+39210;Revisione iter operativo apertura contratti DCI;"";"";6.78.0
+39206;"modifica autorizzazione ruolo ""operatore DCI""";"";"";""
+39198;impossibilità inserimento pagamento estero;"";"";""
+39196;sottoscrizione pinnacle in FEA;"";"";""
 39182;Revisioni reportistica DCI;6.69.4;"";6.72.0
+39177;Iniziativa Cliente Fondi in Diretta;"";"";6.74.0
+39153;Attivazione ambiente per Banca Reale;"";"";""
+39151;PROD | Mancata archiviazione su VIACART;"";"";""
+39130;Gestione polizze DOPPIA GS;"";"";6.77.0
+39127;IMPOSTAZIONI PARAMETRI ORDINE PER UN COLLOCAMENTO BTP (rif #33377);"";"";""
+39121;Log garante 2;"";"";""
+39106;RFI 1636600 - Gestione in anagrafica dei titoli riservati a clienti professionali;"";"";""
+39104;Assistenza produzione fascicolo di contratto periodici 31.12;"";"";""
+39100;Verifica controllo TM2;"";"";""
+39099;Assistenza configurazione doc.ti Fondi;"";"";""
+39098;Ottimizzazione fasi batch per anticipare la pubblicazione dati;"";"";""
+39094;PROD | Visualizzazione Conto estinto;"";"";""
 39086;Ottimizzazione quantità calcolo oggetti di contratto e portafoglio;6.71.1;"";6.72.0
+39082;ESG - preferenza e obiettivo cointestazione non valorizzati anche a fronte di cointestatari che hanno la nuova scheda;6.76.2;6.82.1;6.83.0
+39077;Riscatto totale polizza - prodotto modulo riscatto parziale;6.72.2;"";6.73.0
 39062;Ottimizzazione POULI aggiornamento TPOCNE (segue da #38909);6.69.5;"";6.72.0
+39058;Progetto mercury - valutazioni progettuali;"";"";""
 39055;POULI in errore in aggiornamento TPOCNE;6.69.5;"";6.72.0
+39042;Verifica collegamenti non presenti TCLCOL;"";"";""
 39036;TGPDEX carico in errore;6.70.2 e 6.71.1;"";6.72.0
+39035;"Carico in errore terminano in stato ""valido""";"";"";""
+39034;Assistenza mancato GoLive 05.02.2025;"";"";""
+39029;Modifica IDSIGN;"";"";""
+39022;Trasferimento polizza da dossier mono a dossier coi;"";"";""
+38993;Trasferimento polizza- Errore Anagrafica contraente TPOCNA;"";"";""
+38989;NOBIS non valorizzate ma presente in AS400;"";"";""
+38988;Verifica ndg 002172534 : non compaiono delegati in stampa;"";"";""
+38962;PROD | Verifica su delegato non visibile per NDG 002172534 ;"";"";""
+38941;Integrazione automatica flusso EMT con Cabel (rif #38940);"";"";6.89.0
+38940;Carico estemporaneo flusso EMT;"";"";""
+38933;Segnalazione ordini con stato anomalo in ambito Fondi;"";"";""
 38912;Aggiornamento logo Twill --> Tech-la;"";"";6.72.0
-38904;Adeguamenti report DCI - v.2 - GRAFICO e calcolo media ponderata indici (rif #38868);6.69.3;"";6.72.0
-38595;"PROD | Alert su posizioni singole in cui è stato ""eliminato"" il cc COI";6.71.2;"";6.72.0
-38593;PROD | Conto Corrente COI ancora valorizzato nella scheda contratto della posizione singola;6.70.2 e 6.71.1;"";6.72.0
-38349;PROD | Gestione Polizze per Persone Giuridiche (ex Campo P. Iva non compilabile);"";"";6.72.0
-35506;VERIFICA DISCLAIMER MODULO ORDINE - ADEGUATEZZA ORDINE;6.67.3 e 6.69.3;"";6.72.0
-38870;Modifica ricezione eseguiti (ROTEM) e supporto (segue #38420);6.67.3 e 6.69.2 e 6.69.4;"";6.71.0 e 6.72.0
 38909;RECORD TPOCNA NON REGISTRATI ALL'ATTO DI UNA PRIMA SOTTOSCRIZIONE AZIONE BONUS;6.67.3 e 6.69.3;"";6.71.0
+38907;Modifica sconto commissionale di default;"";"";""
+38904;Adeguamenti report DCI - v.2 - GRAFICO e calcolo media ponderata indici (rif #38868);6.69.3;"";6.72.0
+38903;GamaLife/Finint - Flussi di interscambio;"";"";""
+38901;Polizze CNP Vita Assicura - Valutazione progettuale;"";"";""
+38895;ERRORE AZIONE BONUS;"";"";""
+38888;Verifica / estrazione ordini bloccati;"";"";""
 38886;Ordini amministrato rimangono in Invio in Corso;6.69.2 e 6.70.1;"";6.71.0
+38885;Errore polizza per Cliente nato in Svizzera;"";"";""
+38882;Fasi di svecchiamento / pulizia file;"";"";""
+38873;Posizioni professionali cointestate;"";"";6.89.0
+38871;Forzature in prod polizze trasferite;"";"";""
+38870;Modifica ricezione eseguiti (ROTEM) e supporto (segue #38420);6.67.3 e 6.69.2 e 6.69.4;"";6.71.0 e 6.72.0
 38868;Adeguamenti report DCI - v.2 (rif #35632);6.69.2;"";6.71.0
+38851;Associazione cliente-promotore;"";"";""
+38847;"modifica modulo ""Servizio MITO(Multichannel Internet Trading Online) Attivazione - Modifica - Conferimento Delega Virtuale - Gestione Documentazione On Line""";"";"";6.73.0
+38845;Supporto per AzzoAglio e documentazioni-appunti;"";"";""
+38840; Modifica processo FEA Twill;"";"";""
+38832;BRAGA GIUSEPPE - Consiglio 474982 - Prima Sottoscrizione Polizza AZIONE BONUS (Italiana Assicurazioni);"";"";""
+38831;"GP in stato ""da autorizzare""";"";"";""
+38824;Produzione fascicoli di contratto periodici;"";"";6.85.0
+38819;PROD | Errata associazione ISIN IT0005620908 ;"";"";""
+38814;PROD | Incongruenza peso % polizze;"";"";""
+38813;PROD | Clienti non associati al CF MANCINI STEFANO;"";"";""
+38805;Fase Roseg in errore in produzione;"";"";""
+38773;CC affidato censito come ORD;"";"";""
+38769;Errore in carico mifid realtime su persone giuridiche (es 002672681);"";"";""
 38768;PROD | Errore aggiornamento MiFID per CL 002672681;6.70.1;"";6.71.0
 38764;Adeguamenti report DCI (rif #35632);6.69.1;"";6.71.0
-38578;verifica accesso alla posizione del cliente da twill clienti;6.67.2;"";6.71.0
-36639;Recupero dati per Calcolo performance;"";"";6.71.0
-38574;Numero di polizza non corrispondente al Contratto;"";"";6.70.0
+38721;Nuovi cassetti GP da censire;"";"";""
+38718;PROD | DUPLICAZIONE MOVIMENTI DI CARICO SU POLIZZA ARCA VITA;"";"";""
+38717;Agg.to Rebate nuovi fondi Arca;"";"";""
+38696;Verifica - riattivazione invio documenti a Viacart;"";"";""
+38684;PROD | Variazioni rilevanti AUM;"";"";""
+38683;ERRORE CARICAMENTO FLUSSO TGPRND;"";"";""
+38678; Tuning sul batch per la produzione del flusso per Italiana;6.72.1;"";6.73.0
+38673;Forzatura commissioni di negoziazione amministrato;"";"";""
+38668;Commissioni di negoziazione TENARIS;"";"";""
+38664;Errore su download KID;"";"";""
+38661;Rimozione funzione di scheda cliente contratto da ACM (deve essere common);"";"";NEXT
+38615;Forzatura ragione sociale Ditta Individuale per Polizza;"";"";""
+38613;PROD | Indicazione tutor;"";"";""
+38611;PROD | Firma grafometrica Consulente non richiesta;"";"";""
+38610;PROD | Mancata visualizzazione polizza trasferita a t+1;"";"";""
+38605;"PROD | Errore tecnico ""Anagrafica Contraente non trovata in tabella""";"";"";""
+38604;Forzatura commissioni di negoziazione amministrato;"";"";""
+38603;Errore su documento di sottoscrizione fondo - raccomandazione odierna;"";"";""
+38598;PROD | Rimozione riferimenti Consulente nella reportistica Polizze (segue da #38198);"";"";""
+38596;PROD | Presenza di un dossier GP ma assente il relativo dettaglio;"";"";""
+38595;"PROD | Alert su posizioni singole in cui è stato ""eliminato"" il cc COI";6.71.2;"";6.72.0
+38594;PROD | CC non visibile nella posizione cointestata;"";"";""
+38593;PROD | Conto Corrente COI ancora valorizzato nella scheda contratto della posizione singola;6.70.2 e 6.71.1;"";6.72.0
+38592;Verifica TM2 per GP;"";"";""
+38583;Firma Grafometrica parziale;"";"";""
+38581;Raccomandazione con cent aggiuntivi rispetto all'importo inserito;"";"";""
 38579;Download di documenti firmati da altri clienti;"";"";6.69.0
+38578;verifica accesso alla posizione del cliente da twill clienti;6.67.2;"";6.71.0
+38577;Raccomandazione non coerente nonostante semafori verdi;"";"";""
+38574;Numero di polizza non corrispondente al Contratto;"";"";6.70.0
+38573;Agg.to tabella commissioni di negoziazione;"";"";""
+38571;Agg.to moduli ITALIANA;"";"";""
+38567;1648170 - FEA TWILL uguale a quella di  BRIO (switch da IdSign a Namirial);"";"";""
+38566;1636552 - Consulenza Evoluta per Professionali-;"";"";""
+38565;1636896 - Passaggio ordini a sala DCI Per GP e Amministrati su mercato obbligazionario;"";"";""
+38564;1627032 - Verifica scarto e sblocco rapporti a garanzia;"";"";""
+38563;Estrazione con query per utilizzo Adaptation;"";"";""
+38562;Acquisizione e popolamento dati anagrafica polizze da flusso giornaliero;"";"";6.85.0
+38551;Forzatura commissioni di negoziazione amministrato;"";"";""
+38514;Cliente con nuovo dossier censito, non visibile a t+1;"";"";""
+38506;Aggiornamento TGVPIN con comparti Arca;"";"";""
+38504;Supporto polizze Nobis;"";"";""
 38497;MODIFICA POZRI;6.67.2;"";6.69.0
-38000;Accesso Ghost - estrazione utenti cancellati / disattivi;"";"";6.69.0
-37351;PROD | Scheda contratto - Dettaglio GP ;6.67.2;"";6.69.0
-35632;Reportistica DCI;"";"";6.69.0
-30888;Integrazione modulo d'ordine - Raccolta Istruzioni Specifiche;"";"";6.69.0
+38496;MultiThread a 20 (ex 15);"";"";""
+38495;Verifica/Gestione CC collegati su più dossier e a parità di intestazione;"";"";""
+38490;Carico nuova matrice commissioni negoziazione (PFFTMCN);"";"";""
 38478;Rimozione legame CC su Dossier in presenza di differente intestazione;"";"";6.68.0
+38477;Estrazione dossier vs cc per verifica differenza contraenza;"";"";""
+38470;(segue da #38332) -> esecuzione giornaliera fase recupero anagrafiche polizze;"";"";6.85.0
+38466;"PROD | Sottoscrizione GP resta in stato ""Da completare""";"";"";""
+38465;PROD | Titolo XS2814486093 - Assenza rischio liquidità;"";"";""
+38463;impossibilità a sottoscrivere il nuovo eltif 2 con FEA;"";"";""
+38430;PFFTMCN - Configurazione STED+ e aggiornamenti una tantum;"";"";""
 38420;Modifica ricezione eseguiti (ROTEM) e supporto;6.67.2;"";6.68.0
 38414;ERRORE SEGNALAZIONE NON COERENZA PER HP;6.67.2;"";6.68.0
 38408;Nuovo processo di controllo / verifica pre Pubblicazione Dati;"";"";6.68.0
+38407;POULI - mancato aggiornamento campo RTEIMP in TPOCNT;6.72.1;"";6.73.0
 38406;ORDINI GESTITI NON SI AGGIORNA STAO NONOSTANTE XML OK;6.67.2;"";6.68.0
 38404;"Soglia ptf 30% Eltif 2.0 non deve generare la ""presa visione"" (rif #37607)";6.67.1;"";6.68.0
+38403;PROD | ISIN XS2814486093 non compare tra le obbligazioni da acquistare;"";"";""
+38402;"PROD | Conto valorizzato in dare e sezione ""Affidamenti"" non alimentata";"";"";""
+38400;Pubblicazione dati dalle ore 07:00;"";"";""
 38399;File polizze output Twill vs Cabel;"";"";6.68.0
+38371;Attività di manutenzione URGENTE su DB Framework Twill;"";"";""
+38368;Installazione UAT e PROD 6.66.0;"";"";""
+38367;Acquisizione eseguiti - ROTEM - Assistenza;"";"";""
 38353;Firma Grafometrica - segnalazioni di mancate firme;"";"";6.68.0
-37607;Sottoscrizione Eltif (2.0) - fase 1;"";"";6.67.0
 38352;Alert su contratto per CC assegnati a più dossier;"";"";6.66.0
+38349;PROD | Gestione Polizze per Persone Giuridiche (ex Campo P. Iva non compilabile);"";"";6.72.0
+38348;PROD | Gestione conti associati a più dossier;"";"";""
+38339;PROD | Nuove GP da censire e HP da modificare;"";"";""
+38338;PROD | Acquisto BTP - Costo di intermediazione assente;"";"";""
+38333;"PROD | Versamento aggiuntivo polizza - Errore tecnico ""Tipo Documento ATN non definito""";"";"";""
+38332;"PROD | Errore tecnico ""Anagrafica Contraente per Polizza 61010 non trovata in tabella TPOCNA""";"";"";""
 38330;PROD | Aggiornamento Mifid non correttamente ribaltato sul rischio;"";"";6.65.0
 38329;PROD | Holding Period non adeguato con orizzonte temporale di lungo periodo;"";"";6.65.0
+38328;"PROD | Clienti ""orfani"" di Consulente";"";"";""
+38310;LOGICA PER ALIMENTARE LA TABELLA TCGSLG;"";"";""
+38298;TCLRAP parziale fornita da Cabel;"";"";""
+38292;PROD | TWILL OFFICE: abilitazione ad autorizzare sottoscrizioni GPM con importo inferiore al limite ;"";"";""
+38290;ERRORE APERTURA CONTRATTO GT;"";"";1.4.0
+38287;PROD | Caricamento Eccezioni Anagrafiche ESG;"";"";""
+38282;TABELLA PBCTP001.dbo.TCGSLG;"";"";""
+38279;PROD | Problematiche su società di tipo STU;"";"";""
 38276;PROD | Acquisto BTP bloccato per HP inferiore a 5 anni (RIPROFILATURA OPPORTUNISTICA);6.64.1;"";6.65.0
 38274;Polizze non visibili se agganciate a CC affidati;6.64.1;"";6.65.0
 38272;PROD | Errore aggiornamento MiFID;6.64.1;"";6.65.0
+38271;PROD | Mancata visualizzazione ordinante per società S.N.C.;"";"";""
+38269;PROD | Problematica GREEN BOND;"";"";""
 38265;Inserimento collegamenti mancanti da Cabel per cointestatari;6.64.1;"";6.65.0
+38258;GP non appropriate;"";"";""
+38257;PROD | Segnalazioni anomalie su perdite di ptf;"";"";""
 38252;PROD - Errore integrazione ViaCart;6.64.1;"";6.65.0
+38251;PROD | Verifica ritardo ritorno flusso eseguiti;"";"";""
+38250;PROD | Errore firma grafometrica su modulo d'ordine per riscatto polizza;"";"";""
+38249;PROD | Polizze non visibili;"";"";""
+38248;PROD | GPM non visibile;"";"";""
 38247;PROD | Problema firma grafometrica;6.64.1;"";6.65.0
-38198;PROD | Rimozione riferimenti Consulente nella reportistica;"";"";6.65.0
 38245;PROD | Limite Holding Period;"";"";6.64.0
+38244;Registrazione dati controllo appropriatezza/adeguatezza e fascicolo di consiglio (segue da #38104);"";"";""
 38235;PROD | Errore costi-benefici;"";"";6.64.0
-38104;PROD | Sottoscrizione GP inappropriata;"";"";6.64.0
-37765;PROD | Errore su data riferimento e rendimento linea GPEA;"";"";6.64.0
+38234;PROD | Reportistica: Descrizione buono deposito e dossier a 0 inesistente (segue da #37856);"";"";""
 38215;PROD | Errore su confronto fondi target;"";"";6.63.0
+38211;PROD | Anomalia bond Cambiano: Selezionati in WL risultano Negoziabili in piattaforma;"";"";""
 38210;PROD | Riscatto polizza - Errore caricamento documenti;"";"";6.63.0
-37856;"PROD | Modifica campo ""Tipologia"" per depositi di risparmio e buoni di deposito e rimozione dossier a 0";"";"";6.63.0
-37361;PROD | Documentazione operatività polizza;"";"";6.63.0
+38206;PROD | Sottoscrizione polizza Italiana - Servizi Decumulo e Cedola;"";"";""
+38198;PROD | Rimozione riferimenti Consulente nella reportistica;"";"";6.65.0
+38197;"PROD | Errore ""Destinatario mail non definito""";"";"";""
+38196;PROD | Anomalia su HP posizione cointestata;"";"";""
+38182;PROD | Fondi: errore sui costi;"";"";""
+38180;PROD | Cedole titoli Cambiano;"";"";""
+38179;PROD | Errore in fase di accettazione proposta;"";"";""
+38175;PROD | Gestione campo totale PAC;"";"";""
 38172;Precarico una tantum dati aggiuntivi anagrafiche (POULI);"";"";6.62.0
+38167;Azione Bonus - Welcome bonus;"";"";""
+38144;TWILL TEST errore fase batch - PL - Raccolta Ordini - Monitoraggio Portafoglio;"";"";""
 38139;Popolamento incentivi (TGVPIN) per Gestito/Cassetti GP/Contenitori Polizze;"";"";6.62.0
 38138;PROD |  Modifica descrizioni Holding Period;"";"";6.62.0
-38118;PROD | Inserimento dati PAC;"";"";6.62.0
-38016;PROD | Costi, oneri e incentivi polizze e fondi;"";"";6.62.0
-38003;Rimozione firme su Date/Ora e test acquisizione risposta firma grafometrica;"";"";6.62.0
 38121;PROD | Rischio mercato GPM PRUD;"";"";6.61.0
 38120;PROD | Assenza conti in valuta;"";"";6.61.0
-37988;"PROD | Modificare stringa ""Rischio di mercato personalizzato"" con ""Punteggio di rischio massimo""";"";"";6.61.0
-37874;PROD | Rimozione switch parziale GP;"";"";6.61.0
-37767;PROD | Saldi GP incoerenti rispetto ad AS400;"";"";6.61.0
+38118;PROD | Inserimento dati PAC;"";"";6.62.0
+38113;Configurazione FEA Namirial;"";"";""
+38105;"PROD | Errore ""Dossier Appoggio C/C (TDSANA) non trovato o non attivo alla data odierna""";"";"";""
+38104;PROD | Sottoscrizione GP inappropriata;"";"";6.64.0
+38052;Supporto fasi bloccate;"";"";""
+38051;"PROD | Rimozione riferimento ""Flexible Solution"" sui report";"";"";""
+38031;Sottoscrizione Eltif (2.0) - fase 2 (DA #37607);"";"";""
+38030;Archiviazione classe documentale;"";"";""
+38025;Mancata esposizione minus su stampa posizione consulenza;6.82.1;"";6.83.0
+38016;PROD | Costi, oneri e incentivi polizze e fondi;"";"";6.62.0
 38007;"PROD | Rimozione ""Bozza"" su fascicolo di consiglio / modulo d'ordine / questionario idd e rimozione box registrazione telefonica";"";"";6.60.0
-37989;PROD | Modificare descrizioni linee GP;"";"";6.60.0
-37945;PROD | Holding Period su obbligazioni perpetue;"";"";6.60.0
+38003;Rimozione firme su Date/Ora e test acquisizione risposta firma grafometrica;"";"";6.62.0
+38001;Amministrato - costi e oneri (tb PFFTMCN) - adeguamenti;"";"";""
+38000;Accesso Ghost - estrazione utenti cancellati / disattivi;"";"";6.69.0
+37995;PROD | Casistica GIANI ALFREDO - Polizza su dossier mono-intestato e cc di riferimento cointestato;"";"";""
 37993;Matrice per carico TTIANA.TITPNT;"";"";6.59.0
 37990;Operatività Fondi - per rimborso e switch possibilità di non effettuare chiamata a servizi Cabel;"";"";6.59.0
+37989;PROD | Modificare descrizioni linee GP;"";"";6.60.0
+37988;"PROD | Modificare stringa ""Rischio di mercato personalizzato"" con ""Punteggio di rischio massimo""";"";"";6.61.0
 37968;Ricezione eseguiti (fase ROTEM);"";"";6.59.0
+37962;PROD | Rating ESG anomali;"";"";""
+37961;PROD | Errore su raccomandazione (2);"";"";""
 37960;"PROD | Sottoscrizioni GP e Polizza ""bloccate"" se non selezionato il time deposit come C/C di appoggio";"";"";6.59.0
+37946;PROD | Estrazione dati;"";"";""
+37945;PROD | Holding Period su obbligazioni perpetue;"";"";6.60.0
+37941;Popup Mito solo in login;6.54.2;"";6.57.0
+37940;Documento di prima sottoscrizione ADEIEX11;"";"";""
+37937;Fondi Eltif 2.0 modifca limite di concentraizone;"";"";""
 37931;PROD | Anomalia su liquidità dossier;"";"";6.59.0
+37930;PROD | Risposte MiFID non presenti;"";"";""
+37929;VAPT - underscore.js;6.54.2;"";6.58.0
 37914;PROD | Movimenti di rimborso parziale polizza erroneamente sommati;"";"";6.59.0
 37909;PROD | Parametrizzazione tabella titoli complessi;"";"";6.59.0
-37875;PROD | Incoerenza IDD - Polizza Arca Piano di Risparmio Oscar 100%;"";"";6.59.0
-37837;Tabelle coefficienti di correzione per adeguatezza RL RC HP;"";"";6.59.0
-37835;PROD | TWILL OFFICE - Errore su elenco richieste interventi Banca;"";"";6.59.0
-37761;PROD | Versamento aggiuntivo su GPM;"";"";6.59.0
-37708;Consulenza base - attivazione confronta fondi target;"";"";6.59.0
-37589;Prodotti complessi - limiti % di Banca Cambiano;"";"";6.59.0
-37315;Anomalia RM #36918 - Segnalazione Ilenia Vanni ;"";"";6.59.0
-37929;VAPT - underscore.js;6.54.2;"";6.58.0
 37903;PROD | HP POLIZZE da riparametrare;"";"";6.58.0
 37885;Progettualità SSO internet banking mito - Twill - Portale cliente - Aggiunta popup informativo;6.54.1;"";6.58.0
+37875;PROD | Incoerenza IDD - Polizza Arca Piano di Risparmio Oscar 100%;"";"";6.59.0
+37874;PROD | Rimozione switch parziale GP;"";"";6.61.0
+37868;Supporto a Tech-La per IaLandings;"";"";""
 37867;PROD | Prima sottoscrizione polizza ITALIANA;"";"";6.58.0
+37862;"Richiesta modifica naming ""Financial Advisor"" in ""Consulente""";"";"";""
+37859;Punteggio appropriatezza GP Cambiano;"";"";""
+37858;Carico TMFFRD-EMT per polizze e GP;"";"";""
 37857;PROD | Errore su stampa report;"";"";6.58.0
-37844;VAPT - segnalazioni;6.54.2;"";6.58.0
-37768;VAPT - Accesso Portale Cliente con NDG non del Cliente;6.54.2;"";6.58.0
-37766;PROD | Rischio di mercato personalizzato pari a 0;"";"";6.58.0
-37329;GP - Incoerenza dei saldi tra Twill e Report;"";"";6.58.0
-37941;Popup Mito solo in login;6.54.2;"";6.57.0
+37856;"PROD | Modifica campo ""Tipologia"" per depositi di risparmio e buoni di deposito e rimozione dossier a 0";"";"";6.63.0
+37855;PROD | Dettaglio Time Deposit;"";"";NEXT
+37851;PROD | Fascicolo di consiglio: presenza di una polizza estinta;"";"";""
 37846;PROD | HP polizze tutti uguali e negativi;"";"";6.57.0
+37844;VAPT - segnalazioni;6.54.2;"";6.58.0
+37837;Tabelle coefficienti di correzione per adeguatezza RL RC HP;"";"";6.59.0
+37835;PROD | TWILL OFFICE - Errore su elenco richieste interventi Banca;"";"";6.59.0
 37830;PROD | NDG 003585965: Posizione non appropriata;"";"";6.57.0
 37828;PROD | Raccomandazione: Prodotti non adeguati in fase di sottoscrizione;"";"";6.57.0
 37827;ACCESSO CLIENTE - TWILL CLIENTI;6.55.1;"";6.57.0
+37823;PROD | Obiettivo di sostenibilità non valorizzato;"";"";""
+37819;Supporto fasi batch - chiave doppia TCLCOL per collegamento cliente vs 2 consulenti;"";"";""
+37790;Rischio di Credito - esposizione per cointestazione (rif #37612);"";"";""
+37770;PROD | Errore su saldo in tempo reale;"";"";""
+37768;VAPT - Accesso Portale Cliente con NDG non del Cliente;6.54.2;"";6.58.0
+37767;PROD | Saldi GP incoerenti rispetto ad AS400;"";"";6.61.0
+37766;PROD | Rischio di mercato personalizzato pari a 0;"";"";6.58.0
+37765;PROD | Errore su data riferimento e rendimento linea GPEA;"";"";6.64.0
+37764;PROD | Assenza ordinante trust;"";"";""
+37763;PROD | Errore tecnico su operatività polizza;"";"";""
+37762;PROD | Esito raccomandazione non coerente con semafori verdi;"";"";""
+37761;PROD | Versamento aggiuntivo su GPM;"";"";6.59.0
+37760;PROD | Minimo sottoscrivibile NOBIS;"";"";""
+37759;PROD | Anomalia su verifica di coerenza delle polizze con questionario IDD;"";"";""
+37708;Consulenza base - attivazione confronta fondi target;"";"";6.59.0
+37696;MODIFICA URGENTE STATEMENT SQL DI WORKSPACE;"";"";""
+37691;PROD | Documentazione operatività polizza altri doc.ti (Extra Prima Sottoscrizione) (segue da #37361);"";"";""
+37671;Gestione fondi pensione;"";"";""
+37647;APPORTI PRELIEVI A ZERO SE INSERISCO DATA DA INIZIO RAPPORTO;"";"";""
+37646;Riorganizzazione Indici TSTSLG;"";"";""
 37617;PROD | Incoerenza strumenti in Black List;"";"";6.57.0
+37613;PROD | Holding Period incoerente rispetto ad AS400;"";"";""
 37612;"PROD | Superamento ""anomalo"" del rischio di credito";"";"";6.57.0
+37607;Sottoscrizione Eltif (2.0) - fase 1;"";"";6.67.0
+37592;Adeguamento flusso TTIANA (attuale disallineamento);"";"";6.90.0
+37591;"Differenza patrimonio dossier rispetto lista ""miei dossier""";"";"";""
 37590;Flusso TTIANA campo TITPNT;"";"";6.57.0
+37589;Prodotti complessi - limiti % di Banca Cambiano;"";"";6.59.0
+37588;Mettere a regime fasi ROTEM (Eseguiti Amministrato) e UTIND (invio a Viacart);"";"";""
+37587;Errore inserimento utente in governance;"";"";""
+37586;Servizio per cellulare e mail certificati;"";"";""
+37585;Verifica appropriatezza linee GP;"";"";""
+37584;Carico/adeguamento flusso EMT;"";"";""
+37583;Configurazione FEA Namirial;"";"";""
+37582;Flusso TAFCNT mensile;"";"";""
 37581;appropriatezza polizze;"";"";6.57.0
-37536;Modulistica prima sottoscrizione per Fondi;"";"";6.56.0
-37371;Configurazione lista titoli in conflitto di interesse;"";"";6.55.0
-31406;Numero di telefono e indirizzo e-mail certificato;"";"";6.54.0
+37578;Modifica strategia ordini Akros e MarketHub;"";"";""
+37573;Ripristino invio ordini per GoLive PRODUZIONE;"";"";""
+37562;Profili mifid BASSE/ZERO;"";"";""
+37545;PROD | Raccomandazione: Non consentita scelta ordinante;"";"";""
 37544;Gestire errore in chiamata;"";"";6.53.0
+37542;Polizze - introduzione test di equivalenza ramo 1;"";"";""
+37536;Modulistica prima sottoscrizione per Fondi;"";"";6.56.0
+37531;Costi e oneri per Amministrato su modulo d'ordine (tb PFFTMCN);"";"";""
+37529;PROD | Controlli di coerenza anomali;"";"";""
 37527;Personalizzazione logo Banca Cambiano in Portale Cliente;"";"";6.53.0
 37519;PROD | Modulo d'ordine: rimozione sezione di appendice;"";"";6.53.0
+37518;Verifica XFORM_Errore modifica modulo natixis NIF IE;"";"";""
+37513;Carico estemporaneo WatchList, StyleAnalysis;"";"";""
+37504;Financial Prospect - inserimento - mancanza popolamento Promotore;"";"";""
+37489;PROD | Modifica domanda IDD;"";"";""
 37488;PROD | Sottoscrizione GP sempre da autorizzare;"";"";6.53.0
-37289;Test in UAT - Anagrafiche mifid;"";"";6.53.0
-37273;Test in ambiente UAT - firma grafometrica;"";"";6.53.0
-36353;Recupero anagrafiche (Mifid) in giornata (real time);"";"";6.53.0
-36225;Crash se mancano i dati TTIANX - intercettare e gestire errore per utente;"";"";6.53.0
-36160;Ri-attivazione e configurazione firma in modalità grafometrica;"";"";6.53.0
-31564;X-Form - Modifica punti firma moduli di sottoscrizione fondi;"";"";6.53.0
+37484;Supporto temporaneo produzione per inibire chiamate vs servizi Cabel;"";"";""
+37483;ordine in richiesta forzatura;"";"";""
+37471;Modifica accesso servizio API di Akros;"";"";""
+37462;ASSENZA POSSIBILITA' DI VEDERE LE RACCOMANDAZIONI( RACCOLTE DIRETTE ) FATTE SUI CLIENTI DCI;"";"";""
+37461;ERRORE VISUALIZZAZIONE OPERATORI CON RUOLI DCI;"";"";""
 37446;ERRORE RACCOLTA DIRETTA;6.49.1;"";6.51.0
 37429;ERRORE SEGNALATO DA CLIENTE TWILL;6.49.1;"";6.51.0
 37408;ANOMALIA SCHEDA DI ADESIONE CERTIFICATO DE000UM92RJ0;6.49.1;"";6.51.0
+37405;Supporto per segnalazione Xform post rilascio 6.49.0;"";"";""
+37402;REPORT CONSULENTE E CLIENTE ERRATI;"";"";""
 37401;ERRORE FONDI POLIZZA UNIQA-UL NON SOTTOSCRIVIBILI MA DATI IN TABELLA OK;6.49.1;"";6.51.0
 37398;Errore moltiplicazione saldi polizze (clUTPOLIZZE);6.49.1;"";6.51.0
+37396;URGENTE - problemi a fronte del rilascio versione 6.49;"";"";""
+37394;Gestione PAC su Polizze;"";"";""
+37393;PROD | Affidamenti: incoerenza sull'importo utilizzato;"";"";""
+37392;Gestione nuovo flusso TTIFIL;"";"";6.86.0
+37389;Errore in apertura Analisi 88831 - Spiriti Daniela;"";"";""
+37385;PROD | Polizze erroneamente incoerenti;"";"";""
+37372;ADDENDUM PER FIRMA ELETTRONICA AVANZATA ANIMA SGR;"";"";""
+37371;Configurazione lista titoli in conflitto di interesse;"";"";6.55.0
+37370;Confronto asset class portafogli per nuovo report;"";"";""
+37361;PROD | Documentazione operatività polizza;"";"";6.63.0
+37360;PROD | Aggiornamento Questionario IDD;"";"";""
 37359;PROD | Rimozione toggle TCM polizze;"";"";6.51.0
 37358;Esposizione check appropriatezza nella scelta sottostanti GP;"";"";6.51.0
 37356;PROD | Campi non valorizzati nella sezione Titoli;"";"";6.51.0
 37354;PROD | Saldi storici non visualizzati;"";"";6.51.0
 37353;PROD | Posizione Cliente non visualizzata;"";"";6.51.0
+37351;PROD | Scheda contratto - Dettaglio GP ;6.67.2;"";6.69.0
+37350;PROD | Affidamenti non visualizzati;"";"";""
+37345;PROD | Incoerenza su dossier;"";"";""
+37344;PROD | Incoerenze su conti correnti;"";"";""
 37342;"PROD | Header - Rimozione etichetta ""Sviluppo"" dall'header";"";"";6.51.0
-37283;Abilitazione Cliente su Grafo/Fea tramite invocazione Servizio CABEL;"";"";6.51.0
-36916;"Reportistica: campo ""Ufficio""";"";"";6.51.0
-36915;Proposta: riferimenti ad offerta fuori sede, Twill Cliente e registrazione telefonica;"";"";6.51.0
-36914;Fondi - Rischio di liquidità a 1;"";"";6.51.0
-36908;Progettualità SSO internet banking mito - Twill - Portale Cliente;"";"";6.51.0
-36830;Flusso TTIRDL (da Analysis) - fornitura flusso per rischio di liquidità;"";"";6.51.0
-36641;Integrazione FEA NAMIRIAL;"";"";6.51.0
-36415;Integrazione Twill Cliente con SSO;"";"";6.51.0
-36392;Dati anagrafici integrativi per Strumenti Finanziari - Analysis;"";"";6.51.0
-30570;Adeguatezza di portafoglio migliorativa per Rischio di Concentrazione - Disclaimer;"";"";6.51.0
-30465;Modulo d'ordine - SF Illiquidi;"";"";6.51.0
+37341;Prod | Home Page: pesi % composizione ptf ;"";"";""
+37331;Modifica servizio ricezione ordini/eseguiti da Akros;"";"";""
+37329;GP - Incoerenza dei saldi tra Twill e Report;"";"";6.58.0
+37322;Errore Consiglio;"";"";""
+37315;Anomalia RM #36918 - Segnalazione Ilenia Vanni ;"";"";6.59.0
+37306;Questionario IDD;"";"";""
+37305;Configurazione Utenti Cambiano;"";"";""
+37304;Configurazione GP (Supporto);"";"";""
+37303;Configurazione Polizze (Supporto);"";"";""
+37290;Posizioni di società non complete;"";"";""
+37289;Test in UAT - Anagrafiche mifid;"";"";6.53.0
 37288;Forzare MATRICOLA = 'NOMATTW' se MATRICOLA non presente in Invocazione Servizi;"";"";6.50.0
+37287;Attivazione Controlli TM su Amministrato;"";"";""
+37286;Gestione definitiva;"";"";6.89.0
 37285;Gestione Work-Around;"";"";6.50.0
+37283;Abilitazione Cliente su Grafo/Fea tramite invocazione Servizio CABEL;"";"";6.51.0
 37281;Impostazione cambpo DA_PROMOTORE = 'N', fisso per Cambiano in invocazione servizi CABEL ;"";"";6.50.0
+37273;Test in ambiente UAT - firma grafometrica;"";"";6.53.0
 37247;Inserimento nuova tariffa polizza su Twill Office;6.49.1;"";6.50.0
-37229;Lista movimenti della linea GP in errore;"";"";6.50.0
-37143;Nuova configurazione classi documentali vs tag dedicata a Twill;"";"";6.50.0
-30287;Modifica programma caricamento polizze Uniqa ramo 1;6.49.1;"";6.50.0
 37241;Ottimizzazione batch calcolo performance SIDSP;"";"";6.49.0
 37239;Polizze - gestione movimenti di storno (stato ANNULLATO);"";"";6.49.0
 37230;Polizze - importo versato = somma movimenti;"";"";6.49.0
+37229;Lista movimenti della linea GP in errore;"";"";6.50.0
+37170;Problema in accesso Twill Office da Utenti Tech-La;"";"";""
+37143;Nuova configurazione classi documentali vs tag dedicata a Twill;"";"";6.50.0
+37141;Raccomandazione - Messaggio di errore in caso di consolidamento;"";"";""
+37140;"Raccomandazione - Toggle ""Richiesta Cliente"" bloccato su ""Sì""";"";"";""
+37139;Polizze - assegnazione ndg e CC;"";"";""
+37136;Svuotamento flussi TCLASS e TKYRAP;"";"";""
+37123;Tuning scarti polizze;"";"";""
+37114;Depositi vincolati - valorizzazione RAPNUM = 14 cifre;"";"";6.48.0
 37101;Rappresentazione Zero Coupon ;"";"";6.49.0
+37063;Pulizia dati per LIVE;"";"";""
+37061;Riscostruzione Cassetto Fittizzio;"";"";6.48.0
+37047;Assistenza fasi batch in errore (db_link cabel_as400 KO per fase MFFRD);"";"";""
 37045;Trattamento nuovo tracciano TTIANA;"";"";6.49.0
 37019;Rappresentazione Zero Coupon - Implementazione;"";"";6.49.0
+36947;Gestione Delegati a operare su CC e Dossier;"";"";""
+36943;Performance Dossier GHIDONI CARLO ;"";"";""
+36921;Monitoraggio: Segnalazioni SF Non appropriati / Non adeguati;"";"";""
+36920;Verifica MiFID Cliente 002254043;"";"";""
+36919;Anomalia su TM strumento LU0147408131;"";"";6.46.0
+36917;"Raccomandazione - Rimuovere ""Modulo Istruzione""";"";"";6.46.0
+36916;"Reportistica: campo ""Ufficio""";"";"";6.51.0
+36915;Proposta: riferimenti ad offerta fuori sede, Twill Cliente e registrazione telefonica;"";"";6.51.0
+36914;Fondi - Rischio di liquidità a 1;"";"";6.51.0
+36913;Controllo su taglio minimo obbligazione;"";"";""
+36912;Gestione collocabilità strumento finanziario (fondo);"";"";""
+36908;Progettualità SSO internet banking mito - Twill - Portale Cliente;"";"";6.51.0
+36883;STIMA MANAGERIALE_ Implementazioni GIANOS per Italiana;"";"";""
+36878;Invio della documentazione a Repository Documentale (ViaCart);"";"";""
+36877;Invio della documentazione a Repository Documentale (ViaCart) - Test in ambiente UAT e PRODUZIONE;"";"";""
+36848;verifica naming gestione separata;"";"";""
+36840;APERTURA CONTRATTO IN ERRORE - APPLICAZIONE CONTRATTI;"";"";""
+36834;uat ordini dci_commissioni applicate;"";"";""
+36830;Flusso TTIRDL (da Analysis) - fornitura flusso per rischio di liquidità;"";"";6.51.0
+36829;Flusso TTIANA - aggiornamento valore rischio di credito;"";"";""
 36826;verifica blocco adeguatezza clienti DCI;"";"";6.49.0
-36652;Errore edit ordine da Twill Office;6.39.5 e 6.42.1 e 6.43.1 e 6.44.2;"";6.49.0
-29729;Pomul - snellimento movimenti con causale non trattata;"";"";6.49.0
-37114;Depositi vincolati - valorizzazione RAPNUM = 14 cifre;"";"";6.48.0
-37061;Riscostruzione Cassetto Fittizzio;"";"";6.48.0
-36625;Saldi GP senza cassetto;"";"";6.48.0
-36318;Configurazione anagrafiche GP;"";"";6.48.0
+36825;Installazione in TEST e PRODUZIONE v.6.45.0;"";"";""
+36766;Algoritmi di calcolo Twill;"";"";""
+36762;FASE SA POZRI;"";"";""
+36757;STIMA MANAGERIALE_Calcolo giacenza media posizioni in consulenza base;"";"";""
+36749;"Raccolta diretta: tempi di caricamento ""Simula ptf attuale""";"";"";""
+36748;Funzionalità di ricerca: titolo non trovato;"";"";""
+36722;Inibizione temporanea di alcune segnalazioni di monitoraggio;"";"";""
+36715;Monitoraggio: Segnalazione polizza fuori policy senza polizze in ptf;"";"";""
+36712;Monitoraggio: Contatore in Home Page erroneamente pari a 0;"";"";""
+36704;Sostituzione flusso EMT con accesso a TMFCEMT di SIFDATI;"";"";6.45.0
+36702;Fondi - errata esposizione Sottoscrizioni/Rimborsi in sezione acquisti / vendite del fascicolo di consiglio;6.42.1;"";6.45.0
+36684;Installazione / System Test / Post-Avvio - Twill Consulia;"";"";""
+36683;Sal Periodici Twill Consulia;"";"";""
+36682;Business Game - Università Napoli;"";"";""
+36672;Fine Tuning OnLine;"";"";""
 36671;Generazione Flusso per Italiana Assicurazioni;"";"";6.47.0
+36670;Gestione Polizze;"";"";""
+36667;Projects General;"";"";""
+36666;Dry Run TWILL da parte di Cambiano;"";"";""
+36665;Configurazione / Settings ;"";"";""
+36664;Integrazione SSO;"";"";""
+36663;Change Applicative Previste;"";"";""
+36661;CRs emerse in fase progettuale;"";"";""
+36652;Errore edit ordine da Twill Office;6.39.5 e 6.42.1 e 6.43.1 e 6.44.2;"";6.49.0
+36650;Gestione Libretti di deposito;"";"";6.89.0
+36649;Polizze - verifica / gestione / configurazione polizze con NON Unit linked;"";"";6.46.0
+36648;Clienti / Rapporti estinti: esclusione da parte di Cabel;"";"";""
+36646;Test richiesta forzatura ordini (Amministrato e Gestito);"";"";""
+36641;Integrazione FEA NAMIRIAL;"";"";6.51.0
+36639;Recupero dati per Calcolo performance;"";"";6.71.0
+36638;Adeguamenti per calcolo performance;"";"";6.83.0
+36637;Tuning fase di monitoraggio;"";"";6.46.0
+36635;KIID fondo;"";"";6.46.0
 36634;Scheda fondo;"";"";6.47.0
 36633;Compara fondo;"";"";6.47.0
 36632;Funzionalità Search&Compare Fund;"";"";6.47.0
-36422;Modulistica Polizze (Xform) per Italiana Assicurazioni;"";"";6.47.0
-36421;Acquisizione dati aggiuntivi per produzione doc.ti Polizze;"";"";6.47.0
-36919;Anomalia su TM strumento LU0147408131;"";"";6.46.0
-36917;"Raccomandazione - Rimuovere ""Modulo Istruzione""";"";"";6.46.0
-36649;Polizze - verifica / gestione / configurazione polizze con NON Unit linked;"";"";6.46.0
-36637;Tuning fase di monitoraggio;"";"";6.46.0
-36635;KIID fondo;"";"";6.46.0
 36631;Disattivazione firma telefonica;"";"";6.46.0
+36625;Saldi GP senza cassetto;"";"";6.48.0
+36620;"Raccolta diretta e raccomandazione: errore ""presentatore non valido""";"";"";""
+36619;modulo prima sottoscrizione Italiana non prodotto in formato FEA;"";"";""
 36612;ERRORE accesso Analisi per auorizzazione operazione ( forzatura );"";"";6.46.0
-36561;Tclana.codesm non valorizzato con impatto su controllo TM2 Target Market;"";"";6.46.0
-36532;Clienti senza profilo di rischio;"";"";6.46.0
-36391;Apertura Raccolta Diretta per Fondi;"";"";6.46.0
-35472;Integrazione Twill FA/GOV/Office con SSO;"";"";6.46.0
-36704;Sostituzione flusso EMT con accesso a TMFCEMT di SIFDATI;"";"";6.45.0
-36702;Fondi - errata esposizione Sottoscrizioni/Rimborsi in sezione acquisti / vendite del fascicolo di consiglio;6.42.1;"";6.45.0
+36611;Raccomandazione: errore Liquidità insufficiente;"";"";""
+36604;Raccomandazione - Flag su toggle di superamento rischio personalizzato;"";"";""
+36596;Amministrato - Valorizzazione dati costi e oneri in Fascicolo di Consiglio;"";"";""
+36595;Amministrato - attivazione Target Market per Azioni/Obbligazioni;"";"";6.92.0
+36594;Amministrato - Popolamento matrice PFFTMCN per % comm.ne negoziazione (condizioni vs Titolo);"";"";""
+36593;Amministrato - predisporre esecuzione per ricezione eseguiti - Fase ROTEM;"";"";""
+36592;Raccomandazione - Doppio consolidamento;"";"";""
 36591;Raccomandazione: Errore grafico in fase di assegnazione dossier;6.44.1;"";6.45.0
 36583;Mancata incrementale per creazione tb TTIBUY;6.42.1 e 6.43.1 e 6.44.1;"";6.45.0
 36582;Raccomandazione - Polizza - Errore sul KID;6.42.1 e 6.43.1 e 6.44.1;"";6.45.0
+36581;Raccomandazione: errore servizio Cabel;"";"";""
+36580;Raccomandazione - Tempi di caricamento lunghi in fase di consolidamento;"";"";""
 36579;"Raccomandazione: Errore al click su ""Disponi e invia"" / ""Disponi""";6.44.1;"";6.45.0
 36578;Modulistica con riferimenti Finint;6.44.1;"";6.45.0
-36525;Raccolta diretta: Messaggio di errore tecnico in fase di accettazione;6.44.1;"";6.45.0
-36501;"Scheda Mifid - Errore ""formattazione""";6.44.1;"";6.45.0
-35647;Attuazione controlli ESG specifici per Cambiano;"";"";6.45.0
+36562;Raccolta diretta: errore bloccante;"";"";""
+36561;Tclana.codesm non valorizzato con impatto su controllo TM2 Target Market;"";"";6.46.0
+36551;Attivazione FEA Anima SGR(richiesta di stima);"";"";6.74.0
+36532;Clienti senza profilo di rischio;"";"";6.46.0
+36530;Raccolta diretta: visualizzazione errata nella scheda rischio;"";"";""
 36528;"Raccolta diretta: non compare il pulsante ""Accettazione""";6.41.2 e 6.42.1 e 6.43.1;"";6.44.0
-36453;Schede Contratto: % di composizione del ptf errate;6.41.2 e 6.42.1 e 6.43.1;"";6.44.0
-36389;Gestione controllo appropriatezza / adeguatezza opportunistica;"";"";6.44.0
-36321;Ghosting trasverale;"";"";6.44.0
+36527;Raccolta diretta: errore questionario scaduto;"";"";""
+36526;"Raccolta diretta: pulsante ""Inserisci e verifica"" non funzionante";"";"";""
+36525;Raccolta diretta: Messaggio di errore tecnico in fase di accettazione;6.44.1;"";6.45.0
+36524;Raccolta diretta: rischio di ptf scende se acquisto titoli;"";"";""
+36521;Anomalie dopo rilascio vers 6.40;"";"";""
+36506;Incremento numero decimali;"";"";""
+36502;"Anagrafica: campo ""Tipologia Cliente"" vuoto";"";"";""
+36501;"Scheda Mifid - Errore ""formattazione""";6.44.1;"";6.45.0
+36500;"Sezione ""I miei contratti"" resta in caricamento";"";"";""
+36499;Raccomandazione: Rischio ptf che sale dopo rimborso;"";"";""
+36498;Raccolta diretta: errore riprofilatura opportunistica;"";"";""
+36497;Raccomandazione con esito sempre Non coerente;"";"";""
 36492;Diretta - errore in inserimento Amministrato;6.40.1 e 6.41.1 e 6.42.1;"";6.43.0
+36491;Installazione in TEST e PRODUZIONE v.6.42.0;"";"";""
+36484;attivazione FEA Estero;"";"";""
+36472;Scheda Contratto: delta saldo dossier con ctv titoli;"";"";""
+36470;Errore Raccomandazione non coerente - Possibilità di estendere per richiesta Cliente;"";"";""
 36469;Posizione Cliente non accessibile;6.41.1 e 6.42.1;"";6.43.0
+36468;"Portafoglio aggregato: ambito ""Altri Strumenti Finanziari"" sempre a 0";"";"";""
+36467;Assenza movimenti cc, titoli e fondi;"";"";""
 36466;Tabella Strumenti Finanziari: Assenza colonna % apporto rischio;6.41.1 e 6.42.1;"";6.43.0
+36465;Scheda Contratto - Assenza di cc associato ma % di strumenti di liquidità diversa da 0;"";"";""
+36464;Incongruenza di intestazione dossier e cc - Messaggio visualizzato solo sulla posizione singola;"";"";""
 36463;Incongruenza intestazione dossier e cc: riformulare il messaggio;6.41.1 e 6.42.1;"";6.43.0
+36461;"Raccolta diretta: assenza pulsante ""Fondi""";"";"";""
+36460;Raccomandazione: Adeguatezza migliorativa non funziona;"";"";""
+36459;"Raccomandazione e Raccolta Diretta: ""semafori"" holding period, rischio liquidità e rischio credito diventano arancioni da rossi";"";"";""
+36458;Raccomandazione: Superamento rischio mercato personalizzato;"";"";""
+36457;KO Adeguatezza su tutti gli Strumenti Finanziari;"";"";""
 36456;"Sezioni ""Anagrafica"", ""Raccomandazione"" e ""Monitoraggio"":  messaggio ""Contenuto non autorizzato""";6.41.1 e 6.42.1;"";6.43.0
+36455;Rischio di liquidità del ptf errato;"";"";""
+36454;Parametri di Coerenza ptf errati;"";"";""
+36453;Schede Contratto: % di composizione del ptf errate;6.41.2 e 6.42.1 e 6.43.1;"";6.44.0
 36452;Schede Contratto: Assenza pulsante per generare i report;6.41.1 e 6.42.1;"";6.43.0
-35631;Monitoraggio;"";"";6.43.0
+36422;Modulistica Polizze (Xform) per Italiana Assicurazioni;"";"";6.47.0
+36421;Acquisizione dati aggiuntivi per produzione doc.ti Polizze;"";"";6.47.0
+36420;Adeguamenti documento di raccomandazione;"";"";""
+36419;Rimozione cruscotto di gestione;"";"";""
+36418;Tuning funzionalità (Twill Office);"";"";""
+36417;ACM per le sole funzionalità necessarie (Twill Office);"";"";""
+36416;Integrazione con server SMTP;"";"";""
+36415;Integrazione Twill Cliente con SSO;"";"";6.51.0
+36414;Set Up dell'ambiente Cloud CABEL - PROD;"";"";""
+36413;Formazione;"";"";""
+36412;SAL / Riunioni Interne;"";"";""
+36411;Installazione generica;"";"";""
 36407;Fondi - incentivi in sezione costi e oneri;"";"";6.41.0
+36400;Errore creazione documenti fascicolo di consiglio;"";"";""
+36392;Dati anagrafici integrativi per Strumenti Finanziari - Analysis;"";"";6.51.0
+36391;Apertura Raccolta Diretta per Fondi;"";"";6.46.0
+36389;Gestione controllo appropriatezza / adeguatezza opportunistica;"";"";6.44.0
+36353;Recupero anagrafiche (Mifid) in giornata (real time);"";"";6.53.0
 36348;Schede mifid cointestazioni fornite direttamente da Cabel;"";"";6.41.0
+36342;dati file emt;6.82.1;"";6.83.0
 36340;Gestione utenza per invocazione servizi dispositivi Cabel;"";"";6.41.0
+36324;Cruscotto - Calcolo rateo sugli eseguiti ricevuti da Market Hub, Market Access e Akros;"";"";""
+36321;Ghosting trasverale;"";"";6.44.0
+36320;Adattamento modulo Italiana Assicurazioni;"";"";""
+36318;Configurazione anagrafiche GP;"";"";6.48.0
+36317;OFN - Gestione concentrazione migliorativa per punteggio di rischio;"";"";""
+36306;Controvalore operazioni su ordini vecchi e già inviati a mercato;"";"";""
 36303;Alert per Schede contratto incoerenti per intestazione dossier vs cc;"";"";6.41.0
-36047;Implementazione per appropriatezza/adeguatezza del prodotto;"";"";6.41.0
 36284;Flusso SF Derivati;"";"";6.40.0
 36283;ESG controlli dedicati per Certificates su eccezioni;6.39.4;"";6.40.0
 36266;ESG - errore calcolo portafoglio;6.39.4;"";6.40.0
 36242;Salvataggio storico info BuyList su obbligazione diretta (TROATO);"";"";6.40.0
 36240;Limite prodotti superabile con Iniziativa Cliente;"";"";6.40.0
 36232;ESG - Fix Target Market - valutazione campo 20590;6.39.3;"";6.40.0
+36226;Composizione portafoglio aggregato: pesi % errati;"";"";""
+36225;Crash se mancano i dati TTIANX - intercettare e gestire errore per utente;"";"";6.53.0
+36224;Gestioni Patrimoniali - Campi vuoti;"";"";""
 36220;Autorizzazione necessaria per DCI e variazione controllo CC a garanzia;"";"";6.40.0
+36219;Presenza polizze smobilizzate in precedenza;"";"";""
+36218;Cliente non trovato;"";"";""
+36217;"Raccomandazione - Aggiornamento portafoglio: esito sempre ""Non coerente"" anche con semafori verdi";"";"";""
 36216;ESG controlli dedicati per Certificates;6.39.3;"";6.40.0
 36215;Batch consolidatore polizze - tuning assegnazione CC;6.39.3;"";6.40.0
 36214;Richiesta non corretta di upload file in Diretta;6.39.3;"";6.40.0
+36202;Errore bloccante visualizzazione Clienti;"";"";""
+36201;Esposizione Gestioni Patrimoniali;"";"";""
+36199;Formattazione anomale dei loghi;"";"";""
+36194;mancata ricezione chiamata per conferma operazione con FEA;"";"";""
+36192;Fondo IT0005384596 - Apporto al rischio alto ed errata classificazione;"";"";""
+36181;Questionario IDD presente anche se la polizza è stata eliminata;"";"";""
+36180;Errore accettazione documenti;"";"";""
+36178;Sottoscrizione Fondi: Filtro società;"";"";""
 36172;ESG - Fix batch carico eccezioni;6.39.3;"";6.40.0 
 36171;ordini vecchi non si aprono in Twill;6.39.3;"";6.40.0
+36162;Twill fasi batch TEST e PRODUZIONE;"";"";""
+36160;Ri-attivazione e configurazione firma in modalità grafometrica;"";"";6.53.0
 36156;ESG - Fix evidenza campo Esito adeguatezza ESG per esito negativo;6.39.3;"";6.40.0
 36146;Eliminazione riferimenti a Watch List, classificazione, scoring;"";"";6.40.0
 36145;Possibilità di estensione a punteggio strategico;"";"";6.40.0
@@ -355,165 +733,348 @@
 36131;ESG - incongruenze calcoli SF sostenibili/non sostenibili;6.39.2;"";6.40.0
 36123;ESG - Sistemazione batch carico eccezioni;6.39.2;"";6.40.0
 36112;Estrazione payin per PITIPOCOMM = 'MAN';"";"";6.40.0
+36079;Adeguamenti servizi in ambito ordine;"";"";""
+36077;Adeguamento Servizi dispositivi cabel v3 per SSO;"";"";6.83.0
+36076;Polizze - Gestione cambio contraenza;"";"";""
+36047;Implementazione per appropriatezza/adeguatezza del prodotto;"";"";6.41.0
 36029;Logiche di riprofilatura clienti;6.39.1;"";6.40.0
+36028;Frequenti errori JOB ROSDR;"";"";""
 36022;ESG - segnalazione UAT;6.39.1;"";6.40.0
+36016;nuovi moduli di proposta Italiana;"";"";""
 35938;ERRORE IN ACCESSO VECCHIE RACCOMANDAZIONI;6.35.2 + 6.39.1;"";6.40.0
 35937;Segnalazioni dopo rilascio versione 6.39.0;"";"";6.40.0
 35936;Errore calcolo portafogli per segnalazioni relative a ESG;6.39.1;"";6.40.0
+35929;Installazione X-FORM;"";"";""
+35928;Predisposizione ambiente in Cloud CABEL;"";"";""
+35927;Attività Progettuali Base;"";"";""
 35862;Nuova modale su Portale Cliente (violazione accesso);6.35.1;"";6.40.0
+35844;Nuova Convenzione Italiana Assicurazioni (recupero masse da Eurovita);"";"";""
+35823;ITALIANA DOPPIA GS - POU2GS;"";"";""
+35814;Invio della documentazione a Repository Documentale (ViaCart) - Sviluppo;"";"";""
 35805;ESG_dettaglio sostenibilità;"";"";6.40.0
+35780;Risposta da dare ad un Manager della rete;"";"";""
+35744;Modifica modello ADEIEX11;"";"";""
+35730;Adeguamento Esposizione OnLine della Scheda Mifid;"";"";""
+35729;Adegamento processi di schede cointestazione;"";"";""
+35728;Adattamento processi di acquisizione in SA + PL + LIVE;"";"";""
+35727;Adattamenti per schede Mifid di Cambiano;"";"";""
+35726;Adattamenti Twill FA;"";"";""
+35725;Test e Collaudi;"";"";""
+35707;modifica testo evento mail invio proposta;"";"";""
+35698;ERRORE SWITCH POLIZZA AZIONE BONUS;"";"";""
+35671;Verifica certificazione numero di cellulare per attivaizone FEA;"";"";""
+35669;Verifica certificazione numero di cellulare per attivaizone FEA;"";"";""
+35658;Installazione in TEST v.6.38.0;"";"";""
+35647;Attuazione controlli ESG specifici per Cambiano;"";"";6.45.0
+35645;Conduzione progetto;"";"";""
+35633;Anagrafica strumenti finanziari in giornata;"";"";6.79.0
+35632;Reportistica DCI;"";"";6.69.0
+35631;Monitoraggio;"";"";6.43.0
 35630;Buy List;"";"";6.40.0
 35629;Modalità raccolta ordini;"";"";6.40.0
-35603;ESG - Esposizione in griglia su SF dei dati di sostenibilità;"";"";6.39.0
-35592;ESG - Disclaimer Adaptation;"";"";6.39.0
-35591;ESG - Polizze non UnitLinked;"";"";6.39.0
-35504;BC - Upload documenti firmati in modalità cartacea;"";"";6.39.0
-35471;BC - Flussi Polizze (contratti, saldi, movimenti);"";"";6.39.0
 35628;Contratto di consulenza;"";"";6.38.0
 35627;Gestione dei contratti DCI;"";"";6.38.0
+35603;ESG - Esposizione in griglia su SF dei dati di sostenibilità;"";"";6.39.0
+35600;Attivazione performance in ambiente di TEST;"";"";""
+35592;ESG - Disclaimer Adaptation;"";"";6.39.0
+35591;ESG - Polizze non UnitLinked;"";"";6.39.0
+35587;Portale PAW in TEST;"";"";""
+35563;Problemi post installazione versione 6.35;"";"";""
 35554;OFN - Fascicolo di consiglio - revisione Costi ed Oneri;"";"";6.38.0
+35549;Contratto GP Avantgarde;"";"";""
 35537;Nomenclatura file di acquisizione;6.36.1;"";6.37.0
 35534;OFN - modifica fascia concentrazione FONDI;"";"";6.37.0
+35533;ESG - Criticità + disclaimer;"";"";""
+35516;Installazione in PROD v.6.33.0;"";"";""
+35509;MONITORAGGIO VISITE;"";"";""
+35507;Rilascio versione 6.35.0 - errore monitoraggio;"";"";""
+35506;VERIFICA DISCLAIMER MODULO ORDINE - ADEGUATEZZA ORDINE;6.67.3 e 6.69.3;"";6.72.0
+35504;BC - Upload documenti firmati in modalità cartacea;"";"";6.39.0
+35497;Assistenza fasi batch in errore (utenza twilltomcat ko);"";"";""
+35496;Analisi di impatto;"";"";""
+35472;Integrazione Twill FA/GOV/Office con SSO;"";"";6.46.0
+35471;BC - Flussi Polizze (contratti, saldi, movimenti);"";"";6.39.0
+35463;SF obbligazioni subordinate soggette a bail in;"";"";""
+35455;Installazione in PROD v.6.24.0;"";"";""
 35449;Segnalazione post rilascio 6.35.0;6.35.1;"";6.36.0
-34743;OFN - processo di produzione KIID e comunicazione al cliente;"";"";6.36.0
-34157;Revisione per algoritmi su ESG;"";"";6.36.0
-30150;Progetto integrazione SFDR - ESG;"";"";6.36.0
+35366;BIMFREE - verifica programma di caricamento a fronte cambio C/C;"";"";6.73.0
 35342;PL - Scarico Tabelle POLIZZE da Preload;"";"";6.34.0
+35330;verifica saldo disponibile con prenotata avere;"";"";""
+35269;Monitoraggio - verifica controllo KYC;"";"";""
+35191;Disclosure_modifica modulo d'ordine polizze e illiquidi;"";"";""
+35190;Disclosure_Modifica fascicolo di consiglio;"";"";""
+35186;Installazione in TEST v.6.33.0;"";"";""
 35182;"ANOMALIA SU FUNZIONI ""CONFRONTA PER ASSET CLASS"" E ""GRAFICI DI CONFRONTO"" - FUNZIONE RICHIESTA DA ISPEZIONE DI BANCA ITALIA";6.28.5;"";6.34.0
-34740;Riapertura ticket 25840 - TTASTR;6.28.5;"";6.34.0
+35174;Supporto ambiente di TEST;"";"";""
+35155;Modulo costi oneri e incentivi polizze;"";"";""
+35133;STIMA MANAGERIALE Nuova segnalazione Assoreti Consulenza;"";"";""
+35115;POZRI;"";"";""
+35082;Contratto GP Avantgarde;"";"";""
 35079;RENDICONTI ANNUALI;6.28.5;"";6.33.0
+35071;Verifica associazioni classi TCTGPP su importa polizze UNIQA-UL in simulatore contratti;"";"";""
+35068;Installazione in TEST v.6.32.0;"";"";""
+35051;MODIFICA UTILIZZO QUESTIONARIO MIFID PER DITTE INDIVIDUALI;"";"";""
+35049;Flexible persone giuridiche;"";"";6.93.0
 35047;PRODUZIONE FASCICOLI ANNUALI;6.28.5;"";6.33.0
-35029;OFN - Extra per definizione modello preordine (v.2);6.33.0;"";6.33.0
-33052;OFN - Creazione modello ordine al consolidamento della proposta;6.33.0;"";6.33.0
-33050;OFN - Definizione modello ordine in Xform;6.33.0;"";6.33.0
 35044;AZIONE BONUS - ADEGUATA VERIFICA;6.28.5;"";6.32.0
+35029;OFN - Extra per definizione modello preordine (v.2);6.33.0;"";6.33.0
 35027;Concentrazione per punteggio - revisione ptf valutato con Liquidità;6.32.0;"";6.32.0
+35009;"Verifica liquidità in ""composizione dossier""";"";"";""
+34963;Supporto produzione fascicoli semestrali 31.12;"";"";""
+34924;MIFID III segnalazioni riprofilature opportunistiche;"";"";""
+34914;Invio conferma mail a seguito di variaizione questionario mifid ad indirizzo errato;"";"";""
+34901;Fase batch PL in errore - causa collegamento doppio Cliente vs CF;"";"";""
 34871;Nuova scheda mifid PG lunghezza 67;6.28.3;"";6.32.0
+34854;Informatizzazione Processo di collocamento;"";"";""
+34848;ERRORE GESTIONE SCHEDA MIFID III PERSONA GIURIDICA;"";"";""
 34847;AZIONE BONUS - errore batch POULI;6.28.3;"";6.32.0
 34789;"OFN - Eliminare da raccomandazione ""confronta per asset class""";6.32.0;"";6.32.0
+34778;Flusso KYCANA con caratteri UNIX;"";"";""
 34755;Segnalazione ADAPC a fronte di RSMREC > 31 per nuova scheda mifid;6.28.3;"";6.32.0
+34743;OFN - processo di produzione KIID e comunicazione al cliente;"";"";6.36.0
+34742;OFN - SF BlackList - possibilità di mantenerli in ptf;"";"";""
 34741;"OFN - concentrazione per fasce per ""% tipologia""";6.32.0;"";6.32.0
+34740;Riapertura ticket 25840 - TTASTR;6.28.5;"";6.34.0
+34739;OFN - Controllo costi e benefici non bloccante;"";"";""
+34722;Contratto GP Avantgarde;"";"";""
 34689;Operazioni in Agenda FA;6.28.2;"";6.32.0
+34658;Spazi disco DB;"";"";""
+34652;Parametrizzazione software con nuovi campi TPODAT/TPOANA;"";"";""
 34651;Nuovo batch caricamento polizze First Baloise;6.32.0;"";6.32.0
 34619;Variazione questionario Mifid FEA;6.28.2;"";6.32.0
-34571;Riprofilatura MiFID - Modifica penalizzazioni;6.28.2;"";6.32.0
-34523;Totali dashboard;6.28.3;"";6.32.0
-34327;firmatario posizione consulenza - caso minori con tutor;6.28.3;"";6.32.0
-33024;OFN - Tuning azioni disponibili;6.32.0;"";6.32.0
-33023;OFN - Adattamento griglie operazioni;6.32.0;"";6.32.0
-30151;Rendiconto Unico Costi, Oneri e Incentivi;6.28.5;"";6.32.0
+34611;FATTURAZIONE BACK END - PRODUZIONE FILE FLUSSO_CONTAB_SORT;"";"";""
 34595;Inserimento polizza in portafoglio riallocato;6.28.2;"";6.31.0
+34594;Modifica Modale ricerca Polizze;"";"";""
 34593;verifica layout;6.28.2;"";6.31.0
 34592;Modifica Label;6.28.2;"";6.31.0
+34591;Impostazione grandezze colonne pagina;"";"";""
 34590;Simulazione contratto icona cestino;6.28.2;"";6.31.0
 34589;Modifica campi obbligatori anagrafica contratto;6.28.2;"";6.31.0
 34577;"OFN - Rimuovere ""bozza"" da produzione fascicolo di consiglio";6.31.0;"";6.31.0
+34571;Riprofilatura MiFID - Modifica penalizzazioni;6.28.2;"";6.32.0
 34568;Gestione contratti doppia GS;6.28.2;"";6.31.0
 34547;Presunta anomalia inserimento Mifid con FEA;6.28.2;"";6.31.0
+34523;Totali dashboard;6.28.3;"";6.32.0
+34505;estrazione sottoscrizioni FEA Finint SGR;"";"";""
+34477;OFN - Extra per definizione modello preordine;6.30.0;"";6.30.0
 34476;OFN - Edit obbligazione in proposta;6.31.0;"";6.31.0
+34475;OFN - Verifica titolo sotto osservazione;"";"";""
 34474;OFN - Confronta fondi target;6.31.0;"";6.31.0
+34473;OFN - Togliere inserire liquidità con liquidità attesa;"";"";""
 34472;OFN - Concentrazione ?Coco Bond? con ?Titoli sospesi/Complessi?;6.31.0;"";6.31.0
 34471;OFN - Esclusione polizze da calcolo concentrazione;6.31.0;"";6.31.0
 34470;OFN - Cambio dicitura punteggio di rischio;6.31.0;"";6.31.0
 34469;OFN - FONDI LISTA O CON COMPLESSITA? 999;6.31.0;"";6.31.0
 34468;OFN - Revisione Watch List (LISTA STRUMENTI FINANZIARI);6.31.0;"";6.31.0
 34467;OFN - CONCENTRAZIONE PUNTEGGIO DI RISCHIO per Singolo Titolo;6.31.0;"";6.31.0
+34463;Installazione in TEST v.6.30.0;"";"";""
+34455;Reinstallazione VPN e VMWare;"";"";""
+34432;ERRORE MONITORAGGIO (ROSEG) AMBIENTE DI TEST;"";"";""
+34413;VERIFICA PENALIZZAZIONI SEZIONE MIFID OBIETTIVI DI INVESTIMENTO ;"";"";""
+34404;Errore in accesso Riepilogo da Raccomandazione;6.28.2;"";6.30.0
+34401;Menù Gestione contratti sempre disponibile;6.28.1;"";6.28.1
 34368;modifica TM3;6.31.0;"";6.31.0
 34351;Saldo DV non presente in calcolo performance;6.28.2;"";6.31.0
-34152;Sincronizzazione flussi SIED per RSMREC / QPGREC;6.31.0;"";6.31.0
-33996;LIQUIDITA-AMMINISTRATO non visibile a fronte di Importa;6.28.2;"";6.31.0
-33883;"OFN - Rinomina ""adeguatezza"" nel terzo semaforo della consulenza con Appropriatezza/ Adeguatezza";6.31.0;"";6.31.0
-33027;OFN - Tuning funzioni non oggetto di implementazione;6.31.0;"";6.31.0
-34477;OFN - Extra per definizione modello preordine;6.30.0;"";6.30.0
-34404;Errore in accesso Riepilogo da Raccomandazione;6.28.2;"";6.30.0
+34334;segnalazioni utente che sta eseguendo i test;"";"";""
+34327;firmatario posizione consulenza - caso minori con tutor;6.28.3;"";6.32.0
 34317;Mancato carico TGVUNQ per codice convenzione;6.30.0;"";6.30.0
 34263;Verifche post rilascio 6.29.0;6.30.0;"";6.30.0
-34125;SIMULATORE MODALE POLIZZE - SCELTA NUOVO INSERIMENTO;6.30.0;"";6.30.0
-33061;OFN - Segnalazione monitoraggio orizzonte temporale;6.30.0;"";6.30.0
-33051;OFN - Creazione modello preordine al consolidamento della raccomandazione;6.30.0;"";6.30.0
-33049;OFN - Definizione modello preordine in Xform;6.30.0;"";6.30.0
-33032;OFN - Disabilitare messaggistica vs la Clientela e PF;6.30.0;"";6.30.0
-33015;OFN - Revisione controlli Accesso WatchList/RichiestaCliente vs classificazione titolo;6.30.0;"";6.30.0
-30445;Informativa Costi, Oneri e Incentivi - Switch Fondi e SICAV;6.30.0;"";6.30.0
-33060;OFN - Esposizione su nuovo tab nella coerenza di portafoglio;6.29.0;"";6.29.0
-33059;OFN - Revisione calcolo holding period;6.29.0;"";6.29.0
-34401;Menù Gestione contratti sempre disponibile;6.28.1;"";6.28.1
+34246;Installazione in TEST v.6.29.0;"";"";""
+34180;Verifica: incongruenza flusso Saldi dossier vs Contratto Fondi;"";"";""
 34175;Pagina di firma documento di contratto;6.28.0;"";6.28.0
+34157;Revisione per algoritmi su ESG;"";"";6.36.0
 34156;Gestione schede mifid attuali e nuova versione;6.28.0;"";6.28.0
+34153;Sincronizzazione flussi SIED per RSMREC / QPGREC;"";"";""
+34152;Sincronizzazione flussi SIED per RSMREC / QPGREC;6.31.0;"";6.31.0
 34151;Revisione base dati - ESG;6.28.0;"";6.28.0
 34126;MODALE FLEX SOLUTION;6.28.0;"";6.28.0
-33416;OFN - Revisione base dati;6.28.0;"";6.28.0
-33055;OFN - Revisione liste con esposizione TM4;6.28.0;"";6.28.0
+34125;SIMULATORE MODALE POLIZZE - SCELTA NUOVO INSERIMENTO;6.30.0;"";6.30.0
+34112;Sal cabel/finint - kickoff - Banca Cambiano;"";"";""
+34069;Installazione in TEST v.6.26.0;"";"";""
+34040;errore firma proposta per non adeguatezza ;"";"";""
+33996;LIQUIDITA-AMMINISTRATO non visibile a fronte di Importa;6.28.2;"";6.31.0
+33970;tabella TPOCNG;"";"";""
+33967;Errore inserimento polizza Flex e Eurovita;"";"";""
+33964;simulatore NEW show list polizze;"";"";""
 33921;Attività per il passaggio in produzione della polizza Doppia GS;6.26.0;"";6.26.0
 33917;ERRORE POULI;6.23.3;"";6.26.0
+33909;ERRORE SU RILASCIO BATCH CARICAMENTO POLIZZA AZIONE BONUS;"";"";""
+33883;"OFN - Rinomina ""adeguatezza"" nel terzo semaforo della consulenza con Appropriatezza/ Adeguatezza";6.31.0;"";6.31.0
+33877;DGS - Sal, test di sistema e retro-compatibilità;"";"";""
+33876;DGS - Supporto BackEnd;"";"";""
+33875;DGS - Tuning/adattamenti simulatore/previsionale;"";"";""
 33874;DGS - Tuning per nuovi codici società e prodotto;6.26.0;"";6.26.0
 33873;DGS - Nessuna documentazione richiesta;6.26.0;"";6.26.0
 33872;DGS - Tuning/adattamenti su flusso Input/Output;6.26.0;"";6.26.0
 33871;DGS - Controlli per operazione su nuova polizza;6.26.0;"";6.26.0
 33870;DGS - Configurazione questionario IDD;6.26.0;"";6.26.0
 33869;DGS - Configurazione nuova società e prodotto;6.26.0;"";6.26.0
+33868;Twill - ambiente di TEST non disponibile;"";"";""
 33851;OFN - Svuotamento temporaneo Xform (fasc cons e mod ord) per invocazione servizi Cabel;6.25.1;"";6.26.0
+33844;Installazione in TEST v.6.25.0;"";"";""
+33828;Supporto per fasi batch di Test non girate;"";"";""
+33762;OFN - Rinomina ETP o ETP/Certificates in ETF;"";"";""
+33761;Inibizione operatività in fondo per SF senza contratto;6.25.0;"";6.25.0
+33745;Installazione in TEST v.6.24.0;"";"";""
+33697; Movimenti/Eseguiti di titoli e OICR;"";"";""
+33693;"OFN - Rimozione funzione ""Simulare Liquidità"" in raccomandazione";6.24.0;"";6.24.0
+33689;OFN - Adeguamento integrazione servizi Cabel;6.25.0;"";6.25.0
+33665;OFN - Nuovi flussi per controlli Target Market (rif.33022);6.24.0;"";6.24.0
 33625;errore simulatore;6.26.0;"";6.26.0
+33615;"OFN - Raccomandazione senza operazioni; post consolidamento non si vede il box documenti";"";"";""
+33612;Supporto per GoLive non effettuato in ambiente di Produzione;"";"";""
+33495;PROGRAMMA PER CARICAMENTO POLIZZE GESTITE TRAMITE BROKER ASSICURATIVO - FIRST BALOISE;"";"";""
+33478;Installazione in PROD v.6.22.0;"";"";""
+33431;Installazione in TEST v.6.22.0;"";"";""
+33427;Monitoraggio - mantenimento attivi solo controlli documenti;6.22.0;"";6.22.0
+33426;OFN - System & Integration Test  c/o IFIGEST;"";"";""
+33416;OFN - Revisione base dati;6.28.0;"";6.28.0
+33395;Riattivazione funzioni di Apertura Contratto (segue #33169);"";"";""
+33216;Verifica fasi batch TEST e Produzione Twill;"";"";""
+33177;Supporto per spazio dischi in esaurimento;"";"";""
+33159;OMW - Test;"";"";""
+33134;Fasi bloccate 22.08 e gg successivi;"";"";""
+33062;OFN - Integrazione FEA con nuovo fornitore di IF (Infocert);"";"";""
+33061;OFN - Segnalazione monitoraggio orizzonte temporale;6.30.0;"";6.30.0
+33060;OFN - Esposizione su nuovo tab nella coerenza di portafoglio;6.29.0;"";6.29.0
+33059;OFN - Revisione calcolo holding period;6.29.0;"";6.29.0
+33055;OFN - Revisione liste con esposizione TM4;6.28.0;"";6.28.0
 33054;OFN - Calcolo nuovo algoritmo adeguatezza portafoglio;6.26.0;"";6.26.0
+33053;OFN - Recupero valore TM4 da Cabel;6.24.0;"";6.24.0
+33052;OFN - Creazione modello ordine al consolidamento della proposta;6.33.0;"";6.33.0
+33051;OFN - Creazione modello preordine al consolidamento della raccomandazione;6.30.0;"";6.30.0
+33050;OFN - Definizione modello ordine in Xform;6.33.0;"";6.33.0
+33049;OFN - Definizione modello preordine in Xform;6.30.0;"";6.30.0
 33043;OFN - Attivazione / tuning operatività B.O. su Twill Office;6.26.0;"";6.26.0
 33034;OFN - Attivazione / tuning operatività B.O. su Twill Office;6.26.0;"";6.26.0
+33032;OFN - Disabilitare messaggistica vs la Clientela e PF;6.30.0;"";6.30.0
+33027;OFN - Tuning funzioni non oggetto di implementazione;6.31.0;"";6.31.0
+33024;OFN - Tuning azioni disponibili;6.32.0;"";6.32.0
+33023;OFN - Adattamento griglie operazioni;6.32.0;"";6.32.0
 33021;OFN - Revisione controlli ordine Adeguato/Appropriato;6.26.0;"";6.26.0
-33761;Inibizione operatività in fondo per SF senza contratto;6.25.0;"";6.25.0
-33689;OFN - Adeguamento integrazione servizi Cabel;6.25.0;"";6.25.0
+33015;OFN - Revisione controlli Accesso WatchList/RichiestaCliente vs classificazione titolo;6.30.0;"";6.30.0
+33012;OFN - Supporto Post-Roll-Out;"";"";""
+33011;OFN - Roll-Out;"";"";""
+33010;OFN - Formazione;"";"";""
+33009;OFN - SAL / Riunioni Interne;"";"";""
+33008;OFN - Conduzione progetto;"";"";""
+33007;Visibilità Consulenti manager;6.21.6;"";6.22.0
+32911;DGS - POLIZZA ITALIANA DOPPIA GS - Valutazioni progettuali;"";"";""
+32909;Installazione in PROD v.6.21.4;"";"";""
+32908;Installazione in TEST v.6.21.4;"";"";""
+32907;Twill Governance - errore aggiornamento utenti;6.21.3;"";6.22.0
+32842;Supporto per spazio dischi in esaurimento;"";"";""
+32725;deroga su operatività Italiana Flex;"";"";""
+32693;Installazione in PROD v.6.21.0;"";"";""
+32663;Nuovi Contratti DC;"";"";""
+32649;Nota griglia di concentrazione % Tipologia;"";"";""
+32647;Installazione in TEST v.6.21.0;"";"";""
+32599;Integrazione FEA con Infocert;"";"";""
+32597;OMW - Sal/Riunioni interne;"";"";""
 32596;OMW - tuning/adattamenti simulatore/previsionale;6.25.0;"";6.25.0
-33693;"OFN - Rimozione funzione ""Simulare Liquidità"" in raccomandazione";6.24.0;"";6.24.0
-33665;OFN - Nuovi flussi per controlli Target Market (rif.33022);6.24.0;"";6.24.0
-33053;OFN - Recupero valore TM4 da Cabel;6.24.0;"";6.24.0
 32595;OMW - tuning/adattamenti su flusso Input/Output;6.23.0;"";6.23.0
 32594;OMW - Online proposta per acquisizione nuova informazione da stampare su modulo;6.23.0;"";6.23.0
 32593;OMW - Xform per modifiche all'attuale modulo;6.23.0;"";6.23.0
 32592;OMW - tuning per nuovi codici società e prodotto (online, performance, masse medie, disclouser...);6.23.0;"";6.23.0
 32591;OMW - configurazione nuova società e prodotto;6.23.0;"";6.23.0
-26268;Polizze a garanzia - Blocco rimborsi;6.23.0;"";6.23.0
-33427;Monitoraggio - mantenimento attivi solo controlli documenti;6.22.0;"";6.22.0
-33007;Visibilità Consulenti manager;6.21.6;"";6.22.0
-32907;Twill Governance - errore aggiornamento utenti;6.21.3;"";6.22.0
-26937;CTR - Gestione registrazione firma FEA con invio mail al B.O.;6.22.0;"";6.22.0
-26936;CTR - Integrazione documento con IdSign per FEA con invio mail al Cliente;6.22.0;"";6.22.0
-26935;CTR - Revisione Xform per punti firma;6.22.0;"";6.22.0
-26933;CTR - Simulatore - Gestione prodotti;6.22.0;"";6.22.0
-26932;CTR - Simulatore;6.22.0;"";6.22.0
-26930;CTR - Gestione Note;6.22.0;"";6.22.0
-26929;CTR - Gestione Extra Dossier;6.22.0;"";6.22.0
-26928;CTR - Edit Contratto con possibilità di sostituzione dell'esistente;6.22.0;"";6.22.0
-26927;CTR - Edit Cliente con Link a Contratto in essere e in via di definizione;6.22.0;"";6.22.0
-26926;CTR - I miei clienti - visualizzazione/edit contratto (sia nuova apertura che contratto eventualmente già esistente);6.22.0;"";6.22.0
-26924;CTR - Attività trasversali per porting;6.22.0;"";6.22.0
-26923;CTR - Test non regressione;6.22.0;"";6.22.0
-26922;CTR - Solo DM può lavorare sui contratti;6.22.0;"";6.22.0
-28319;Utilizzo FEA dall'estero (segue da RM #27469);6.19.0;"";6.19.0
+32571;NUOVA POLIZZA;"";"";""
+32552;Installazione in TEST v.6.20.0;"";"";""
+32453;Ambiente TEST - dischi full;"";"";""
+32306;Avviso ai Clienti per la modifica della modalità di autenticazione/firma con FEA;"";"";""
+32305;Portale Cliente - Modifica modalità di certificazione accesso + Firma contratto FEA;"";"";""
+32186;FEA Estero - Scelta chiamata per tutti i documenti;"";"";""
+31841;Disposizione ordini automatica a seguito di firma con FEA;"";"";""
+31825;APPLICAZIONE CONTRATTI - CAMPO FPACOD;"";"";""
+31744;Fasi ambiente di test - Tomcat non attivi;"";"";""
+31667;Sottoscrizione OICR da Delegato/Tutore;"";"";""
+31598;SERVIZIO COLLOCAMENTO CABEL;"";"";""
+31564;X-Form - Modifica punti firma moduli di sottoscrizione fondi;"";"";6.53.0
+31545;OMW - Valutazioni Progettuali (OPEN MULTIASSET WELCOME);"";"";""
+31419;"Fasi ambiente di test - ""triggering heartbeat"" - 15.02.2023";"";"";""
+31406;Numero di telefono e indirizzo e-mail certificato;"";"";6.54.0
+31381;Flussi Cabel ricevuti in ritardo in data 10.01.2023;"";"";""
+31374;liquidità;"";"";""
+31312;Acquisizione e trattamento dati ESG - valutazione progettuale;"";"";""
+31152;Verifica Riprofilatura Opportunistica - Raccomandazione n. 390558;"";"";""
+31073;Obbligazioni subordinate soggette a bail in - Introduzione dichiarazione Cliente d;"";"";""
+30981;Flussi Cabel non ricevuti in data 16.12.2022;"";"";""
 30978;Utilizzo FEA dall'estero - Doc.to sottoscrizione contratto Fea da portale cliente;6.17.0;"";6.17.0
+30934;"Verifica segnalazione monitoraggio ""SF Complesso Non Corretto""";"";"";""
 30926;Verifica SF DE0001965556 su cliente Benelli: risulta non adeguato e non appropriato;6.17.0;"";6.17.0
+30923;Call del 05.12.2022;"";"";""
+30922;Chiarimenti punteggi sugli Strumenti Finanziari;"";"";""
+30888;Integrazione modulo d'ordine - Raccolta Istruzioni Specifiche;"";"";6.69.0
+30862;Installazione Test e Prod v 6.16.0 (skf3 1.16.0);"";"";""
+30849;Revisione ReverseBackFront TWILL vs BACKEND;"";"";""
+30791;CTR - ADDON - rimozione sezione payin pagato;"";"";""
+30790;QUESTIONARIO MIFID - SF NON CORRETTO;"";"";""
+30655;Portale Cliente - Pubblicazioni documenti firmati con FEA da Postino;"";"";""
+30572;Clienti Professionali - Valutazione Costi Benefici;"";"";""
+30570;Adeguatezza di portafoglio migliorativa per Rischio di Concentrazione - Disclaimer;"";"";6.51.0
+30569;Rimozione Richiesta Cliente per Accesso Watch List in operazioni di Vendita/Rimborso;"";"";""
+30568;Ordini di iniziativa cliente - revisione logica applicata;"";"";""
+30558;Tabella TROLAO ( e altre ) situazione con fase LIVE lanciata nel corso della giornata;"";"";""
+30523;Supporto per pubblicazione dati Twill - 13.10.2022;"";"";""
+30472;Campo aggiuntivo TCLANA - Riprofilatura opportunistica;"";"";""
+30465;Modulo d'ordine - SF Illiquidi;"";"";6.51.0
+30445;Informativa Costi, Oneri e Incentivi - Switch Fondi e SICAV;6.30.0;"";6.30.0
+30441;Disclaimer complessi - SF in Black List per Clienti Professionali;"";"";""
 30321;Tabella W70 rating per punteggio rating (nuova versione excel simulatore multivariata);6.13.2;"";6.14.0
+30316;Diversificazione Geografica e Valutaria;"";"";""
 30300;Punteggi di rischiosità del titolo (090 --> 000);6.13.2;"";6.14.0
 30299;Controllo di appropriatezza per clienti professionali;6.13.2;"";6.14.0
+30287;Modifica programma caricamento polizze Uniqa ramo 1;6.49.1;"";6.50.0
+30285;Test acquisizione nuovo tracciato TTIANA;"";"";""
 30275;agenda;6.13.2;"";6.14.0
 30274;decimali non evidenziati correttamente;6.13.2;"";6.14.0
 30273;no funzione export per conti correnti;6.13.2;"";6.14.0
+30151;Rendiconto Unico Costi, Oneri e Incentivi;6.28.5;"";6.32.0
+30150;Progetto integrazione SFDR - ESG;"";"";6.36.0
+30139;STIMA MANAGERIALE Operatività Ufficio Crediti;"";"";""
 30123;Carico 2 pdf di sottoscrizione fondi;6.12.7;"";6.14.0
+30055;"CTR - ADDON - ""Canone contratto in essere""; aggiungere calcolo del canone percentuale ";"";"";""
+30052;CTR - ADDON - nuova stampa applicativa per sintesi informazioni di una simulazione;"";"";""
+30051;CTR - ADDON - alert per indicare che le simulazioni sono datate ;"";"";""
 30046;Aggiornamento pdf in xform - 5 società;6.12.6;"";6.14.0
 30043;Revisione controllo di adeguatezza;6.13.2;"";6.14.0
 30008;Revisione corpo mail modulo d'ordine ed esposizione KIID in portale cliente;6.12.6;"";6.14.0
 29963;Aggiornamento pdf ni xform - 8 società;6.12.6;"";6.14.0
 29956;Riapertura RM #29088 - Sottoscrizione casa prodotto già in portafoglio;6.12.6;"";6.14.0
+29950;Carico nuove versione case Sicav;"";"";""
+29934;Supporto ambiente di produzione 13.07.2022 - server non accessibili e fasi batch non eseguite;"";"";""
 29910;PSK - Link modulo prima sottoscrizione + sezione portale cliente;6.12.5;"";6.14.0
 29892;Corpo mail modulo d'ordine e prima sottoscrizione;6.12.5;"";6.14.0
 29884;Ko reinvio mail per firma FEA;6.12.4;"";6.14.0
 29879;Verifica punteggio di appropriatezza SF;6.13.1;"";6.14.0
+29878;Gestione Family Office - valutazioni progettuali;"";"";""
 29864;Prima sottoscrizione OICR per entità giuridiche;6.12.4;"";6.14.0
 29855;Mancato invio mail per Fea per modulo d'ordine;6.12.3;"";6.14.0
 29854;Supporto per ricarico clienti UNICASIM e intervento SIPCI;6.12.3;"";6.14.0
 29852;Modulo ordine in errore per firma su sezione KIID;6.12.2;"";6.14.0
 29851;ERRORE IN FORZATURA ORDINI;6.12.2;"";6.14.0
+29844;MODIFICA TRACCAITO TCLSVA - AGGIUNTA AL #23809;"";"";""
 29818;Moduli prime sottoscrizioni fondi;6.12.1;"";6.14.0
 29817;Nuova versione pdf Natixis;6.12.1;"";6.14.0
 29815;PDF Editabili - documentGroup e xml format ko;6.12.1;"";6.14.0
 29797;Mancato aggiornamento FEA;6.14.0;"";6.14.0
+29796;Nuova versione pdf Franklin Templeton;6.12.1;"";6.12.1
+29749;Invio E-Mail al B.O. per MiFID da Postino;"";"";""
+29741;Griglia I miei conti correnti;"";"";""
+29729;Pomul - snellimento movimenti con causale non trattata;"";"";6.49.0
+29719;Visualizzazione split quote in posizione Twill (continua #29229);"";"";""
+29691;Flussi SIED non pervenuti in data 08.06.2022;"";"";""
+29544;Supporto per manutenzione server Test e Produzione fine settimana 21.05.2022;"";"";""
+29495;Rimozione firma OTP da documenti prodotti da Twill;"";"";""
+29466;Riprofilatura Opportunistica - sospensione controllo per clienti migrati;_v.6.12.0;"";_v.6.12.0
+29433;PSK ADDON - Sezione aggiuntiva con relativo punto firma per dichiarazione su KIID;_V.6.12.0;"";_v.6.12.0
+29432;PSK ADDON - Visualizzazione documenti KIID in portale cliente;_V.6.12.0;"";_v.6.12.0
+29431;PSK ADDON - Visualizzazione documenti firmati con FEA in portale cliente;_V.6.12.0;"";_v.6.12.0
+29430;PSK ADDON - Revisione mail con link per i singoli moduli;_V.6.12.0;"";_v.6.12.0
+29429;PSK ADDON - Gestione firma per accettazione in modalità cartacea e FEA;_V.6.12.0;"";_v.6.12.0
+29428;PSK ADDON - Gestione callback per registrazione firma FEA;_V.6.12.0;"";_v.6.12.0
+29427;PSK ADDON - Gestione produzione documenti via batch;_V.6.12.0;"";_v.6.12.0
+29426;PSK ADDON - Carico xform e definizione punti firma (per circa 20 modelli);_v.6.12.0;"";_v.6.12.0
+29364;Adeguamento per IF del flusso TCLANA per informazioni ESG (segue #28238);_v.6.11.1;"";_V.6.11.1
 29353;ADM - System & Integration Test  c/o Consulia - Stream2;6.13.0;"";6.13.0
 29352;ADM - System & Integration Test  c/o Consulia - Stream1;6.13.0;"";6.13.0
 29351;ADM - System & Integration Test  c/o IFIGEST - Stream2;6.13.0;"";6.13.0
@@ -529,13 +1090,912 @@
 29341;ADM - Nuove tb con dati di dominio e punteggi PL e LIVE;6.13.0;"";6.13.0
 29340;ADM - Definizione query di popolamento e innesto in processi batch;6.13.0;"";6.13.0
 29339;ADM - Definizione tab SA, PL, LIVE con dati aggiuntivi Titolo;6.13.0;"";6.13.0
+29338;ADM - Supporto Post-Roll-Out;"";"";""
 29336;ADM - Roll-Out;6.13.0;"";6.13.0
 29335;ADM - SAL / Riunioni Interne;6.13.0;"";6.13.0
 29334;ADM - Conduzione progetto;6.13.0;"";6.13.0
+29316;PSK ADDON - Processo revisione Nuova Sottoscrizione Fondi e KIID - Valutuazioni progettuali;"";"";""
+29166;Verifica / supporto fasi batch 11-12.04.2022;"";"";""
+29126;Migrazione Unica SIM - censimento utenze e definizione contratti evoluta;_V.6.12.0;"";_V.6.12.0
+29111;FIA - Revisione batch ROSEG;"";"";""
+29110;FIA - Revisione buildptf per considerare la manleva;"";"";""
+29109;FIA - Manleva: funzione Twill Office;_v.6.11.0;"";_v.6.11.0
+29108;FIA - Manleva: censimento automatico;"";"";""
+29107;FIA - Revisione modulo d'ordine Proposta per nuovi disclaimer;"";"";""
+29106;FIA - Revisione controlli semafori;"";"";""
+29105;FIA - Nuovo flag richiesta cliente e salvataggio in ptf;"";"";""
+29104;FIA - Action per indicare la possibilità di nuova richiesta cliente in concentrazione;"";"";""
+29103;"FIA - revisione controlli concentrazione per ""Tipologia"" e rimozione limite 500.000 per FIA";_v.6.10.1;"";_v.6.11.0
+29098;PSK - Revisione testo mail per comprendere una nuova dicitura dinamica;_V.6.12.0;"";_v.6.12.0
+29097;PSK - Gestione allegati per modulo prima sottoscrizione, fascicolo di consiglio;_V.6.12.0;"";_v.6.12.0
+29096;PSK - Gestione produzione documenti via batch (ROSDR);_V.6.12.0;"";_v.6.12.0
+29095;PSK - Integrazione con postino;_V.6.12.0;"";_v.6.12.0
+29094;PSK - Revisione iter di firma considerando presenza documenti di prima sottoscrizione che NON sono da firmare;_V.6.12.0;"";_v.6.12.0
+29093;PSK - Tutti i documenti devono essere prima scaricati prima delle firme;_V.6.12.0;"";_v.6.12.0
+29092;PSK - Gestione nuovi PUBTIP per considerare se il doc.to è per download o per firma;_V.6.12.0;"";_v.6.12.0
+29091;PSK - Prepopolamento nuovo documento NON scaricabile;_V.6.12.0;"";_v.6.12.0
+29090;PSK - Nuovo link a fianco dell'operazione con accesso KIID;_V.6.12.0;"";_v.6.12.0
+29089;PSK - Gestione array allegati su attuale framework;_V.6.12.0;"";_v.6.12.0
+29088;PSK - Metodo per riconoscere se fondo è già nel ptf;_V.6.12.0;"";_v.6.12.0
+29087;PSK - Utilizzo parametrico per gestione pdf editabili per Fondi;_V.6.12.0;"";_v.6.12.0
+29086;PSK - Completamento attività su Morgan Stanley;_V.6.12.0;"";_v.6.12.0
+29061;CTR - System & Integration Test  c/o CONSULIA Stream5;"";"";""
+29060;CTR - System & Integration Test  c/o IFIGEST Stream5;"";"";""
+29052;Piano manutenzione Twill;"";"";""
+29036;Twill - assistenza a Edp per riavvio server applicativo;"";"";""
+29014;Twill fasi batch 24.03.2022 - mail saldi post pubblicazioni dati non completata;"";"";""
+29006;Twill fasi batch 23.03.2022 - mail saldi post pubblicazioni dati non completata;"";"";""
+29005;aggiornamento scadenza questionario Mifid;_V.6.11.0;"";_V.6.11.0
+28978;FIA - Revisione monitoraggio per concentrazione fascia FIA (rif #28977) - Valutazioni progettuali;"";"";""
+28977;FIA - Revisione controlli concentrazione fascia Fia - Valutazioni progettuali;"";"";""
+28919;Monitoraggio - Segnalazione scadenza mifid su clienti con solo GP;"";"";""
+28914;Unicapem - verifica valori;_V.6.11.0;"";_V.6.11.0
+28907;Errore inserimento note monitoraggio;"";"";""
+28898;Creazione Staffe tabella TCLDSE;"";"";""
+28852;Escludere alcuni NDG dalla possibilità di attivare la FEA;"";"";""
+28850;Migliorie modulo MITO da Postino;"";"";""
 28819;ADM - Simulazione/calcolo dell?adeguatezza multivariata di un SF - Valutazioni progettuali;6.13.0;"";6.13.0
-29796;Nuova versione pdf Franklin Templeton;6.12.1;"";6.12.1
-39747;Applicazioni Banca - mancata assegnazione patrimonio per ptf con saldo a 0 (rif. #39210);"";"";1.8.0
-39723;Applicazioni Banca - % con tre decimali in lista ricerca contratti (rif. #39210);1.7.1;"";1.8.0
-39644;Applicazioni Banca - Documento Contratto - tuning (rif. #39210);1.6.1;"";1.7.0
-39610;(rif #39210) - Applicazioni Banca - ambiente Test - segnalazione importo canone in deroga non numerico;1.6.1;"";1.7.0
-38290;ERRORE APERTURA CONTRATTO GT;"";"";1.4.0
+28782;Ripristino stampa posizione globale cliente;"";"";""
+28709;PSK - Modulo Sottoscrizione SICAV Blank con FEA e Prima sottoscrizione OICR esposizione KIID - Valutazioni progettuali;"";"";""
+28659;Concentrazione Polizze;"";"";""
+28656;Verifica / supporto fasi batch 17.02.2022;"";"";""
+28632;"Segnalazione monitoraggio da NON attivare per clienti ""Professional""";"";"";""
+28418;Revisione % concentrazione complessi;"";"";""
+28416;Errore accesso portafoglio;"";"";""
+28337;Assistenza fasi batch Ifigest per flussi non arrivati (25.01.2022);"";"";""
+28319;Utilizzo FEA dall'estero (segue da RM #27469);6.19.0;"";6.19.0
+28312;Modifica moduli x form per FEA (rif #17100);"";"";""
+28310;Supporto per flussi Cabel non arrivati 21.01.2022;"";"";""
+28298;Adattamento concentrazione complessi;"";"";""
+28272;FEA - Punti firma nel Fascicolo di Consiglio;"";"";""
+28241;Supporto segnalazioni monitoraggio e controllo professionali su SF Complessi non corretti;"";"";""
+28175;"Documentazione generica in visibilità ai clienti su sezione ""comunicazioni""";"";"";""
+28173;strong authentication per numeri esteri;"";"";""
+28059;Quota monitoraggio AddOn;"";"";""
+27827;MiFID firmabile con FEA da Postino;"";"";""
+27756;Posizione Cliente - Indicazione Delega;"";"";""
+27731;Clienti Professionali/NAP;"";"";""
+27694;Acquisizione dati aggiuntivi TTIANA per controlli su SF Illiquidi e Fondi OICR < 25 MLN tramite query su AS400 ed esposizione dati;"";"";""
+27583;Estrazioni massive monitoraggio per le funzioni di controllo;"";"";""
+27556;Verifica punteggi di adeguatezza e appropriatezza;"";"";""
+27552;SAL - Nuovo Rendiconto Saldi Storici;"";"";""
+27522;ADCOI in errore - Ambiente di TEST;"";"";""
+27500;Attivazione servizio family office;"";"";""
+27482;Fasi in errore in ambiente di Test e Produzione - attività di verifica e supporto;"";"";""
+27475;Scarico schede mifid scadute - Verifiche e adeguamenti Twill;"";"";""
+27469;Strong Authentication dall'estero con numero di telefono italiano;"";"";""
+27468;Verifica fasi batch di Test e Produzione;"";"";""
+27463;Carico estemporaneo dati aggiuntivi TTIANA per controlli su SF Illiquidi e Fondi OICR < 25 MLN;"";"";""
+27340;Flussi giornalieri di Cabel non pervenuti in data odierna;"";"";""
+27319;Acquisizione dati aggiuntivi TTIANA per controlli su SF Illiquidi e Fondi OICR < 25 MLN;"";"";""
+27317;MON - (AddOn) - Monitoraggio: evidenze SF non corretti per SF complessi;"";"";""
+27300;Revisione fasce e controlli di concentrazione;"";"";""
+27277;Supporto flusso giornaliero GP Dati integrativi;"";"";""
+27226;Adattamenti per revisione adeguatezza/appropriatezza per clienti Professionali;"";"";""
+27175;MON - (AddOn) - MONTETITOLI CATEGORIA: CUSTODIA , GAR E COLLOCAMENTO;"";"";""
+27173;MON - (Correttiva) - visibilità completa monitoraggio;"";"";""
+27170;correzione label;"";"";""
+27169;Estrazione accesso utenti;"";"";""
+27073;Approfondimento per differenze Clientela Retail e Professionale;"";"";""
+27052;Alert Monitoraggio da login - Estrazione timestamp ultimo accesso;"";"";""
+27042;Richiesta estrazione punteggi di Adeguatezza e Appropriatezza dei Clienti in TCLANA;"";"";""
+26940;CTR - Diversificazione trattamento contratti in base allo stato della simulazione;"";"";""
+26939;CTR - Gestione simulazioni multiple;"";"";""
+26938;CTR - Adeguamento base dati e aggiornamento pregresso;"";"";""
+26937;CTR - Gestione registrazione firma FEA con invio mail al B.O.;6.22.0;"";6.22.0
+26936;CTR - Integrazione documento con IdSign per FEA con invio mail al Cliente;6.22.0;"";6.22.0
+26935;CTR - Revisione Xform per punti firma;6.22.0;"";6.22.0
+26934;CTR - Stampa pdf di Benvenuto;"";"";""
+26933;CTR - Simulatore - Gestione prodotti;6.22.0;"";6.22.0
+26932;CTR - Simulatore;6.22.0;"";6.22.0
+26931;CTR - Stampa pdf delle Note;"";"";""
+26930;CTR - Gestione Note;6.22.0;"";6.22.0
+26929;CTR - Gestione Extra Dossier;6.22.0;"";6.22.0
+26928;CTR - Edit Contratto con possibilità di sostituzione dell'esistente;6.22.0;"";6.22.0
+26927;CTR - Edit Cliente con Link a Contratto in essere e in via di definizione;6.22.0;"";6.22.0
+26926;CTR - I miei clienti - visualizzazione/edit contratto (sia nuova apertura che contratto eventualmente già esistente);6.22.0;"";6.22.0
+26925;CTR - Censimento excel per fascia dedicata di errori;"";"";""
+26924;CTR - Attività trasversali per porting;6.22.0;"";6.22.0
+26923;CTR - Test non regressione;6.22.0;"";6.22.0
+26922;CTR - Solo DM può lavorare sui contratti;6.22.0;"";6.22.0
+26921;CTR - Revisione strutture in Applicazioni Banca;"";"";""
+26920;CTR - Processo trasferimento dati Applicazioni Banca in Twill;"";"";""
+26919;CTR - Definizione strutture in Twill e compatibilità Dizionario;"";"";""
+26918;CTR - Definizione e studio oggetti per porting;_v.6.11.0;"";_v.6.11.0
+26917;CTR - Roll-Out ;"";"";""
+26916;CTR - SAL / Riunioni Interne;"";"";""
+26915;CTR - Conduzione progetto;"";"";""
+26902;MON - (Correttiva) - Evidenza segnalazioni Mifid non collegate a contratto;"";"";""
+26900;Evidenza obbligazioni subordinate e bail-in;"";"";""
+26894;CoCo Bond (Contingent Convertible Bond) - identificazione e controlli in concentrazione;"";"";""
+26875;MON - Progetto Monitoraggio;"";"";""
+26871;MON - (Correttiva) - Segnalazioni post demo;"";"";""
+26831;Nuovo Modulo firmabile con FEA da Postino;"";"";""
+26816;Valutazione attivazione calcolo performance a livello di Posizione Globale e/o Dossier;"";"";""
+26809;Verifica carichi KO 22.07 causa mancanza flussi Cabel;"";"";""
+26630;Dashboard - aggiungere contatore Totale Dossier;"";"";""
+26629;POEVT - controllo e blocco per numeri flussi da trattare;"";"";""
+26596;Valutazione Costi-Benefici - 3. Introduzione del controllo sulle operazioni effettuate negli ultimi 7 giorni;"";"";""
+26568;SF Illiquidi;"";"";""
+26567;MON - (AddOn) - Monitoraggio: evidenze SF non appropriati, non adeguati;"";"";""
+26519;MON - Revisione eposizione adeguatezza/appropriatezza OnLine;"";"";""
+26518;MON - Revisione Store Procedure adeguatezza/appropriatezza;"";"";""
+26517;MON - Calcolo codice obiettivo in base al punteggio di adeguatezza (TCLANA.ADCPNT) e punteggio strategico cliente=TCLANA.ADCPNT;"";"";""
+26516;MON - Adeguamento calcolo in buildPortafoglio con utilizzo nuovi dati Mifid;"";"";""
+26515;MON - Adeguamento riprofilatura cointestazioni con applicazione valore più prudente dei cointestatari;"";"";""
+26514;MON - Calcolo e scrittura valore Coerenza SF su TTIANA/G in PL e LIVE;"";"";""
+26513;MON - Esposizione Mifid su scheda anagrafica;"";"";""
+26512;MON - Acquisizione dati Mifid in TCLANA;"";"";""
+26479;Visibilità macchine disco E: macchine di produzione .68 e .74;"";"";""
+26382;Verifica errore fasi batch in ambiente di TEST e rallentamento OnLine;"";"";""
+26381;MODIFICA STRUTTURA RETE;"";"";""
+26268;Polizze a garanzia - Blocco rimborsi;6.23.0;"";6.23.0
+26114;MON - System & Integration Test  c/o Consulia;"";"";""
+26113;MON - Tuning OnLine per visualizzazione evidenze di monitoraggio;"";"";""
+26112;MON - Attivazione monitoraggio batch;"";"";""
+26111;MON - Adeguamenti per WatchList di IF;"";"";""
+26110;MON - Attivazione/adeguamento della visualizzazione e dei controlli del termometro;"";"";""
+26109;MON - Definizione delle 5 fasce proposte (configurazione Twill Office);"";"";""
+26108;MON - Gestione ed esposizione punteggio di rischio singolo SF;"";"";""
+26107;MON - Revisione buildPortafoglio per applicazione nuovo algoritmo di calcolo;"";"";""
+26106;MON - Gestione file volatilita, rating in ambito PL e LIVE (ora solo in SA);"";"";""
+26105;MON - Scheda Contratto per dossier per revisione esposizione dati simile a Posizione Globale Cliente;"";"";""
+26104;MON - Scheda Contratto per dossier per gestione filtro lista CC collegati;"";"";""
+26103;MON - Revisione buildPortafoglio;"";"";""
+26102;MON - Revisione buildContratto;"";"";""
+26101;MON - Revisione Batch Portafogli;"";"";""
+26100;MON - Revisione Batch Contratti;"";"";""
+26099;MON - Revisione e definizione strutture in Twill;"";"";""
+26098;MON - Roll-Out e Post Roll-Out;"";"";""
+26096;MON - Macro Analisi Tecnico/Funzionale e sal;"";"";""
+25968;Demo consulenza su Polizze ven 30.04 e preparazione ambiente di TEST di Banca Ifigest;"";"";""
+25966;Supporto 27.04.2021 per mancato carico file DatiIntegrativiGP;"";"";""
+25936;Mancata ricezione flussi Cabel 21.04.2021;"";"";""
+25811;MON - Revisione regole concentrazione;"";"";""
+25798;Verifica fasi batch del 03.04 (errore trattamento TCLCOL);"";"";""
+25790;MON - Acquisizione in SA dei flussi volatilità (da #25423);"";"";""
+25782;MON - Acquisizione in SA dei flussi rating (da #25423);"";"";""
+25779;Acquisizione in SA del flusso PosizioniGP (da #25423);"";"";""
+25737;AMPLIAMENTO VISIBILITA' UTENTE ROBBAB;"";"";""
+25661;caricamento flusso EMT tracciato V3;"";"";""
+25614;MODIFICA STRUTTURA RETE;"";"";""
+25559;C/E dossier 055999 non presente in TWILL;"";"";""
+25460;Demo per visualizzazione e consulenza Polizze;"";"";""
+25423;MON - Acquisizione in SA dei flussi emt;"";"";""
+25249;MON - Acquisizione/elaborazione Mifid da flussi Cabel;"";"";""
+25165;Errore carico liquidità GP (Load TDSSAL_GP) - AMBIENTE DI PRODUZIONE;"";"";""
+25144;Assistenza e verifica fasi batch Twill di Test e Produzione;"";"";""
+25142;MON - Valutazioni Progettuali;"";"";""
+25067;Supporto fasi di TEST e PRODUZIONE;"";"";""
+25061;ANOMALIA PATR. ALLA DATA;"";"";""
+25031;Sal Periodici Twill Ifigest;"";"";""
+25030;Installazione / System Test / Post-Avvio - Twill Ifigest;"";"";""
+24976;Automatizzazione flusso integrativo GP;"";"";""
+24975;Carico Struttura Rete;"";"";""
+24974;MON - (AddOn) - Dashboard - link a fianco a liquidità;"";"";""
+24973;Esposizione differenza tra prezzo e prezzo di carico;"";"";""
+24969;Affidamenti - intervento / verifica per evidenza clienti con affidamento;"";"";""
+24968;Agenda - Titoli in scadenza;"";"";""
+24776;Verifica CLASSIFICAZIONE ASSET CLASS per Polizze;"";"";""
+24767;Saldi CC - Saldo Contabile <> (Saldo Disponbile +/- partite prenotate);"";"";""
+24753;Twill Produzione - fasi batch Connection reset;"";"";""
+24728;Sezione ?prossimi impegni?, il giorno non è corretto;"";"";""
+24643;Gestione copia flussi Cabel in directory alternativa;"";"";""
+24570;Installazione del 18.12.2020;"";"";""
+24569;"Errata classificazione ""Negoziabile""";"";"";""
+24566;Configurazione Twill office;"";"";""
+24559;Ctv Saldo GP non corretto;"";"";""
+24556;Attività per attivazione modello di Consulenza;"";"";""
+24553;(rif RFC 1124) inserire tra le informazioni sui servizi accessori le informazioni riguardanti il codice MITO ( Home Banking ) ;"";"";""
+24519;Revisione calcolo CTV Derivati;"";"";""
+24464;"Integrazione Twill con Xform e produzione documento ""Posizione Cliente"" da funzione OnLine Posizione Globale Cliente";"";"";""
+24407;Strumenti Finanziari;"";"";""
+24395;Saldi giornalieri: caricare anche per titoli non attivi;"";"";""
+24370;Assistenza quadratura e adeguamento controllo semantico su TDSSAL;"";"";""
+24351;Esposizione Saldo nella lista di ricerca dei dossier;"";"";""
+24330;Flusso TDSCCC con record non collegati a TCLRAP;"";"";""
+24284;Ampliare set informativo dei dossier GP;"";"";""
+24283;Lista sottostanti GP - aggiungere cambio e cambio medio di carico;"";"";""
+24282;"Lista titoli: esposizione classificazione ""negoziabile"" non attesa";"";"";""
+24281;Monte Titoli del Promotore;"";"";""
+24280;Gestione dossier garanzia;"";"";""
+24279;Liquidità negative / affidamenti;"";"";""
+24246;Supporto saldi Liquidità non presenti in GP;"";"";""
+24220;Cambio label di colonna Clienti in Relazioni in Lista Posizione Globale Clienti;"";"";""
+24219;Modificare visualizzazione prezzo e prezzo medio/c per DCS ;"";"";""
+24198;Esposizione Dossier Garanzia in dashboard;"";"";""
+24182;TCLCLR con filiale <> TCLRAP;"";"";""
+24168;Assistenza ricarico flussi non corretti ricevuti da Cabel;"";"";""
+24142;Global Search - Ricerche puntuali su NDG e Dossier;"";"";""
+24130;Calcolo peso rischio per portafoglio Dossier;"";"";""
+24122;Ricerca dossier ed export;"";"";""
+24054;FEA Italiana Flexible Solution - modifiche e integrazioni - Parte Evolutiva;"";"";""
+24012;Gestione liquidità GP sottostante al dossier;"";"";""
+23968;Gestione saldo derivati di tipologia DCS;"";"";""
+23967;Saldi dossier su SF identificati come Polizze ;"";"";""
+23965;Invio giornaliero dei Saldi tramite fase ad hoc;"";"";""
+23943;TTIANA senza ISNCOD;"";"";""
+23940;Revisione accessi Dossier GP;"";"";""
+23915;Visualizzazione Dossier;"";"";""
+23907;Carico e gestione tabella Collegamenti Rapporti;"";"";""
+23871;Percentuali anomale;"";"";""
+23869;Carico storico prezzi da flusso excel;"";"";""
+23797;Esposizione flussi GP con linea di investimento;"";"";""
+23796;Dettaglio/drilldown dossier;"";"";""
+23656;Gestione flusso TGPSCA;"";"";""
+23635;Revisione processo di BuildPortafoglio - Stream 4;"";"";""
+23634;Revisione processo di BuildPortafoglio - Stream 3;"";"";""
+23587;Integration test, NON Regression test ambiente CA;"";"";""
+23583;Revisione chiave rapporto per C/c Estrero;"";"";""
+23409;flusso polizze ANIMA in errore;"";"";""
+23286;Integrazione documentazione in proposta per polizze Eurovita;"";"";""
+23273;Composizione Portafoglio - Drill Down su GP;"";"";""
+23272;System & Integration Test  c/o IFIGEST;"";"";""
+23271;System & Integration Test;"";"";""
+23269;Composizione Portafoglio - Derivati;"";"";""
+23268;Gestione Posizione Globale;"";"";""
+23267;Elenco Posizioni Globali;"";"";""
+23266;Elenco Contratti;"";"";""
+23265;Composizione Portafoglio - Tuning su sezioni esistenti;"";"";""
+23264;Info Generali e Box Saldi c/c - Tuning;"";"";""
+23263;Anagrafica SF - Tuning;"";"";""
+23262;Agenda - Tuning;"";"";""
+23261;Pubblicazioni - Tuning;"";"";""
+23260;Gestione dei Prezzi- Tuning;"";"";""
+23259;Tuning Funzionalità;"";"";""
+23258;Anagrafica MIFID: Rimozione Funzionalità;"";"";""
+23257;Controlli Adeguatezza - Rimozione Funzionalità;"";"";""
+23256;Elenco Clienti - Rimozione Funzionalità;"";"";""
+23255;Elenco Operatività - Rimozione Funzionalità;"";"";""
+23254;Monitoraggio - Rimozione Funzionalità;"";"";""
+23253;Composizione PTF - Slide 3 - Rimozione Funzionalità;"";"";""
+23252;Elenco Operatività - Rimozione Funzionalità;"";"";""
+23251;Cruscotto di Gestione - Rimozione Funzionalità;"";"";""
+23250;Rimozione Funzionalità;"";"";""
+23249;Composizione PTF - Slide 1/2 - Batch;"";"";""
+23248;Composizione PTF - Slide 2 - Asset Class;"";"";""
+23247;Composizione PTF - Slide 1 - Ambito - OnLine (F+B);"";"";""
+23246;DashBoard;"";"";""
+23245;Revisione Processi ;"";"";""
+23244;Revisione Processi GL;"";"";""
+23243;Revisione Processi ;"";"";""
+23242;Revisione Processi PL;"";"";""
+23241;Gestione delle liste di Watch List / Scoring OnLine;"";"";""
+23240;Costruzione della tabella TTIPRS / TTIPRS_PNT;"";"";""
+23239;Anagrafica Titoli;"";"";""
+23238;Processo di creazione di TTIANX;"";"";""
+23237;Definizione Matrice di Riclassificazione;"";"";""
+23236;Asset Class;"";"";""
+23235;Generazione di TSTRIS;"";"";""
+23234;Caricamento Excel;"";"";""
+23233;Struttura Rete;"";"";""
+23232;Gestione Clienti senza FA assegnato;"";"";""
+23231;Gestione Dossier senza c/c di appoggio;"";"";""
+23230;Gestione Ambito di un singolo SF;"";"";""
+23229;Gestione Conti Margine;"";"";""
+23228;Gestione C/c non associati ad un Dossier;"";"";""
+23227;Strumenti Finanziari;"";"";""
+23226;Revisione processo di BuildPortafoglio - Stream 2;"";"";""
+23225;Revisione BuildPTF;"";"";""
+23224;Rinomina Contratto Base -> Posizione Globale Cliente;"";"";""
+23223;Gestione Parametro di Properties;"";"";""
+23222;Gestione Posizione Globale;"";"";""
+23221;Definizione Processo di acquisizione Schede Prodotto per Derivati;"";"";""
+23220;Integrazione con IFIGEST;"";"";""
+23219;Definizione Processo di acquisizione Schede Prodotto per Fondi;"";"";""
+23218;Integrazione con FIDA;"";"";""
+23217;Adeguamento processo di acquisizione Schede Prodotto;"";"";""
+23215;Integrazione con Analysis;"";"";""
+23210;Integrazione con CABEL;"";"";""
+23209;SAL / Riunioni Interne;"";"";""
+23208;Macro Analisi Tecnico/Funzionale;"";"";""
+23207;Conduzione progetto ;"";"";""
+23206;Project Generals;"";"";""
+23205;Accesso in Active Directory;"";"";""
+23204;Configurazione base di TWILL;"";"";""
+23203;Set Up dell'ambiente in SKILL;"";"";""
+23202;Attività Progettuali Base;"";"";""
+23201;Supporto Post-Roll-Out;"";"";""
+23200;Roll-Out ;"";"";""
+23198;Installazione generica ;"";"";""
+23197;Formazione;"";"";""
+23196;Documentazione Tecnica;"";"";""
+23195;Valutazioni Progettuali;"";"";""
+23194;Project Generals;"";"";""
+23193;Pulizia del Software per adeguamento a Prodotto;"";"";""
+23192;Adeguamento processo su Consulia;"";"";""
+23191;Modificare accessi con ROUCOD statico;"";"";""
+23190;Revisione gestione TSTRIS e TTARUO;"";"";""
+23189;Attività di miglioramento prodotto Licenza d'Uso;"";"";""
+23182;POAPI / POAPD - check sequenzialità flussi trattati;"";"";""
+23092;TTIRDL da riportare in ambiente live;"";"";""
+22688;Adeguamento acquisizione processi flussi esistenti;"";"";""
+22574;Estensione strategico in ambito Raccolta Diretta;"";"";""
+22458;Accesso al portale cliente in SCA;"";"";""
+22369;Componente Ramo I per Switch Multi-ramo;"";"";""
+22325;Twill Office - rimozione strumenti e dashboard in home page;"";"";""
+22322;errore crea raccomandazione da menù operaitività;"";"";""
+22321;anomalia su fascicolo di consiglio esteso - NON CONSOLIDABILE - tutti i clienti in EVOLUTA;"";"";""
+22310;Errore OPERATIVITA' SWITCH SU POLIZZA;"";"";""
+22300;Polizze- Asset Class messe tutte in comparto Liquidità ;"";"";""
+22299;Quadratura SLG PROFIN vs TWILL - Verifica dashboard Twill per la vista Manager vs vista in Profin ( Estrazione Dati );"";"";""
+22293;Colonna Saldo Disponibile non tiene conto del segno;"";"";""
+22275;Appropriatezza su SF in ptf per Persone Giuridiche;"";"";""
+22270;Composizione ptf pre e post errato in riepilogo raccomandazione;"";"";""
+22237;Tuning Griglie - Fase 1di2 - Rinomina Label + Layout Compatto/Esteso;"";"";""
+22236;Ottimizzazione specchietto composizione portafoglio dashboard;"";"";""
+22235;Ottimizzazione lista raccomandazioni;"";"";""
+22213;POAPI / POAPD - Creazione raccordi TTARKR;"";"";""
+22200;Anomalia Switch Polizze;"";"";""
+22193;POULI - adeguamenti;"";"";""
+22190;POUNQ - Gestione evento ?396|Modifica coordinate bancarie?  + varie;"";"";""
+22185;Gestione Società CORE in Polizze & GP;"";"";""
+22181;inserimento filtro in modalità Manager;"";"";""
+22171;Visualizzazione esiti semaforici adeguatezza/appropriatezza in lista SF da semaforo Strumenti Finanziari;"";"";""
+22165;Verifica su GP Symphonia estinti;"";"";""
+22155;Ripristinare gestione dei sottostanti delle polizze/GP in Ricerca per Asset Class ;"";"";""
+22150;Nelle griglie dei saldi mancano le date di riferimento del saldo e del prezzo;"";"";""
+22149;Aggiungere il campo data fine per il calcolo della performance per stampe ;"";"";""
+22148;Riportare la causale aggiuntiva ( CAUTXT ) in Movimenti Polizze ;"";"";""
+22147;Attivazione link Search&Compare Fund in Header di TWILL;"";"";""
+22145;Esposizione della volatilità 3 anni in Grafico Coerenza;"";"";""
+22144;stampa scheda cliente;"";"";""
+22142;POUNQ - adeguamenti;"";"";""
+22141;POULI - trattamento eventi privi di ordine;"";"";""
+22140;GPSYM - batch trattamento flussi;"";"";""
+22139;Polizza Eurovita - record con check-error;"";"";""
+22134;Problematica su operazioni effettuate su uno stesso comparto presente mediante più contratti;"";"";""
+22131;Funzione di Interrogazione dei movimenti dei C/C affidamento;"";"";""
+22130;Costi benefici - Colore e dimensione icone;"";"";""
+22129;Costi benefici - Adeguatezza PTF;"";"";""
+22128;Ricerca fondi per switch;"";"";""
+22127;ETP: Acquisto e vendita in giornata con acquisizione eseguito;"";"";""
+22126;Rimane la clessidra dei documenti in produzione anche se sono stati già prodotti;"";"";""
+22108;funzionamento errato raccolta diretta per rapporti fiduciari;"";"";""
+22104;Problema split vendita;"";"";""
+22094;Tuning su Dati Obbligazioni;"";"";""
+22093;Gestione ttarki.decdat in Aggiuntivi/Switch di Polizze;"";"";""
+22092;Errore in Switch Polizze quando totale % non 100;"";"";""
+22089;Aggiornamento messaggio di blocco;"";"";""
+22088;Portale Cliente - Chiusura Modale dopo Attivazione FEA;"";"";""
+22087;Simulazione liquidità: all?interno il totale saldo raccomandazione non viene aggiornato;"";"";""
+22086;Acquisto SF in portafoglio con watch list e non adeguato;"";"";""
+22085;Sistemare % su grafici di confronto (appaiono con il ?.?) ;"";"";""
+22083;Il contatore del monitoraggio è a 0 anche dopo pubblicazione dati.;"";"";""
+22082;Menù monitoraggio e lista monitoraggio da contratto: filtro blank su tipologia segnalazione;"";"";""
+22081;Personalizzazioni griglie compatto ed esteso;"";"";""
+22080;Cambiare mittente mail da profin@bancaconsulia a comunicazioni@bancaconsulia.it;"";"";""
+22079;Configurazione Settings di default a 2 decimali;"";"";""
+22078;Movimenti CC/Titoli del portale Cliente: prevedere massimo righe 10/25/50 /Tutti;"";"";""
+22073;Accesso Cliente - Composizione ptf e dati mail telefono;"";"";""
+22063;"Nell'elenco documenti, Reinvia Fea --> ""Invia con Fea""";"";"";""
+22062;Firma FEA: non arriva Mail e deve dare alert a utente ?è stata inviata mail al cliente..?;"";"";""
+22061;Acquisto SF con rischio liquidità KO deve finire tra gli SF non adeguati ;"";"";""
+22060;FundCompare: chiamata KO;"";"";""
+22059;Confronta per COMPARTI con Header Colonne come per Asset;"";"";""
+22058;Supporti operativi ritorna ?directory non valida?;"";"";""
+22057;Lista segnalazioni monitoraggio - Adeguamento;"";"";""
+22056;Fondi: richiesta l?evidenza lista movimenti fondi (TFOMOV) in AGGIUNTA alla lista movimenti dei titoli (TTIMOV);"";"";""
+22055;Coerenza/Strumenti finanziari: totali nel dettaglio SF ? invertite label colonne %peso con %apporto;"";"";""
+22054;Non compaiono i dati di concentrazione (anche nel analisi/consiglio) ;"";"";""
+22049;L?eseguito è atterrato in TWILL ma l?ordine non risulta chiuso;"";"";""
+22032;Esposizione errata saldo titolo;"";"";""
+21962;Accesso portale cliente - Non si attiva Strong Auth;"";"";""
+21961;Sosttoscrizione PAC - Rendere Giorno Addebito Rata OBBLIGATORIO;"";"";""
+21960;Gli ESEGUITI NON DISTRUGGONO IL PTF;"";"";""
+21959;Rendimento YTD/Volatilità YTD: valori non evidenziati con separatore;"";"";""
+21958;Concentrazione complessi: compare il primo valore, non il più alto;"";"";""
+21957;Ordini Acquisto AZIONI - Valori % Euro;"";"";""
+21955;Esposizione classificazione SF - Ordine Fondo;"";"";""
+21954;Raccomandazione con ordine Fondo Pac - Errore consolidamento proposta;"";"";""
+21953;Modifica esposizione dati diffEuro e % su Contenitore polizze e sottostanti;"";"";""
+21952;informazione di Rendimento YTD mancante nella stampa posizione consulenza;"";"";""
+21951;il link alla scheda di analysis per sottostanti polizze da sistemare;"";"";""
+21949;Modifica etichetta Reportistisca;"";"";""
+21948;Strong Authentication accesso automatico;"";"";""
+21947;Aggiornamento portafoglio Riepilogo solo su Raccomandazione In definizione;"";"";""
+21946;Completare e allineare tutte le fasi batch;"";"";""
+21945;Documenti possibilità di rinvio mail FEA;"";"";""
+21941;Mail per FEA;"";"";""
+21940;Errore in campo Rate pagate;"";"";""
+21939;Ordine polizza Uniqa - dati beneficiario - ordine rimene in Da Completare;"";"";""
+21938;Descrizione dati aggiuntivi ordine Polizza Uniqa;"";"";""
+21937;Raccomandazione 302120 (amb Prod.) - manca abilitazione tasto Consolida;"";"";""
+21936;Nuova sottoscrizione GP - ricerca sottostanti - semaforo adeguatezza;"";"";""
+21935;Ordine nuova sottoscrizione - evidenza prezzo;"";"";""
+21914;Ricerca per titolo;"";"";""
+21829;Esecuzione fasi SA - PL - LIVE;"";"";""
+21793;TOTALI POLIZZE NON CORRETTI ( ANCHE PER POSIZIONI UNIT );"";"";""
+21762;Introduzione Stacked Columns in Riepilogo consulenza e confronta per Asset Class;"";"";""
+21659;Dossier estinti e CC assegnato a dossier diversi attivi;"";"";""
+21624;Regressione in rimborso POLIZZE;"";"";""
+21623;Regressione in Rimborso GP CONSULIA;"";"";""
+21622;Revisione Accesso PORTALE CLIENTE;"";"";""
+21614;Download file GP/Polizza in Proposta;"";"";""
+21497;Cruscotto di gestione segue RM 20862;"";"";""
+21496;Verifica User/password governance;"";"";""
+21485;Apertura dettagli concentrazione su POST;"";"";""
+21480;Raccolta Diretta - dossier cointestati in CE;"";"";""
+21478;Modale selezione dossier da assegnare;"";"";""
+21465;Errore in Raccolta diretta;"";"";""
+21443;budget di rischio;"";"";""
+21442;Problemi di responsive su iPad;"";"";""
+21439;Adeguamento Accesso Portale Cliente con Video 24/co;"";"";""
+21438;confrontO PER ASSET CLASS;"";"";""
+21437;TRACCIABILITà;"";"";""
+21436;PERFORMANCE E AGGREGAZIONE FONDI - PUNTO 3,4 E 5;"";"";""
+21435;PERFORMANCE E AGGREGAZIONE FONDI - PUNTO 2;"";"";""
+21434;PERFORMANCE E AGGREGAZIONE FONDI - PUNTO 1;"";"";""
+21433;MONITORAGGIO - EVOLUTIVE - PUNTO 4;"";"";""
+21432;MONITORAGGIO - EVOLUTIVE - PUNTO 3;"";"";""
+21431;MONITORAGGIO - EVOLUTIVE - PUNTO 2;"";"";""
+21430;MONITORAGGIO - EVOLUTIVE - PUNTO 1;"";"";""
+21429;MONITORAGGIO - CORRETTIVA - PUNTO 3;"";"";""
+21428;MONITORAGGIO - CORRETTIVA - PUNTO 2;"";"";""
+21410;Diretta - ricerca nuovo titolo;"";"";""
+21407;Anomalia Tabs operando con navigazione prev/next del browser;"";"";""
+21393;Pagina di visione globale per Cliente (in Scheda Cliente e/o Portale Cliente);"";"";""
+21392;Ultime operatività in dashboard / lista operatività;"";"";""
+21391;Raccomandazione RIEPILOGO - Riepilogo Portafoglio;"";"";""
+21390;Raccomandazione RIEPILOGO - Elenco Operazioni;"";"";""
+21389;Raccomandazione RIEPILOGO - Composizione;"";"";""
+21388;Raccomandazione RIEPILOGO - Controllo adeguatezza;"";"";""
+21387;Raccomandazione - Grafici di confronto;"";"";""
+21386;Raccomandazione - Note;"";"";""
+21385;Raccomandazione - Elenco documenti con download;"";"";""
+21384;Raccomandazione - Definizione e produzione documenti;"";"";""
+21383;Raccomandazione - Elenco operazioni;"";"";""
+21382;Raccomandazione - Inserimento nuova operazione;"";"";""
+21381;Raccomandazione - Confronta per Asset Class;"";"";""
+21380;Raccomandazione - Simula ptf attuale;"";"";""
+21379;Raccomandazione - Costi e benefici;"";"";""
+21378;Raccomandazione - Simulazione liquidità;"";"";""
+21377;Raccomandazione - Controlli Adeguatezza;"";"";""
+21376;Raccomandazione - Revisione GUI;"";"";""
+21375;Raccomandazione - Inserimento/Edit;"";"";""
+21374;Raccomandazione - Lista;"";"";""
+21373;Scheda Prospect - PDF Scheda Posizione;"";"";""
+21372;Scheda Prospect - Grafici di Confronto;"";"";""
+21371;Scheda Prospect - Dettaglio Composizione Portafoglio;"";"";""
+21364;INFO SU Delegati/Legali Rappresentanti;"";"";""
+21363;MANCA POSSIBILITà DI RIMBORSO TOTALE PER LE POLIZZE;"";"";""
+21362;FILTRO IN OPERATIVITA';"";"";""
+21361;MONITORAGGIO;"";"";""
+21360;CAUSALE DESCRIZIONE MOVIMENTI TITOLI;"";"";""
+21359;TIPOLOGIA DOSSIER;"";"";""
+21357;SESSIONE SCADUTA;"";"";""
+21356;EVENTI IN AGENDA;"";"";""
+21355;RACCOLTA DIRETTA evolutive - ALTA;"";"";""
+21354;RACCOLTA DIRETTA evolutive URGENTE;"";"";""
+21353;Test Raccolta Diretta - correttive - NORMALE;"";"";""
+21352;Test Raccolta Diretta - correttive - ALTA;"";"";""
+21351;Test Raccolta Diretta - correttive URGENTI;"";"";""
+21350;Riduzione funzionalità GUI;"";"";""
+21349;Riduzione funzionalità Scheda Contratto EVO;"";"";""
+21348;Riduzione funzionalità Scheda Cliente;"";"";""
+21347;SA - accesso con numero verde o QRCode;"";"";""
+21346;SA - certificazione telefono;"";"";""
+21345;Login - integrazione in Twill con PAW;"";"";""
+21340;Scheda TITOLO;"";"";""
+21307;Verifica: cancellazione di una classificazione di un titolo TTIANX.CLTCOD) che ho in ptf;"";"";""
+21284;Nuova sottoscrizione - assegnazione automatica dossier;"";"";""
+21261;filtri pre impostato;"";"";""
+21257;Errore in Switch FONDI;"";"";""
+21255;"Accendere ""aggiorna portafoglio"" dopo scelta di estensione a strategico";"";"";""
+21252;Raccomandazione in proposta, se torno in riepilogo le sezioni dei vari SF non sono espandibili;"";"";""
+21234;Raccomandazione ? Motivazioni in Informazioni Generali;"";"";""
+21232;Possibilità di consolidare la Proposta se tutti gli ordini sono in stato OK;"";"";""
+21213;Aggiornamento stato proposta dopo firma documenti;"";"";""
+21210;Switch tabs applicazione: miglioramento performance;"";"";""
+21200;Operazioni: visualizzazione dettaglio anche se salvataggio non permesso;"";"";""
+21194;Distinzione stati ordini in Proposta: da assegnare o da completare;"";"";""
+21193;Confronta per asset class tramite Titoli in Portafoglio (rif. #20831);"";"";""
+21186;Facilitare l?utilizzo del Conto Corrente in Valuta;"";"";""
+21185;Facilitare l?applicazione delle commissioni di negoziazione;"";"";""
+21184;Facilitare la visualizzazione degli Eseguiti riportando direttamente nella griglia della raccolta le seguenti informazioni;"";"";""
+21183;Quando si assegna il dossier, verificare l?ordine senza dover cliccare sul pulsante verifica;"";"";""
+21182;Migliorare la gestione dello split dell?operazione su più dossier titoli;"";"";""
+21181;Semplificare l?assegnazione dei dossier e la verifica degli ordini;"";"";""
+21169;Motivazione monitoraggio fissa per CB;"";"";""
+21168;Modifica con appendice: richiesta data;"";"";""
+21165;"Manca bottone ""Salva/aggiorna"" su polizza BimVita";"";"";""
+21156;Allargare modale per visualizzazione Style Analysis + aggiungere ambito;"";"";""
+21155;Modificare visualizzazione boolean in Costi/Benefici;"";"";""
+21154;Anomalia in Aggiorna Ordine di PROPOSTA;"";"";""
+21153;Verifica consolidamento a seguito di modifica con appendice;"";"";""
+21152;Escludere dall?assegnazione dossier i Depositi GP Symphonia ;"";"";""
+21150;Mantenere filtro sempre aperto nella ricerca guidata per asset class;"";"";""
+21149;Inserire ambito nella griglia per ricerca guidata per asset class;"";"";""
+21148;Note in Inserimento Liquidità disabilitate;"";"";""
+21145;Modifica opzioni in fase di stampa;"";"";""
+21144;Il grafico per Strumenti Finanziari non si aggiorna con le operazioni inserite nella raccomandazione;"";"";""
+21143;Visualizzare sottostanti inseriti in sottoscrizione polizza (Raccomandazione Consolidata);"";"";""
+21142;Enfatizzare tasto Aggiorna per la produzione dei fascicoli;"";"";""
+21140;Verifica messaggio comparto non presente (LU0261950041);"";"";""
+21139;Verificare funzione copia nel Riepilogo della raccomandazione;"";"";""
+21138;Disclaimer su modulo d?ordine per CE quando si utilizzano i Selezionati;"";"";""
+21137;Errore nel riepilogo a seguito di inserimento di polizza Eurovita MR Retail;"";"";""
+21136;Errore cifre decimali in Simula sul portafoglio attuale;"";"";""
+21135;Adeguamento funzionamento dei semafori per PTF POST di Raccomandazione;"";"";""
+21134;Consolidamento della raccomandazione anche se non adeguata ma non creazione della proposta;"";"";""
+21133;Inserimento nella raccomandazione di SF Negoziabili, In osservazione e Non Idonei ;"";"";""
+21132;Nel Riepilogo Portafoglio in Riepilogo Analisi manca la descrizione nella sottoscrizione GP Consulia;"";"";""
+21114;Revisione firme documenti prodotti da raccomandazione;"";"";""
+21090;Visualizzazione C/C affidamento nella sezione della liquidità;"";"";""
+21089;Scheda cliente Dashboard - totale posizione;"";"";""
+21086;Scheda cliente Dashboard - Revisione label contratti;"";"";""
+21080;Ricerca SF da asset class - esposizione Adeguatezza e Appropriatezza;"";"";""
+21075;Attivazione dei bottoni 'Costi e Benefici' e 'Tracciabilità' solo quando in contesto;"";"";""
+21074;non coretto funzionamento Fund compare;"";"";""
+21072;"Riepilogo Operazioni - senza ""Aggiorna Portafoglio"" sezioni non espandibili";"";"";""
+21061;Contratto: grigettare sezioni Monitoraggio e Affidamenti senza contenuti;"";"";""
+21060;Ottimizzazione Aggiornamento Portafoglio;"";"";""
+21055;Esposizione ambito in riepilogo operazioni;"";"";""
+21042;"Riepilogo Raccomandazione: Modifica logica ""Aggiornamento portafoglio""";"";"";""
+21036;TWILL - Errore ricerca guidata per asset class;"";"";""
+21034;Esposizione Anagrafica polizza su codici non più emettibili;"";"";""
+21031;Sottoscrizione GP, check sotto il limite OK se profilo BackOffice;"";"";""
+21009;Gestione tabs applicazione: tooltip;"";"";""
+21007;Footer applicazione;"";"";""
+21004;Incongruenza contatori in dashboard;"";"";""
+20997;Ottimizzazione Servizio: Firma Accettazione;"";"";""
+20996;Ottimizzazione Servizio: Crea Raccomandazione;"";"";""
+20995;Ottimizzazione Servizio: Elenco Operatività;"";"";""
+20988;Esposizione descrizione della classificazione nella modale di ripartizione SF vs AssetClass;"";"";""
+20986;Adeguamento campi delle griglie a Excel di riferimento - Primo Rilascio (#20744 - PUNTO 6);"";"";""
+20985;Adeguamento campi delle griglie a Excel di riferimento - Primo Rilascio (#20744 - PUNTO 3);"";"";""
+20981;Esposizione Anagrafica su saldi Polizze (segue da #20888);"";"";""
+20979;Performance: cambio filtri di default;"";"";""
+20978;Concentrazione complessi: dettaglio hard, grey, black list in modale;"";"";""
+20977;Uniformare colori intestazioni box;"";"";""
+20976;Griglie: Rimuovere funzionalità;"";"";""
+20975;Movimenti: tipo data contabile;"";"";""
+20973;Concentrazione Complessi - fascia Black List;"";"";""
+20970;Tuning Termometro di Rischio;"";"";""
+20961;In lista CLIENTI non mostrare le COI (Solo PF e PG);"";"";""
+20934;Modifiche logiche salvataggio filtri;"";"";""
+20914;"Migliorare GUI messaggio ""Aggiornamento portafoglio in corso""";"";"";""
+20894;filtro movimenti performance;"";"";""
+20893;In Elenco Movimenti di Liquidità mostra c/c non corretto;"";"";""
+20889;Ottimizzazione Servizio: Strumento vs Asset Class;"";"";""
+20888;Adeguamento campi delle griglie a Excel di riferimento - Secondo Rilascio;"";"";""
+20884;Aggiornamento automatico SALDO RACCOMANDAZIONE;"";"";""
+20883;Filtrare SOCIETA' con COMPARTI sottoscrivibili;"";"";""
+20882;Operatività sui delegati;"";"";""
+20881;Verifica Utenze;"";"";""
+20880;Ambito Certificates;"";"";""
+20879;Aggregazione Comparti per Confronto e Ricerca Guidata;"";"";""
+20878;SF ETP classificato come ambito AZIONE;"";"";""
+20877;Anomalie inserimento FONDO per PAC;"";"";""
+20876;Flag Nuova Sottoscrizione obbligatorio (J0010137)  FONDI;"";"";""
+20875;Evidenza di Incr/Decr errato in RIEPILOGO;"";"";""
+20873;Operazione Inserimento ISN non in TTIANX erroneamente consentita in CB;"";"";""
+20862;Cruscotto di gestione - Eliminare Raccolta netta e ricavi;"";"";""
+20861;Problemi in stampa POSIZIONE CONSULENZA;"";"";""
+20860;Anomalia inserimento Motivazione Raccomandazione;"";"";""
+20857;Gestione Affidamenti e Garanzie;"";"";""
+20856;Anomalia in Confronto Style Analisys - Elenco SF in PTF;"";"";""
+20855;Funzione di ricerca titoli - ottimizzazione tempi di risposta;"";"";""
+20854;Tasto CONSOLIDA non deve essere attivato se Liquidità Simulata < 0;"";"";""
+20850;Abilitare l'accesso a Rimb/Sott/Switch da Ricerca/Confronta per Asset Class;"";"";""
+20848;Ambito non corretto in elenco SF in PTF da Funzione di Confronta;"";"";""
+20847;Errore in esposizione QTA' e DIVISA in Dettaglio SF per Asset Class;"";"";""
+20846;Titolo modale errata in Rimborso Polizza;"";"";""
+20845;Adeguamento colore frecce di incremento/decremento;"";"";""
+20844;Anomalia in calcolo Performances;"";"";""
+20841;Togliere la sezione FONDI PENSIONE da Scheda Contratto;"";"";""
+20839;Errore pagina Titoli Portafoglio;"";"";""
+20837;Performance: non salvare filtri;"";"";""
+20827;Stampa posizione;"";"";""
+20826;Scheda Cliente;"";"";""
+20797;Bottone NOW() in firma documenti;"";"";""
+20796;Modificare la modale per la registrazione della firma;"";"";""
+20795;Enfatizzare Call-To-Action di Documenti e Registrazione Firma ;"";"";""
+20787;Sottoscrizione GP;"";"";""
+20781;Raccomandazione ? Motivazioni in Informazioni Generali;"";"";""
+20778;Consolidamento Raccomandazione;"";"";""
+20776;Installazione Stream 7;"";"";""
+20775;Installazione Stream 6;"";"";""
+20762;Interventi su Grafici di Confronto;"";"";""
+20744;Adeguamento campi delle griglie a Excel di riferimento - Primo Rilascio;"";"";""
+20743;Responsività da verificare;"";"";""
+20741;Controllo mifid incongruenti;"";"";""
+20729;Ordinamento colonne in RIEPILOGO;"";"";""
+20728;Dettagli Semaforo Strumenti Finanziari ;"";"";""
+20727;05.12 Anomalia esposizione Movimenti di Conto Corrente;"";"";""
+20723;10.05 Gestione parametri ordini;"";"";""
+20722;Nuova sottoscrizione Polizza Italiana Flex Solution;"";"";""
+20718;Fund Compare;"";"";""
+20717;Dettaglio Tracciabiltà - Registrazione;"";"";""
+20716;Anomlia in calcolo Saldo liquidità simulata;"";"";""
+20683;Disabilitazione tabs navigazione con chiamate ajax in corso;"";"";""
+20663;Anomalie precompilazione contratto Italiana Assicurazione (Unica FLezx solution);"";"";""
+20655;Revisione Processi Batch per Monitoraggio;"";"";""
+20654;Il tasto CREA viene sostituto con CREA RACCOMANDAZIONE / CREA RACCOLTA DIRETTA;"";"";""
+20653;Evidenza SF appartenenti a Asset Class;"";"";""
+20652;Esposizione suddivisione Asset Class per SF;"";"";""
+20645;Ambiente Prod Profin con Debug Attivo: segnalare - Inoltre CPU/RAM sottodimensionati in Test e Prod;"";"";""
+20643;PEP dato fake in anagrafica;"";"";""
+20627;ALLINEARE 4.1 SU 5.0;"";"";""
+20624;Verificare KO accesso a RACCOLTA in Twill Office (ambiente Consulia);"";"";""
+20623;Verifica consolida Proposta KO in Twill Office (ambiente Consulia);"";"";""
+20618;Servizio DossierList utilizzato per assegnazione dossier deve essere filtrato per i soli dossier utilizzabili;"";"";""
+20605;Gestione appendice module d'ordine;"";"";""
+20600;Errore per Jsp > 65000 Byte (Twill Office);"";"";""
+20598;Diretta: caso in cui ordine non verificato e Diretta consolidata;"";"";""
+20597;Revisione tecnica interna: Autocomplete checkviewfilter;"";"";""
+20596;Timing scodatore - aumentare tempo;"";"";""
+20577;Anomalia griglie;"";"";""
+20576;TWILL -  errore per formato decimali;"";"";""
+20540;Revisione CMD - Scheduler e varie in ambito Pianificatore/Schedulatore;"";"";""
+20539;Revisione ricezione flussi Polizze e adeguamento pgm trattamento flussi;"";"";""
+20538;Errore in CONSOLIDA ANALISI ;"";"";""
+20535;Composizione Portafoglio - calcolo percentuale di rischio errata;"";"";""
+20534;Errori creazione raccomandazione + creazione proposta;"";"";""
+20532;Errore TWILL - Operatività Fondi in ptf per consulenza base;"";"";""
+20531;Campi quote e importo in Switch;"";"";""
+20530;Persistenza errare del campo Stacco Dividendi;"";"";""
+20529;Eliminare il campo Sconto Commissioni in Switch;"";"";""
+20528;Eliminare i campi Conto di Regolamento e Divisa Operazione in SWITCH Fondi;"";"";""
+20527;Tuning vari su operatività Fondi;"";"";""
+20498;In tb parametri sono censite le società prodotto che ammettono il regolamento nella sola divisa Euro;"";"";""
+20497;Verifica operatività su Fondi - Isin LU0132601682;"";"";""
+20494;PAC: l?importo minimo di sottoscrizione tra PIC e PAC non è sempre il medesimo ? in genere l?importo minimo per i PIC è molto più alto rispetto al PAC (verificare campi TFOANA-TFOPAC) ;"";"";""
+20493;PAC: eliminare la casella Giorno Addebito Rata e aggiungere come campo informativo l?Importo minimo della Rata (dovrebbe essere Tabella TFOPAC Campo RTEIMP) ;"";"";""
+20492;PAC: utilizzare come modalità di selezione del tipo di regolamento il tasto On/Off switch (default PIC);"";"";""
+20491;Riorganizzare le sezioni come da esempio nell?immagine TO BE ;"";"";""
+20490;Modificare il nome del tasto da Crea a Inserisci ;"";"";""
+20489;Facendo l?Accesso alla Watch List deve essere impostato automaticamente su SI la Richiesta Cliente;"";"";""
+20487;Cliente con un conto di regolamento in divisa ;"";"";""
+20486;Se il Cliente ha solo un conto di regolamento in euro il Conto Regolamento è sempre C/C Euro e la Divisa operazione è sempre EURO senza possibilità di scelta;"";"";""
+20485;Utilizzare come modalità di selezione del conto di regolamento il tasto On/Off switch (default C/C Euro);"";"";""
+20484;Invertire Conto di Regolamento con Divisa Operazione;"";"";""
+20473;Gestione DIRETTA;"";"";""
+20472;Bottone di STAMPA Posizione GP anche in Alto di Scheda Contratto;"";"";""
+20470;Nuovo Termometro Budget di Rischio;"";"";""
+20469;Revisione Accesso Portale Cliente;"";"";""
+20468;Polizze bloccare aggiunta sottostante al raggiungimento del numero massimo consentito;"";"";""
+20467;Controllo errato in amministrato;"";"";""
+20454;Non esporre griglia DOCUMENTI se non ci sono documenti;"";"";""
+20430;strumenti di pagamento;"";"";""
+20429;Errore Annulla Raccomandazione;"";"";""
+20428;"Global Search disabilitata ricerca ""clienti""";"";"";""
+20426;Il tasto consolidamento deve essere attivo solo post Aggiorna;"";"";""
+20425;Ordinamento Ambito non coerente;"";"";""
+20422;Blocco inserimento Polizza UNIQA per cambio ISIN;"";"";""
+20418;Errore Tecnico: Natura consulenza non gestita (SF030130);"";"";""
+20360;Flag Presso Terzi da ereditare su SF in PTF;"";"";""
+20359;Spostare il campo PIAZZA tra i dati dell'operazione;"";"";""
+20358;Manca selezione di Default PIC su Inserimento Fondo;"";"";""
+20357;Null Pointer in Coerenza di PTF - Raccomandazione n. 289502;"";"";""
+20356;Miglioramento Sottoscrizione Polizza;"";"";""
+20355;Anagrafica contratto Consulenza Evoluta;"";"";""
+20354;Anagrafica singolo intestatario;"";"";""
+20353;Accesso ghost: Maiscolo/Minuscolo;"";"";""
+20347;Agenda: dimensione box come Ultime pubblicazioni;"";"";""
+20345;Totale GP Consulia deve comprendere i contratti EVO e BASE;"";"";""
+20343;Modifica gestione campi boolean;"";"";""
+20338;Cambio icone per Acquisto/Sott/Vendita/Rimborso;"";"";""
+20337;Flag Presso Terzi solo per EVO;"";"";""
+20335;Composizione del portafoglio: Ordinamento Fasce Strumenti Finanziari;"";"";""
+20334;Composizione del portafoglio: Grafico per Asset Class;"";"";""
+20333;Evidenze non valide in Strumenti Pagamento;"";"";""
+20332;Movimenti di Conto Corrente - Punto 05.12;"";"";""
+20331;Verifiche di Adeguatezza: Coerenza di PTF - Budget di Rischio - Punto 05.05;"";"";""
+20330;Dati %& di Macro Asset Class errati quando presenti contratti EVO e BASE;"";"";""
+20329;Erroneamente il semaforo è rosso anche se SF sono OK;"";"";""
+20328;Verifiche di Adeguatezza: Concentrazione - Rischio di Concentrazione - Punto 05.07;"";"";""
+20322;Gestione Polizze Uniqa e Unipol;"";"";""
+20317;Dettaglio Contratto: voci menù accese;"";"";""
+20315;Edit polizze: gestione TCM;"";"";""
+20314;Edit fondo: implementazione ricerca comparto;"";"";""
+20312;Gestione logout;"";"";""
+20311;Esporre Descrizione linea GP in Switch;"";"";""
+20309;Ricerca fondo: aggiunta filtro società;"";"";""
+20308;Amministrato: piazze;"";"";""
+20306;Gestione hover intestazioni colonna;"";"";""
+20300;Aggiunto filtro date range;"";"";""
+20297;Uniformare colorazione box blu/viola;"";"";""
+20296;Revisione semafori per controlli di adeguatezza;"";"";""
+20295;Implementare freccia su/giu e dettaglio ordini ;"";"";""
+20294;Esiti Adeguatezza - Stumenti Finanziari: Evidenza Non idonei;"";"";""
+20292;Contratto: Drilldown movimenti delle varie sezioni in pagina e non in modale;"";"";""
+20286;Definizione sottostanti polizza a livello di codice polizza;"";"";""
+20284;Gestione motivazioni ordine;"";"";""
+20275;Visualizzazioni consulenze Old vs New e vv;"";"";""
+20271;Aggiungere % su grafici di coerenza;"";"";""
+20270;Polizze multiramo: preselezione della Gestione Separata e sempre visibile in testa all'elenco dei sottostanti;"";"";""
+20268;Ricerca Polizze, aggiungere in liste: tipologia (assicurativa/finanziaria) e multiramo S/N;"";"";""
+20267;Operazione Switch Gestione Patrimoniale: aggiungere informazioni semaforiche di adeguatezza;"";"";""
+20264;Gestione Modulo Istruzione in ambito consulenza Evoluta;"";"";""
+20262;07.13_Verifiche di Adeguatezza Coerenza di PTF - Budget di Rischio_20191119;"";"";""
+20261;Evidenziare il saldo post Simulazione e Post Raccomandazione;"";"";""
+20260;Aggiungere l?ultimo prezzo disponibile con la data di riferimento ;"";"";""
+20259;Aggiunta DIVISA come parametro di filtro in selezione Fondi;"";"";""
+20258;Rinominare Note Rimborso Entrata in Note;"";"";""
+20244;Tuing su Switch Sottoscrizioni Aggiuntive e Rimborsi (Parziali e Totali) Fondi e SICAV (002);"";"";""
+20237;Gestione extradossier in ambito Amministrato e Gestito;"";"";""
+20236;Twill visualizza solo Raccomandazioni create da Twill stesso;"";"";""
+20212;Gestione motivazioni sulla raccomandazione;"";"";""
+20211;Ordinamento SF WatchList nel relativo dettaglio di adeguatezza;"";"";""
+20210;Caratteri accentati;"";"";""
+20209;Visualizzazione dati Concentrazione e concentrazione complessi;"";"";""
+20201;Tuning di colorizzazione su Grafici composizione PTF Cliente;"";"";""
+20159;Esposizione fascia Titolo nell'elenco dei saldi;"";"";""
+20157;Evitare espansione di sezioni vuote;"";"";""
+20156;Filtri su Movimenti di Dettaglio;"";"";""
+20152;01.01Grafici PTF Consulente;"";"";""
+20149;Label Ammissione PAC --> PAC;"";"";""
+20147;Ricerca titoli per Gestito: aggiungere società;"";"";""
+20145;Integrazione Schedulazione per test se processo pianificabile/eseguibile;"";"";""
+20143;Esposizione apporto di rischio;"";"";""
+20139;Esposizione saldo cassetto GP;"";"";""
+20138;Controlli limiti sottoscrizione su cassetti GP;"";"";""
+20136;Gestione ammissione PIC/PAC per Operazioni GP;"";"";""
+20127;Rinominare SF richiesto dal Cliente in Richiesta Cliente;"";"";""
+20126;Estrazione TOP n elementi da elenchi;"";"";""
+20125;Ordinamento Movimenti DESC;"";"";""
+20047;Errore in dettaglio situazione anagrafica;"";"";""
+20035;Evidenza dei Sottostanti GP e Polizze (>);"";"";""
+20033;Inserire il tasto espandi/chiudi tutto;"";"";""
+20032;Evidenza delle Posizioni Presso terzi;"";"";""
+20031;Evidenza dei SubDossier;"";"";""
+20027;Terminologia;"";"";""
+20026;Composizione del portafoglio: Eliminare Componente Residuale e Conti Correnti/Polizze;"";"";""
+20025;Ultime pubblicazioni da Dashboard vs Elenco Pubblicazioni + Varie;"";"";""
+20024;Asset MIx;"";"";""
+19889;Infrastruttura ottimizzata Analisi e consiglio;"";"";""
+19830;Installazione Stream 5;"";"";""
+19829;Installazione Stream 4;"";"";""
+19828;Installazione Stream 3;"";"";""
+19827;Installazione Stream 2;"";"";""
+19826;Installazione Stream 1;"";"";""
+19808;Stream 1: TO DO List + attività extra stima (test);"";"";""
+19676;Integration test, NON Regression test;"";"";""
+19675;System & Integration Test;"";"";""
+19635;Attività varie infrastrutturali front-end;"";"";""
+19630;Ottimizzazioni: uso cache;"";"";""
+19601;Mockup DashBoard Posizione Cliente;"";"";""
+19593;Adeguamento componente pagina;"";"";""
+19460;Pagina di Login + DashBoard;"";"";""
+19452;Infrastruttura Front-End;"";"";""
+19387;Aggiornamenti AG-Grid;"";"";""
+19386;Aggiornamenti Syncfusion;"";"";""
+19385;Aggiornamenti Generici;"";"";""
+19384;Aggiornamenti Software altri;"";"";""
+19382;Project Generals;"";"";""
+19353;Revisione struttura fasi carico batch (WaitSied - Pentaho);"";"";""
+19351;Generiche;"";"";""
+19350;Ottimizzazioni prestazioni sistema;"";"";""
+19349;Riallineamento per passaggio in PROD;"";"";""
+19348;Clone DB + Stm di adeguamento incrementale;"";"";""
+19347;Migrazione Dati;"";"";""
+19346;Sessioni di parallelo;"";"";""
+19345;Login - implementazione GUI;"";"";""
+19344;Allestimento WebApp di Portale Cliente;"";"";""
+19343;Portale Cliente;"";"";""
+19342;Scheda Prospect - Composizione Portafoglio;"";"";""
+19341;Scheda Prospect - Controlli Adeguatezza;"";"";""
+19340;Definizione PTF - Elenco SF definiti per il PTF;"";"";""
+19339;Definizione PTF - inserimento SF (Polizze e GP) ex novo;"";"";""
+19338;Definizione PTF - inserimento SF (Amministrato, Gestito) ex novo;"";"";""
+19337;Definizione PTF - Inserimento SF (Amministrato, Gestito) da Analisys OnLine;"";"";""
+19336;Definizione PTF - per ricerca e inserimento SF (Polizze e GP)  da Anagrafica Banca;"";"";""
+19335;Definizione PTF - ricerca e inserimento SF (Amministrato, Gestito) da Anagrafica Banca;"";"";""
+19334;Definizione PTF - Gestione liquidità;"";"";""
+19333;Elenco dei Prospect;"";"";""
+19332;Inserimento/Edit Prospect;"";"";""
+19331;Distruzione Oggetti di PTF Prospect ;"";"";""
+19330;Adattamento Build ObjPTF;"";"";""
+19329;Analisi trasversali di dettaglio;"";"";""
+19328;Gestione Clienti PROSPECT;"";"";""
+19327;Visualizzazione Agenda + Edit;"";"";""
+19326;DashBoard Agenda;"";"";""
+19325;Elenco Pubblicazioni;"";"";""
+19324;DashBoard Pubblicazioni;"";"";""
+19316;Scheda Cliente;"";"";""
+19315;Invio a Mercato;"";"";""
+19314;Registra Accettazione;"";"";""
+19313;Split Ordine;"";"";""
+19312;Arricchimento Dati;"";"";""
+19311;Sintesi dati proposta e visualizzazione/scarico documenti;"";"";""
+19310;Proposta;"";"";""
+19309;Riepilogo Operazioni;"";"";""
+19308;Grafici di confronto tra PTF e TATTICO in RACCOM;"";"";""
+19307;Riutilizzo funzionalità già previste ;"";"";""
+19306;Analisi/Consiglio - Riepilogo;"";"";""
+19305;Inserimento / Gestione Operazione;"";"";""
+19304;Confronta per Asset Class;"";"";""
+19303;Simula sul PTF Attuale;"";"";""
+19302;Analisi/Consiglio - Operatività;"";"";""
+19300;Note;"";"";""
+19299;Dettaglio Tracciabiltà - Visualizzazione;"";"";""
+19298;Riepilogo operazioni inserite;"";"";""
+19297;Supporto Operativo;"";"";""
+19296;Simulazione liquidità;"";"";""
+19294;Azioni, bottoni di navigazione e dati generali del consiglio;"";"";""
+19293;Analisi/Consiglio;"";"";""
+19292;Gestione Richiesta nuovo Strumento di pagamento;"";"";""
+19291;Informazioni Intestatario;"";"";""
+19290;Accordi;"";"";""
+19289;Plusvalenze / Minusvalenze ;"";"";""
+19288;Strumenti di Pagamento;"";"";""
+19287;Informazione sui Rapporti della Posizione;"";"";""
+19286;Informazioni sulla Posizione;"";"";""
+19285;Scheda Contratto Strumentale/Evoluta - Dettaglio Contratto;"";"";""
+19283;Monitoraggio;"";"";""
+19282;Reports;"";"";""
+19280;Elenco Operatività;"";"";""
+19279;Elenco Analisi/Consigli (operazioni);"";"";""
+19278;Performance dati;"";"";""
+19276;Apertura Contratto;"";"";""
+19275;Simulazione Contratto;"";"";""
+19274;Grafici di confronto tra PTF e TATTICO;"";"";""
+19273;Saldi e Movimenti Fondi pensione;"";"";""
+19272;Saldi e Movimenti polizze;"";"";""
+19271;Saldi e Movimenti Gestioni Patrimoniali;"";"";""
+19270;Saldi e Movimenti Fondi;"";"";""
+19269;Saldi e Movimenti Etp/Certificati;"";"";""
+19268;Saldi e Movimenti obbligazioni;"";"";""
+19267;Saldi e Movimenti Azioni;"";"";""
+19266;Saldi e Movimenti Liquidità;"";"";""
+19265;Composizione Portafoglio;"";"";""
+19264;Controllo Adeguatezza;"";"";""
+19263;Dettaglio Saldi C/C & Depositi;"";"";""
+19262;Riepilogo Anagrafica;"";"";""
+19261;Scheda Contratto Strumentale/Evoluta;"";"";""
+19260;Elenco Evidenze Monitoraggio per CF e Manager;"";"";""
+19259;Monitoraggio;"";"";""
+19258;Elenco Ordini/Raccomandazioni;"";"";""
+19257;Elenco Operazioni;"";"";""
+19256;Elenco Contratti;"";"";""
+19255;Elenchi da Menu;"";"";""
+19254;Sezione Agenda;"";"";""
+19253;Sezione ultime Pubblicazioni;"";"";""
+19252;Sezione Ultime 6 attività;"";"";""
+19251;Cruscotto di Gestione;"";"";""
+19250;BOX di Count;"";"";""
+19249;Composizione PTF Complessivo x Classificazione Titoli;"";"";""
+19248;Composizione PTF Complessivo x Comparto;"";"";""
+19247;Composizione PTF Complessivo x Ambito;"";"";""
+19246;Sezione di richiesta attenzione;"";"";""
+19245;Home Page Promotore;"";"";""
+19244;Funzionalità OnLine & Batch;"";"";""
+19243;Gestione / Impatto;"";"";""
+19242;Funzionalalità Lista + Edit di identificazone;"";"";""
+19241;Gestione Contratto Diretta;"";"";""
+19240;Batch di popolamento Agenda;"";"";""
+19239;Predispozione dati a t-1;"";"";""
+19238;Varie;"";"";""
+19237;Funzionalità Governance;"";"";""
+19236;Funzionalità / Componenti Comuni;"";"";""
+19235;Gestione Preferiti per Utente - Gestione per Ambito;"";"";""
+19234;Gestione Preferiti per Utente - Infrastruttura comune;"";"";""
+19233;Accesso Ghost - Infrastruttura comune (anche login);"";"";""
+19231;My Account - Settings e dati utente;"";"";""
+19230;Gestione Accounts;"";"";""
+19229;Dati del Titolo (Base);"";"";""
+19201;Con utilizzo grafici ChartDirector;"";"";""
+19200;Revisione documenti per cliente (rendiconti/fascicoli/etc);"";"";""
+19199;Implementazione Servizio per Enumerati / Domini;"";"";""
+19198;Gestione Enumerati / Domini;"";"";""
+19197;Configurazione;"";"";""
+19196;Fruizione in Notifications;"";"";""
+19195;Infrastruttura comune;"";"";""
+19194;Gestione Alert & Notifiche;"";"";""
+19193;Ricerca per Ambito;"";"";""
+19192;Infrastruttura comune;"";"";""
+19191;Business Search;"";"";""
+19190;Funzionalità / Componenti Comuni;"";"";""
+19189;Infrastruttura Back-End;"";"";""
+19188;Supporto a Front-End;"";"";""
+19187;Gestione MultiTab;"";"";""
+19186;Con attuale Java/Jsp compresa;"";"";""
+19185;Start-Up nuova applicazione Portale Promotore & Cliente;"";"";""
+19184;Solo per ACM di Portale Promotore e Cliente + Audit Log ;"";"";""
+19183;Start-Up nuova applicazione Governance;"";"";""
+19182;Audit Log;"";"";""
+19181;ACM;"";"";""
+19180;Gestione tramite Governance SKILL-F3;"";"";""
+19179;Adeguamento stili attuali legati all'attuale skin (nero);"";"";""
+19178;Rimozione stili inline all'interno di SKF3;"";"";""

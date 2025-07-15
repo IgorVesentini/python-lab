@@ -1,0 +1,8 @@
+#;Oggetto;# Fixed on ;# Fixed also on ;# Major release
+39990;Modifica testo mail (#39901) - rettifica (segue da #39959);;;6.97.0
+39989;Provincia di nascita non impostata su Form Polizze quando il cliente è nato all'estero ;;;6.97.0
+39987;Errore in fase di generazione della documentazione prodotto assicurativo Azione Bonus;6.95.1;6.96.1;6.97.0
+39984;Problema su switch in Twill;6.95.1;6.96.1;6.97.0
+39980;Problema in fase di gestione dei documenti di raccomandazione;6.95.1;6.96.1;6.97.0
+39969;URGENTE - ERRORE CALCOLO PERFORMANCE;6.95.1;6.96.1;6.97.0
+39753;Cancellazione raccomandazione non consolidata;;;6.97.0
