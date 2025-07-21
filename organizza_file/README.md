@@ -12,6 +12,7 @@ I file vengono copiati da una cartella di input in una struttura `output/anno/me
 - Estrazione della data di ultima modifica
 - Creazione automatica delle cartelle `output/anno/mese`
 - Copia dei file nella cartella corrispondente
+- Scrittura dei log su `output/log.txt` (con info e gestione errori)
 
 ---
 
@@ -42,7 +43,7 @@ Assicurati di creare le cartelle `input/` e `output/` o indicare percorsi assolu
 
 ## 🎯 Obiettivi futuri
 
-- [ ] ✏️ Logging su `log.txt` per ogni operazione effettuata
+- [x] ✏️ Logging su `log.txt` per ogni operazione effettuata
 - [ ] 🔢 Rinomina automatica dei file (`documento_001.pdf`, `documento_002.pdf`, ...)
 - [ ] ⚠️ Gestione errori e logging avanzato
 - [ ] 🧪 Modalità "dry-run" per simulare l'esecuzione
