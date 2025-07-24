@@ -1,7 +1,7 @@
 import csv
 from version_utils import parse_version, compare_versions, detect_encoding
 
-EXPECTED_HEADERS = ["#", "Oggetto", "# Fixed on", "# Fixed also on", "# Major release"]
+EXPECTED_HEADERS = ["#", "Progetto", "Oggetto", "# Fixed on", "# Fixed also on", "# Major release", "Privato"]
 
 def validate_headers(actual_headers, expected_headers):
     actual_clean = [h.strip() for h in actual_headers]
@@ -21,7 +21,7 @@ def filter_major_release(input_file, output_file, version_from_str, version_to_s
     with open(input_file, newline='', encoding=encoding) as infile:
         reader = csv.DictReader(infile, delimiter=delimiter)
         headers_map = {h.strip(): h for h in reader.fieldnames}
-        headers = reader.fieldnames
+        headers = [headers_map[h] for h in EXPECTED_HEADERS]
         validate_headers(list(headers_map.keys()), EXPECTED_HEADERS)
 
         for row in reader:
@@ -45,7 +45,7 @@ def filter_fix_release(input_file, output_file, target_version_str, delimiter):
     with open(input_file, newline='', encoding=encoding) as infile:
         reader = csv.DictReader(infile, delimiter=delimiter)
         headers_map = {h.strip(): h for h in reader.fieldnames}
-        headers = reader.fieldnames
+        headers = [headers_map[h] for h in EXPECTED_HEADERS]
         validate_headers(list(headers_map.keys()), EXPECTED_HEADERS)
 
         for row in reader:

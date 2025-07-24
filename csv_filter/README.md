@@ -66,7 +66,7 @@ Permette di selezionare:
    Assicurati che il file `input/input.csv` sia formattato così:
 
    ```
-   #;Oggetto;# Fixed on;# Fixed also on;# Major release
+   #;Progetto;Oggetto;# Fixed on;# Fixed also on;# Major release;Privato
    12345;Descrizione issue;6.95.1;6.96.1;6.97.0
    ```
 
@@ -127,14 +127,16 @@ Questo progetto è distribuito con licenza [MIT](./LICENSE).
 Per funzionare correttamente, il filtro richiede che il CSV esportato da Redmine abbia **esattamente queste colonne, in questo ordine**:
 
 1. **#** — Numero del ticket
-2. **Oggetto** — Titolo o descrizione breve del ticket
-3. **# Fixed on** — Versione in cui il ticket è stato risolto
-4. **# Fixed also on** — Altre versioni in cui il ticket è stato risolto (separati da virgola o "e")
-5. **# Major release** — Versione di rilascio principale
+2. **Progetto** — Progetto di riferimento
+3. **Oggetto** — Titolo o descrizione breve del ticket
+4. **# Fixed on** — Versione in cui il ticket è stato risolto
+5. **# Fixed also on** — Altre versioni in cui il ticket è stato risolto (separati da virgola o "e")
+6. **# Major release** — Versione di rilascio principale
+7. **Privato** — Ticket privato
 
 **Esempio di intestazione corretta:**
 ```
-#;Oggetto;# Fixed on;# Fixed also on;# Major release
+#;Progetto;Oggetto;# Fixed on;# Fixed also on;# Major release;Privato
 ```
 
 > ⚠️ **Nota:** L’ordine e i nomi delle colonne devono essere esattamente questi. Se esporti da Redmine, seleziona solo queste colonne e assicurati che i nomi coincidano.

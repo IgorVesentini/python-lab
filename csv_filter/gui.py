@@ -159,16 +159,18 @@ class CSVFilterGUI:
         info_title.pack(anchor='w', padx=8, pady=(3,0))
         columns = [
             ("#", "Numero del ticket"),
+            ("Progetto", "Progetto di riferimento"),
             ("Oggetto", "Titolo o descrizione breve"),
             ("# Fixed on", "Versione in cui il ticket è stato risolto"),
             ("# Fixed also on", "Altre versioni in cui il ticket è stato risolto"),
-            ("# Major release", "Versione di rilascio principale")
+            ("# Major release", "Versione di rilascio principale"),
+            ("Privato", "Ticket privato")
         ]
         for col, desc in columns:
             tk.Label(info_frame, text=f"•  {col}", bg='#eaf4fb', fg='#222', font=('Consolas', 9, 'bold')).pack(anchor='w', padx=16, pady=0, side='top')
             tk.Label(info_frame, text=f"    {desc}", bg='#eaf4fb', fg='#444', font=('Arial', 8), anchor='w').pack(anchor='w', padx=32, pady=(0,1), side='top')
         tk.Label(info_frame, text="Esempio intestazione:", bg='#eaf4fb', fg='#005fa3', font=('Arial', 8, 'italic')).pack(anchor='w', padx=8, pady=(2,0))
-        tk.Label(info_frame, text="#;Oggetto;# Fixed on;# Fixed also on;# Major release", bg='#eaf4fb', fg='#005fa3', font=('Consolas', 9), anchor='w').pack(anchor='w', padx=16, pady=(0,3))
+        tk.Label(info_frame, text="#;Progetto;Oggetto;# Fixed on;# Fixed also on;# Major release;Privato", bg='#eaf4fb', fg='#005fa3', font=('Consolas', 9), anchor='w').pack(anchor='w', padx=16, pady=(0,3))
 
         ttk.Label(file_frame, text="File CSV di output:").grid(row=2, column=0, sticky=tk.W, pady=5)
         output_entry = ttk.Entry(file_frame, textvariable=self.output_file, width=60)
