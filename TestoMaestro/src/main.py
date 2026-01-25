@@ -93,6 +93,12 @@ def main():
 
     args = parser.parse_args()
 
+    # ----------------------------
+    # Controllo obbligatorietà condizionata
+    # ----------------------------
+    if args.file_type == "csv" and not args.has_header:
+        parser.error("--has-header è obbligatorio per i file CSV")
+
     if args.col_types:
         parse_col_types(args.col_types)
 
