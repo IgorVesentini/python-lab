@@ -1,5 +1,5 @@
 from typing import List, Tuple
-from utils import read_file_lines, preview_lines, cast_value, split_csv_line, DEFAULT_MAX_FILE_SIZE_MB
+from utils import read_file_lines, preview_lines, cast_value, split_csv_line, DEFAULT_MAX_FILE_SIZE_MB, compare, auto_cast
 
 # ---------------------------
 # Funzioni principali del motore
@@ -40,7 +40,6 @@ def sort_fixed(rows: List[str], sort_sets: List[Tuple[Tuple[int,int], bool]]) ->
     def key_func(line):
         key = []
         for (start, end), ascending in sort_sets:
-            # python slicing 0-based, end non incluso
             substr = line[start-1:end]
             key.append(substr if ascending else _invert_value(substr))
         return tuple(key)
@@ -57,3 +56,41 @@ def _invert_value(val):
             return "".join(chr(255 - ord(c)) for c in str(val))
     except Exception:
         return val
+
+# ---------------------------
+# FILTRI NUOVI
+# ---------------------------
+
+def apply_filters_csv(rows, filters):
+    """
+    Applica filtri su CSV.
+    filters: lista di tuple (col_index, operator, value)
+    """
+    filtered = []
+    for row in rows:
+        keep = True
+        for col, op, val in filters:
+            cell = cast_value(row[col - 1], col)
+            if not compare(cell, op, val):
+                keep = False
+                break
+        if keep:
+            filtered.append(row)
+    return filtered
+
+def apply_filters_fixed(lines, filters):
+    """
+    Applica filtri su fixed-width.
+    filters: lista di tuple (start, end, operator, value)
+    """
+    filtered = []
+    for line in lines:
+        keep = True
+        for start, end, op, val in filters:
+            cell = auto_cast(line[start - 1:end].strip())
+            if not compare(cell, op, val):
+                keep = False
+                break
+        if keep:
+            filtered.append(line)
+    return filtered

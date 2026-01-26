@@ -80,3 +80,30 @@ def auto_cast(value):
 
 def split_csv_line(line: str, sep: str = ",") -> List[str]:
     return [col.strip() for col in line.rstrip().split(sep)]
+
+# ---------------------------
+# Confronti generici per filtri
+# ---------------------------
+
+def compare(cell, operator, value):
+    """Confronta cell con value usando operator"""
+    if operator == "=":
+        return cell == value
+    if operator == "!=":
+        return cell != value
+    if operator == ">":
+        return cell > value
+    if operator == "<":
+        return cell < value
+    if operator == ">=":
+        return cell >= value
+    if operator == "<=":
+        return cell <= value
+    if operator == "~":
+        return str(value) in str(cell)
+    if operator == "!~":
+        return str(value) not in str(cell)
+    if operator == "in":
+        return cell in value
+
+    raise ValueError(f"Operatore non valido: {operator}")
