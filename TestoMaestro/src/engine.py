@@ -79,15 +79,11 @@ def apply_filters_csv(rows, filters):
     return filtered
 
 def apply_filters_fixed(lines, filters):
-    """
-    Applica filtri su fixed-width.
-    filters: lista di tuple (start, end, operator, value)
-    """
     filtered = []
     for line in lines:
         keep = True
         for start, end, op, val in filters:
-            cell = auto_cast(line[start - 1:end].strip())
+            cell = line[start-1:end].strip()  # senza auto_cast
             if not compare(cell, op, val):
                 keep = False
                 break
