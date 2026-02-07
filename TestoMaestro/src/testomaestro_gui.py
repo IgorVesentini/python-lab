@@ -433,7 +433,6 @@ class TestoMaestroGUI:
             self.show_error("File non valido!")
             return
         try:
-            filters_list = []
             highlight_positions = []
 
             if self.file_type.get() == "csv":
@@ -453,29 +452,36 @@ class TestoMaestroGUI:
                 with open(path, "r", encoding="utf-8") as f:
                     lines = [f.readline().rstrip("\n") for _ in range(10)]
 
-                # Raccogli filtri e highlight solo se start/end sono numerici
+                # --- controlli filtri ---
+                errors = self.check_fixed_filter_rows(lines)
+                if errors:
+                    alert_msg = "Controlli campi filtro:\n" + "\n".join(errors)
+                    self.show_error(alert_msg)
+                    return  # non applica filtri se ci sono errori
+
+                # raccolta filtri e posizioni highlight
+                filters_list = []
                 for row in self.filter_rows:
                     start_val = row["col_var"][0].get()
                     end_val   = row["col_var"][1].get()
                     val       = row["val_var"].get()
                     op        = row["op_var"].get() or "="
 
-                    if start_val.isdigit() and end_val.isdigit():
+                    if start_val.isdigit() and end_val.isdigit() and val:
                         start, end = int(start_val), int(end_val)
                         filters_list.append((start, end, op, val))
                         highlight_positions.append((start-1, end))
 
-                # Applica filtri usando engine
+                # applica filtri usando engine
                 from engine import apply_filters_fixed
                 filtered_lines = apply_filters_fixed(lines, filters_list) if filters_list else lines
-                preview = "\n".join(filtered_lines)
 
-                # Mostra nel widget
+                # mostra nel widget
                 self.preview_text.config(state="normal")
                 self.preview_text.delete(1.0, tk.END)
-                self.preview_text.insert(tk.END, preview)
+                self.preview_text.insert(tk.END, "\n".join(filtered_lines))
 
-                # Evidenzia colonne
+                # evidenzia colonne
                 for start, end in highlight_positions:
                     for i, line in enumerate(filtered_lines):
                         line_len = len(line)
@@ -485,7 +491,7 @@ class TestoMaestroGUI:
                             self.preview_text.tag_add(f"hl{i}", f"{i+1}.{s}", f"{i+1}.{e}")
                             self.preview_text.tag_config(f"hl{i}", background="yellow")
 
-            self.preview_text.config(state="disabled")
+                self.preview_text.config(state="disabled")
 
         except Exception as e:
             self.show_error(f"Errore nell'anteprima output:\n{e}")
@@ -587,6 +593,57 @@ class TestoMaestroGUI:
 
     def show_error(self, msg):
         messagebox.showerror("Errore", msg)
+
+    def check_fixed_filter_rows(self, lines):
+        """
+        Controlla le righe di filtro per file fisso.
+        Ritorna una lista di tuple (riga_idx, messaggio) per le righe che non rispettano i requisiti.
+        Non considera righe completamente vuote.
+        """
+        error_list = []
+        max_len = len(lines[0]) if lines else 0
+
+        for idx, row in enumerate(self.filter_rows):
+            start_var, end_var = row["col_var"]
+            val_var = row["val_var"]
+            op_var = row["op_var"]
+
+            start_val = start_var.get().strip()
+            end_val = end_var.get().strip()
+            val = val_var.get()
+            op = op_var.get() if op_var else "="
+
+            # se la riga è completamente vuota, la saltiamo
+            if not start_val and not end_val and not val:
+                continue
+
+            # tutti i campi devono essere valorizzati se almeno uno è impostato
+            if not start_val or not end_val or val is None:
+                error_list.append(f"Riga {idx+1}: tutti i campi Da, A, Filtro devono essere valorizzati")
+                continue
+
+            # controlli numerici Da e A
+            if not start_val.isdigit() or int(start_val) <= 0:
+                error_list.append(f"Riga {idx+1}: Campo Da obbligatorio e > 0")
+            if not end_val.isdigit() or int(end_val) <= 0:
+                error_list.append(f"Riga {idx+1}: Campo A obbligatorio e > 0")
+
+            if start_val.isdigit() and end_val.isdigit():
+                start, end = int(start_val), int(end_val)
+                if end < start:
+                    error_list.append(f"Riga {idx+1}: Campo A non può essere minore di Da")
+                if end > max_len:
+                    error_list.append(f"Riga {idx+1}: Campo A non può superare la lunghezza del file ({max_len})")
+
+                # lunghezza del filtro
+                if op not in ["~", "!~"]:  # operatori contiene/non contiene
+                    if len(val) != (end - start + 1):
+                        error_list.append(f"Riga {idx+1}: Lunghezza Filtro deve essere {end - start + 1}")
+                else:
+                    if len(val) > (end - start + 1):
+                        error_list.append(f"Riga {idx+1}: Lunghezza Filtro non può superare {end - start + 1}")
+
+        return error_list
 
 if __name__ == "__main__":
     root = tk.Tk()
