@@ -433,48 +433,60 @@ class TestoMaestroGUI:
             self.show_error("File non valido!")
             return
         try:
-            # Applicare filtri
+            filters_list = []
+            highlight_positions = []
+
             if self.file_type.get() == "csv":
                 sep = self.csv_separator.get()
                 if sep == "\\t":
                     sep = "\t"
+                import pandas as pd
                 df = pd.read_csv(path, sep=sep, header=0 if self.csv_header.get() else None)
                 for row in self.filter_rows:
-                    col = row[0].get()
-                    val = row[1].get()
+                    col = row["col_var"].get()
+                    val = row["val_var"].get()
                     if col and val:
                         df = df[df[col].astype(str).str.contains(val)]
                 preview = df.head(10).to_string(index=False)
-            else:
+
+            else:  # file fisso
                 with open(path, "r", encoding="utf-8") as f:
                     lines = [f.readline().rstrip("\n") for _ in range(10)]
-                # evidenzia colonne
-                highlight_positions = []
-                for row in self.filter_rows:
-                    start = row[0][0].get()
-                    end = row[0][1].get()
-                    if start.isdigit() and end.isdigit():
-                        highlight_positions.append((int(start)-1, int(end)))  # 1-based to 0-based
-                preview_lines = []
-                for line in lines:
-                    preview_lines.append(line)
-                preview = "\n".join(preview_lines)
 
-            # Mostra nel widget con highlight (solo fisso)
-            self.preview_text.config(state="normal")
-            self.preview_text.delete(1.0, tk.END)
-            self.preview_text.insert(tk.END, preview)
-            # Highlight per fisso
-            if self.file_type.get() == "fisso":
+                # Raccogli filtri e highlight solo se start/end sono numerici
+                for row in self.filter_rows:
+                    start_val = row["col_var"][0].get()
+                    end_val   = row["col_var"][1].get()
+                    val       = row["val_var"].get()
+                    op        = row["op_var"].get() or "="
+
+                    if start_val.isdigit() and end_val.isdigit():
+                        start, end = int(start_val), int(end_val)
+                        filters_list.append((start, end, op, val))
+                        highlight_positions.append((start-1, end))
+
+                # Applica filtri usando engine
+                from engine import apply_filters_fixed
+                filtered_lines = apply_filters_fixed(lines, filters_list) if filters_list else lines
+                preview = "\n".join(filtered_lines)
+
+                # Mostra nel widget
+                self.preview_text.config(state="normal")
+                self.preview_text.delete(1.0, tk.END)
+                self.preview_text.insert(tk.END, preview)
+
+                # Evidenzia colonne
                 for start, end in highlight_positions:
-                    for i, line in enumerate(lines):
+                    for i, line in enumerate(filtered_lines):
                         line_len = len(line)
                         s = min(start, line_len)
                         e = min(end, line_len)
                         if s < e:
                             self.preview_text.tag_add(f"hl{i}", f"{i+1}.{s}", f"{i+1}.{e}")
                             self.preview_text.tag_config(f"hl{i}", background="yellow")
+
             self.preview_text.config(state="disabled")
+
         except Exception as e:
             self.show_error(f"Errore nell'anteprima output:\n{e}")
 
