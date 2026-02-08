@@ -27,63 +27,23 @@ class TestoMaestroGUI:
 
         self.create_widgets()
 
-    def browse_file(self):
-        import os
-        from tkinter import filedialog, messagebox
-
-        filetypes = (("All files", "*.*"), ("CSV files", "*.csv"), ("Fisso files", "*.txt"))
-        filename = filedialog.askopenfilename(initialdir=os.getcwd(), title="Seleziona file", filetypes=filetypes)
-        if filename:
-            self.file_path.set(filename)
-            # qui puoi anche richiamare self.load_file() se vuoi aggiornare anteprima e filtri
-            try:
-                self.load_file()
-            except Exception as e:
-                messagebox.showerror("Errore", f"Errore caricamento file:\n{e}")
-
-    def update_csv_options(self, value):
-        # Mostra/nascondi opzioni CSV
-        if value == "csv":
-            self.csv_frame.grid()
-        else:
-            self.csv_frame.grid_remove()
-
-        # Aggiorna label filtri
-        self.update_filter_labels()
-
-        # Distruggi vecchie righe dei filtri
-        for row in self.filter_rows:
-            if isinstance(row[2], tuple):
-                for w in row[2]:
-                    w.destroy()
-            else:
-                row[2].destroy()
-            row[3].destroy()
-            row[4].destroy()
-            if len(row) > 5:
-                row[5].destroy()  # op_menu
-            if len(row) > 6:
-                row[6].destroy()  # remove button
-        self.filter_rows.clear()
-
-        # Aggiungi una riga di filtro corretta per il nuovo tipo
-        self.add_filter_row(start_row=1)
-
-        # Ricarica file se già selezionato
-        if self.file_path.get():
-            self.load_file()
-
     def update_filters_dropdown(self):
         if self.file_type.get() != "csv":
             return
+
         for row in self.filter_rows:
-            col_var = row[0]
-            col_menu = row[2]
-            if isinstance(col_menu, ttk.OptionMenu):
-                menu = col_menu["menu"]
+            col_var = row["col_var"]
+            col_widget = row["col_widget"]
+
+            if isinstance(col_widget, ttk.OptionMenu):
+                menu = col_widget["menu"]
                 menu.delete(0, "end")
+
                 for c in self.csv_columns:
-                    menu.add_command(label=c, command=lambda value=c, v=col_var: v.set(value))
+                    menu.add_command(
+                        label=c,
+                        command=lambda value=c, v=col_var: v.set(value)
+                    )
 
     def create_widgets(self):
         # ===== Selezione file =====
@@ -323,17 +283,6 @@ class TestoMaestroGUI:
             r["op_widget"].grid(row=i+1, column=3)
             r["btn_widget"].grid(row=i+1, column=99)
 
-    def update_filters_dropdown(self):
-        if self.file_type.get() != "csv":
-            return
-        for row in self.filter_rows:
-            col_var = row[0]
-            col_menu = row[2]
-            menu = col_menu["menu"]
-            menu.delete(0, "end")
-            for c in self.csv_columns:
-                menu.add_command(label=c, command=lambda value=c, v=col_var: v.set(value))
-
     # ===== Multi-ordinamento =====
     def add_sort_row(self):
         row_idx = len(self.sort_rows)
@@ -378,13 +327,26 @@ class TestoMaestroGUI:
 
         # Distruggi vecchie righe dei filtri
         for row in self.filter_rows:
-            if isinstance(row[2], tuple):
-                for w in row[2]:
-                    w.destroy()
-            else:
-                row[2].destroy()
-            row[3].destroy()
-            row[4].destroy()
+                col_w = row.get("col_widget")
+                if col_w:
+                        if isinstance(col_w, tuple):
+                                for i, w in enumerate(col_w):
+                                        w.destroy()
+                        else:
+                                col_w.destroy()
+
+                val_w = row.get("val_widget")
+                if val_w:
+                        val_w.destroy()
+
+                op_w = row.get("op_widget")
+                if op_w:
+                        op_w.destroy()
+
+                btn_w = row.get("btn_remove")
+                if btn_w:
+                        btn_w.destroy()
+
         self.filter_rows.clear()
 
         # Aggiungi una riga di filtro corretta per il nuovo tipo
