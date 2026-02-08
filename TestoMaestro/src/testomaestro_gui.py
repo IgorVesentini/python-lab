@@ -103,6 +103,12 @@ class TestoMaestroGUI:
         self.sort_frame = ttk.LabelFrame(self.root, text="Ordinamenti (multi)")
         self.sort_frame.grid(row=3, column=0, padx=10, pady=5, sticky="ew")
 
+        # Riga intestazione per file fisso
+        if self.file_type.get() != "csv":
+            ttk.Label(self.sort_frame, text="Da").grid(row=0, column=0, padx=5, pady=2)
+            ttk.Label(self.sort_frame, text="A").grid(row=0, column=1, padx=5, pady=2)
+            ttk.Label(self.sort_frame, text="Ordinamento").grid(row=0, column=2, padx=5, pady=2)
+
         self.add_sort_row()
         btn_add_sort = ttk.Button(self.sort_frame, text="+ Aggiungi ordinamento", command=self.add_sort_row)
         btn_add_sort.grid(row=99, column=0, columnspan=3, pady=5, sticky="w")
@@ -580,6 +586,17 @@ class TestoMaestroGUI:
                             self.preview_text.tag_add(f"hl{i}", f"{i+1}.{s}", f"{i+1}.{e}")
                             self.preview_text.tag_config(f"hl{i}", background="yellow")
 
+                # sottolinea le colonne degli ordinamenti
+                for idx, (cols, ascending) in enumerate(sorts_list):
+                    start, end = cols
+                    for i, line in enumerate(filtered_lines):
+                        line_len = len(line)
+                        s = min(start-1, line_len)
+                        e = min(end, line_len)
+                        if s < e:
+                            self.preview_text.tag_add(f"sort{i}_{idx}", f"{i+1}.{s}", f"{i+1}.{e}")
+                            self.preview_text.tag_config(f"sort{i}_{idx}", underline=1)
+
                 self.preview_text.config(state="disabled")
 
         except Exception as e:
@@ -604,18 +621,35 @@ class TestoMaestroGUI:
                 start = row["col_var"][0].get()
                 end = row["col_var"][1].get()
                 val = row["val_var"].get()
-                op = row["op_var"].get() if row["op_var"].get() else "="
+                op = row["op_var"].get() if row["op_var"] and hasattr(row["op_var"], "get") else "="
                 if start and end:
                     filters_list.append((int(start), int(end), op, val))
 
         # Raccogli ordinamenti
         sorts_list = []
         for row in self.sort_rows:
-            col_var, order_var = row[0], row[1]
-            col_val = col_var.get()
-            order_val = order_var.get()
-            if col_val:
-                sorts_list.append((col_val, order_val))
+            if self.file_type.get() == "csv":
+                col_var = row["col_var"]
+                order_var = row["order_var"]
+                col_val = col_var.get()
+                order_val = order_var.get()
+                if col_val:
+                    sorts_list.append((col_val, order_val))
+            else:  # file fisso
+                start_val = row["col_start_var"].get()
+                end_val   = row["col_end_var"].get()
+                order_val = row["order_var"]
+
+                if start_val.isdigit() and end_val.isdigit():
+                    # gestiamo boolean e string
+                    if isinstance(order_val, bool):
+                        ascending = order_val
+                    else:
+                        # se è un Tkinter StringVar o una stringa normale
+                        order_str = order_val.get() if hasattr(order_val, "get") else str(order_val)
+                        ascending = order_str.lower() == "crescente"
+
+                    sorts_list.append(((int(start_val), int(end_val)), ascending))
 
         # Scrittura file output
         try:
@@ -641,7 +675,7 @@ class TestoMaestroGUI:
                 if sorts_list:
                     sort_sets = []
                     for col_str, order in sorts_list:
-                        ascending = order.lower() in ["crescente", "asc"]
+                        ascending = str(order).lower() in ["crescente", "asc"]
                         if "-" in col_str:
                             start, end = map(int, col_str.split("-"))
                             cols = list(range(start - 1, end))  # 0-based
@@ -674,9 +708,7 @@ class TestoMaestroGUI:
 
                 if sorts_list:
                     sort_sets = []
-                    for col_str, order in sorts_list:
-                        ascending = order.lower() in ["crescente", "asc"]
-                        start, end = map(int, col_str.split("-"))
+                    for (start, end), ascending in sorts_list:
                         sort_sets.append(((start, end), ascending))
                     lines = sort_fixed(lines, sort_sets)
 
