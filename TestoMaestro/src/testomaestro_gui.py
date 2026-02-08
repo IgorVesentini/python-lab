@@ -286,15 +286,86 @@ class TestoMaestroGUI:
     # ===== Multi-ordinamento =====
     def add_sort_row(self):
         row_idx = len(self.sort_rows)
-        col_var = tk.StringVar()
-        order_var = tk.StringVar(value="Crescente")
-        col_entry = ttk.Entry(self.sort_frame, textvariable=col_var, width=15)
-        col_entry.grid(row=row_idx, column=0, padx=5, pady=2)
-        order_menu = ttk.OptionMenu(self.sort_frame, order_var, order_var.get(), "Crescente", "Decrescente")
-        order_menu.grid(row=row_idx, column=1, padx=5, pady=2)
-        btn_remove = ttk.Button(self.sort_frame, text="❌", command=lambda idx=row_idx: self.remove_sort_row(idx))
-        btn_remove.grid(row=row_idx, column=2, padx=5, pady=2)
-        self.sort_rows.append((col_var, order_var, col_entry, order_menu, btn_remove))
+
+        if self.file_type.get() == "csv":
+            # CSV: singola colonna
+            col_var = tk.StringVar()
+            order_var = tk.StringVar(value="Crescente")
+            col_entry = ttk.Entry(self.sort_frame, textvariable=col_var, width=15)
+            col_entry.grid(row=row_idx, column=0, padx=5, pady=2)
+            order_menu = ttk.OptionMenu(self.sort_frame, order_var, order_var.get(), "Crescente", "Decrescente")
+            order_menu.grid(row=row_idx, column=1, padx=5, pady=2)
+            btn_remove = ttk.Button(self.sort_frame, text="❌")
+            btn_remove.grid(row=row_idx, column=2, padx=5, pady=2)
+
+            row_dict = {
+                "col_var": col_var,
+                "order_var": order_var,
+                "col_widget": col_entry,
+                "order_widget": order_menu,
+                "btn_widget": btn_remove
+            }
+            btn_remove.config(command=lambda r=row_dict: self.remove_sort_row_by_object(r))
+            self.sort_rows.append(row_dict)
+
+        else:
+            # Fisso: due colonne Da-A
+            col_start_var = tk.StringVar()
+            col_end_var = tk.StringVar()
+            order_var = tk.StringVar(value="Crescente")
+
+            col_entry_start = ttk.Entry(self.sort_frame, textvariable=col_start_var, width=8)
+            col_entry_end = ttk.Entry(self.sort_frame, textvariable=col_end_var, width=8)
+            col_entry_start.grid(row=row_idx, column=0, padx=5, pady=2)
+            col_entry_end.grid(row=row_idx, column=1, padx=5, pady=2)
+
+            order_menu = ttk.OptionMenu(self.sort_frame, order_var, order_var.get(), "Crescente", "Decrescente")
+            order_menu.grid(row=row_idx, column=2, padx=5, pady=2)
+
+            btn_remove = ttk.Button(self.sort_frame, text="❌")
+            btn_remove.grid(row=row_idx, column=5, padx=5, pady=2)
+
+            row_dict = {
+                "col_start_var": col_start_var,
+                "col_end_var": col_end_var,
+                "order_var": order_var,
+                "col_start_widget": col_entry_start,
+                "col_end_widget": col_entry_end,
+                "order_widget": order_menu,
+                "btn_widget": btn_remove
+            }
+            btn_remove.config(command=lambda r=row_dict: self.remove_sort_row_by_object(r))
+            self.sort_rows.append(row_dict)
+
+    def remove_sort_row_by_object(self, row):
+        if row not in self.sort_rows:
+            return
+
+        # Distruggi tutti i widget della riga
+        if self.file_type.get() == "csv":
+            row["col_widget"].destroy()
+            row["order_widget"].destroy()
+            row["btn_widget"].destroy()
+        else:
+            row["col_start_widget"].destroy()
+            row["col_end_widget"].destroy()
+            row["order_widget"].destroy()
+            row["btn_widget"].destroy()
+
+        # Rimuovi dalla lista
+        self.sort_rows.remove(row)
+
+        # Riallinea tutte le righe rimanenti
+        for i, r in enumerate(self.sort_rows):
+            if self.file_type.get() == "csv":
+                r["col_widget"].grid(row=i, column=0, padx=5, pady=2)
+                r["order_widget"].grid(row=i, column=1, padx=5, pady=2)
+                r["btn_widget"].grid(row=i, column=2, padx=5, pady=2)
+            else:
+                r["col_start_widget"].grid(row=i, column=0, padx=5, pady=2)
+                r["col_end_widget"].grid(row=i, column=1, padx=5, pady=2)
+                r["order_widget"].grid(row=i, column=2, padx=5, pady=2)
+                r["btn_widget"].grid(row=i, column=5, padx=5, pady=2)
 
     def remove_sort_row(self, idx):
         row = self.sort_rows[idx]
@@ -305,6 +376,47 @@ class TestoMaestroGUI:
             row[2].grid(row=i, column=0)
             row[3].grid(row=i, column=1)
             row[4].grid(row=i, column=2)
+
+    def check_fixed_sort_rows(self, lines):
+        """
+        Controlla le righe di ordinamento per file fisso.
+        Ritorna una lista di messaggi di errore per le righe non valide.
+        Ignora le righe completamente vuote.
+        """
+        error_list = []
+        max_len = len(lines[0]) if lines else 0
+
+        for idx, row in enumerate(self.sort_rows):
+            start_var = row["col_start_var"]
+            end_var = row["col_end_var"]
+            order_var = row["order_var"]
+
+            start_val = start_var.get().strip()
+            end_val = end_var.get().strip()
+
+            # riga completamente vuota
+            if not start_val and not end_val:
+                continue
+
+            # entrambi devono essere valorizzati
+            if not start_val or not end_val:
+                error_list.append(f"Riga {idx+1}: entrambi i campi Da e A devono essere valorizzati")
+                continue
+
+            # controlli numerici
+            if not start_val.isdigit() or int(start_val) <= 0:
+                error_list.append(f"Riga {idx+1}: Da deve essere > 0")
+            if not end_val.isdigit() or int(end_val) <= 0:
+                error_list.append(f"Riga {idx+1}: A deve essere > 0")
+
+            if start_val.isdigit() and end_val.isdigit():
+                start, end = int(start_val), int(end_val)
+                if end < start:
+                    error_list.append(f"Riga {idx+1}: A non può essere minore di Da")
+                if end > max_len:
+                    error_list.append(f"Riga {idx+1}: A non può superare la lunghezza del file ({max_len})")
+
+        return error_list
 
     # ===== File handling =====
     def browse_file(self):
@@ -421,8 +533,9 @@ class TestoMaestroGUI:
                     self.show_error(alert_msg)
                     return  # non applica filtri se ci sono errori
 
-                # raccolta filtri e posizioni highlight
+                # raccolta filtri e highlight
                 filters_list = []
+                highlight_positions = []
                 for row in self.filter_rows:
                     start_val = row["col_var"][0].get()
                     end_val   = row["col_var"][1].get()
@@ -434,16 +547,30 @@ class TestoMaestroGUI:
                         filters_list.append((start, end, op, val))
                         highlight_positions.append((start-1, end))
 
-                # applica filtri usando engine
-                from engine import apply_filters_fixed
+                # applica filtri
+                from engine import apply_filters_fixed, sort_fixed
                 filtered_lines = apply_filters_fixed(lines, filters_list) if filters_list else lines
+
+                # raccolta ordinamenti
+                sorts_list = []
+                for row in self.sort_rows:
+                    start_val = row["col_start_var"].get()
+                    end_val   = row["col_end_var"].get()
+                    order_val = row["order_var"].get()
+                    if start_val.isdigit() and end_val.isdigit():
+                        ascending = order_val.lower() == "crescente"
+                        sorts_list.append(((int(start_val), int(end_val)), ascending))
+
+                # applica ordinamenti
+                if sorts_list:
+                    filtered_lines = sort_fixed(filtered_lines, sorts_list)
 
                 # mostra nel widget
                 self.preview_text.config(state="normal")
                 self.preview_text.delete(1.0, tk.END)
                 self.preview_text.insert(tk.END, "\n".join(filtered_lines))
 
-                # evidenzia colonne
+                # evidenzia colonne dei filtri
                 for start, end in highlight_positions:
                     for i, line in enumerate(filtered_lines):
                         line_len = len(line)
@@ -532,6 +659,15 @@ class TestoMaestroGUI:
 
             else:  # file fisso
                 lines = [line.rstrip("\n") for line in open(in_file, encoding="utf-8")]
+
+                # --- controlli filtri ---
+                filter_errors = self.check_fixed_filter_rows(lines)
+                # --- controlli ordinamenti ---
+                sort_errors = self.check_fixed_sort_rows(lines)
+                all_errors = filter_errors + sort_errors
+                if all_errors:
+                    self.show_error("Errori rilevati:\n" + "\n".join(all_errors))
+                    return
 
                 if filters_list:
                     lines = apply_filters_fixed(lines, filters_list)
