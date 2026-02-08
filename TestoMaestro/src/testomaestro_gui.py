@@ -103,11 +103,9 @@ class TestoMaestroGUI:
         self.sort_frame = ttk.LabelFrame(self.root, text="Ordinamenti (multi)")
         self.sort_frame.grid(row=3, column=0, padx=10, pady=5, sticky="ew")
 
-        # Riga intestazione per file fisso
+        # Label guida ordinamenti (solo per file fisso)
         if self.file_type.get() != "csv":
-            ttk.Label(self.sort_frame, text="Da").grid(row=0, column=0, padx=5, pady=2)
-            ttk.Label(self.sort_frame, text="A").grid(row=0, column=1, padx=5, pady=2)
-            ttk.Label(self.sort_frame, text="Ordinamento").grid(row=0, column=2, padx=5, pady=2)
+            self.update_sort_labels()
 
         self.add_sort_row()
         btn_add_sort = ttk.Button(self.sort_frame, text="+ Aggiungi ordinamento", command=self.add_sort_row)
@@ -146,6 +144,7 @@ class TestoMaestroGUI:
             ttk.Label(self.filter_frame, text="Da").grid(row=0, column=0, padx=5, pady=2)
             ttk.Label(self.filter_frame, text="A").grid(row=0, column=1, padx=5, pady=2)
             ttk.Label(self.filter_frame, text="Filtro").grid(row=0, column=2, padx=5, pady=2)
+            ttk.Label(self.filter_frame, text="Operatore").grid(row=0, column=3, padx=5, pady=2)
 
     # ===== Multi-filtro =====
     def add_filter_row(self, start_row=1):
@@ -291,7 +290,8 @@ class TestoMaestroGUI:
 
     # ===== Multi-ordinamento =====
     def add_sort_row(self):
-        row_idx = len(self.sort_rows)
+        row_idx = len(self.sort_rows) + 1 if self.file_type.get() != "csv" else len(self.sort_rows)
+
 
         if self.file_type.get() == "csv":
             # CSV: singola colonna
@@ -472,6 +472,10 @@ class TestoMaestroGUI:
 
         # Ricarica file (opzionale)
         self.load_file()
+
+        # Aggiorna intestazioni ordinamenti per file fisso
+        if self.file_type.get() != "csv":
+            self.update_sort_labels()
 
     def load_file(self):
         path = self.file_path.get()
@@ -774,6 +778,17 @@ class TestoMaestroGUI:
                         error_list.append(f"Riga {idx+1}: Lunghezza Filtro non può superare {end - start + 1}")
 
         return error_list
+
+    def update_sort_labels(self):
+        # Distruggi eventuali etichette precedenti
+        for widget in self.sort_frame.grid_slaves(row=0):
+            widget.destroy()
+
+        # Solo per file fisso
+        if self.file_type.get() != "csv":
+            ttk.Label(self.sort_frame, text="Da").grid(row=0, column=0, padx=5, pady=2)
+            ttk.Label(self.sort_frame, text="A").grid(row=0, column=1, padx=5, pady=2)
+            ttk.Label(self.sort_frame, text="Ordinamento").grid(row=0, column=2, padx=5, pady=2)
 
 if __name__ == "__main__":
     root = tk.Tk()
