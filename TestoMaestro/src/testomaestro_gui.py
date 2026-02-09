@@ -4,10 +4,26 @@ import os
 import pandas as pd
 from datetime import datetime
 
+# ===== Theme e font moderni =====
+BG_COLOR = "#f5f5f5"            # Sfondo finestra
+FRAME_COLOR = "#e8e8e8"         # Colori frame
+ENTRY_BG = "#ffffff"             # Background entry / optionmenu
+ACCENT_COLOR = "#4a90e2"        # Colore accenti / bordi
+FONT_PREVIEW = ("Consolas", 10) # Monospazio per anteprima
+FONT_DEFAULT = ("Segoe UI", 10)
+
+FRAME_BG_COLOR = "#e0e0e0"  # grigio chiaro pastello
+LABEL_BG_COLOR = "#e0e0e0"
+
 class TestoMaestroGUI:
     def __init__(self, root):
         self.root = root
         self.root.title("TestoMaestro - GUI")
+
+        # ===== Step 1: sfondo chiaro e dimensione finestra =====
+        BG_COLOR = "#f5f5f5"
+        self.root.configure(bg=BG_COLOR)
+        self.root.geometry("900x600")
 
         # Variabili
         self.file_path = tk.StringVar()
@@ -49,70 +65,78 @@ class TestoMaestroGUI:
                     col_var.set(self.csv_columns[0])
 
     def create_widgets(self):
+        style = ttk.Style()
+        style.configure("My.TLabelframe", background=FRAME_BG_COLOR, font=FONT_DEFAULT)
+        style.configure("My.TLabelframe.Label", background=FRAME_BG_COLOR, font=FONT_DEFAULT)
+        style.configure("My.TLabel", background=LABEL_BG_COLOR, font=FONT_DEFAULT)
+        style.configure("My.TButton", font=FONT_DEFAULT)
+        style.configure("My.TEntry", font=FONT_DEFAULT)
+    
         # ===== Selezione file =====
-        file_frame = ttk.LabelFrame(self.root, text="File di input")
+        file_frame = ttk.LabelFrame(self.root, text="File di input", style="My.TLabelframe")
         file_frame.grid(row=0, column=0, padx=10, pady=10, sticky="ew")
-
+    
         entry_file = ttk.Entry(
             file_frame,
             textvariable=self.file_path,
             width=50,
-            state="readonly"
+            state="readonly",
+            font=FONT_DEFAULT
         )
         entry_file.grid(row=0, column=0, padx=5, pady=5)
-
-        btn_browse = ttk.Button(file_frame, text="Sfoglia...", command=self.browse_file)
+    
+        btn_browse = ttk.Button(file_frame, text="Sfoglia...", command=self.browse_file, style="My.TButton")
         btn_browse.grid(row=0, column=1, padx=5, pady=5)
-
+    
         # ===== Filtri =====
-        self.filter_frame = ttk.LabelFrame(self.root, text="Filtri (multi)")
+        self.filter_frame = ttk.LabelFrame(self.root, text="Filtri (multi)", style="My.TLabelframe")
         self.filter_frame.grid(row=1, column=0, padx=10, pady=5, sticky="ew")
         self.update_filter_labels()
         self.add_filter_row(start_row=1)
-        btn_add_filter = ttk.Button(self.filter_frame, text="+ Aggiungi filtro", command=self.add_filter_row)
+        btn_add_filter = ttk.Button(self.filter_frame, text="+ Aggiungi filtro", command=self.add_filter_row, style="My.TButton")
         btn_add_filter.grid(row=99, column=0, columnspan=5, pady=5, sticky="w")
-
+    
         # ===== Ordinamenti =====
-        self.sort_frame = ttk.LabelFrame(self.root, text="Ordinamenti (multi)")
+        self.sort_frame = ttk.LabelFrame(self.root, text="Ordinamenti (multi)", style="My.TLabelframe")
         self.sort_frame.grid(row=2, column=0, padx=10, pady=5, sticky="ew")
         self.update_sort_labels()
         self.add_sort_row()
-        btn_add_sort = ttk.Button(self.sort_frame, text="+ Aggiungi ordinamento", command=self.add_sort_row)
+        btn_add_sort = ttk.Button(self.sort_frame, text="+ Aggiungi ordinamento", command=self.add_sort_row, style="My.TButton")
         btn_add_sort.grid(row=99, column=0, columnspan=3, pady=5, sticky="w")
-
+    
         # ===== Anteprima =====
-        preview_frame = ttk.LabelFrame(self.root, text="Anteprima (prime 10 righe)")
+        preview_frame = ttk.LabelFrame(self.root, text="Anteprima (prime 10 righe)", style="My.TLabelframe")
         preview_frame.grid(row=3, column=0, padx=10, pady=5, sticky="nsew")
-
-        self.preview_text = tk.Text(preview_frame, height=10, width=80, state="disabled")
+    
+        self.preview_text = tk.Text(preview_frame, height=10, width=80, state="disabled", font=FONT_PREVIEW)
         self.preview_text.grid(row=0, column=0, padx=5, pady=5)
-
+    
         # ===== Pulsanti =====
-        self.btn_execute = ttk.Button(self.root, text="Esegui", command=self.execute)
+        self.btn_execute = ttk.Button(self.root, text="Esegui", command=self.execute, style="My.TButton")
         self.btn_execute.grid(row=4, column=0, padx=10, pady=5, sticky="ew")
         self.btn_execute.grid_remove()
-
-        self.btn_preview_out = ttk.Button(self.root, text="Mostra anteprima output", command=self.show_output_preview)
+    
+        self.btn_preview_out = ttk.Button(self.root, text="Mostra anteprima output", command=self.show_output_preview, style="My.TButton")
         self.btn_preview_out.grid(row=5, column=0, padx=10, pady=5, sticky="ew")
         self.btn_preview_out.grid_remove()
-
+    
         # Espandi anteprima quando finestra ridimensionata
         self.root.grid_rowconfigure(3, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
-    # ===== Label guida dinamica per filtri =====
+
     # ===== Label guida dinamica per filtri =====
     def update_filter_labels(self):
         for widget in self.filter_frame.grid_slaves(row=0):
             widget.destroy()
-
+    
         if self.file_type.get() == "csv":
-            ttk.Label(self.filter_frame, text="Colonna").grid(row=0, column=0, padx=5, pady=2)
-            ttk.Label(self.filter_frame, text="Filtro").grid(row=0, column=1, padx=5, pady=2)
+            ttk.Label(self.filter_frame, text="Colonna", style="My.TLabel").grid(row=0, column=0, padx=5, pady=2)
+            ttk.Label(self.filter_frame, text="Filtro", style="My.TLabel").grid(row=0, column=1, padx=5, pady=2)
         else:
-            ttk.Label(self.filter_frame, text="Da").grid(row=0, column=0, padx=5, pady=2)
-            ttk.Label(self.filter_frame, text="A").grid(row=0, column=1, padx=5, pady=2)
-            ttk.Label(self.filter_frame, text="Filtro").grid(row=0, column=2, padx=5, pady=2)
-            ttk.Label(self.filter_frame, text="Operatore").grid(row=0, column=3, padx=5, pady=2)
+            ttk.Label(self.filter_frame, text="Da", style="My.TLabel").grid(row=0, column=0, padx=5, pady=2)
+            ttk.Label(self.filter_frame, text="A", style="My.TLabel").grid(row=0, column=1, padx=5, pady=2)
+            ttk.Label(self.filter_frame, text="Filtro", style="My.TLabel").grid(row=0, column=2, padx=5, pady=2)
+            ttk.Label(self.filter_frame, text="Operatore", style="My.TLabel").grid(row=0, column=3, padx=5, pady=2)
 
     # ===== Multi-filtro =====
     def add_filter_row(self, start_row=1):
@@ -121,8 +145,17 @@ class TestoMaestroGUI:
         if self.file_type.get() == "csv":
             col_var = tk.StringVar()
             val_var = tk.StringVar()
-            col_menu = ttk.OptionMenu(self.filter_frame, col_var, *(self.csv_columns if self.csv_columns else ["-"]))
-            val_entry = ttk.Entry(self.filter_frame, textvariable=val_var, width=15)
+    
+            # OptionMenu con font moderno
+            col_menu = ttk.OptionMenu(
+                self.filter_frame,
+                col_var,
+                *(self.csv_columns if self.csv_columns else ["-"])
+            )
+            col_menu.config(width=15)
+            col_menu["menu"].config(font=FONT_DEFAULT)
+    
+            val_entry = ttk.Entry(self.filter_frame, textvariable=val_var, width=15, font=FONT_DEFAULT)
             op_var = None
             op_menu = None
         else:
@@ -130,25 +163,31 @@ class TestoMaestroGUI:
             col_end_var = tk.StringVar()
             val_var = tk.StringVar()
             op_var = tk.StringVar(value="=")
-            col_menu = (ttk.Entry(self.filter_frame, textvariable=col_start_var, width=8),
-                        ttk.Entry(self.filter_frame, textvariable=col_end_var, width=8))
-            val_entry = ttk.Entry(self.filter_frame, textvariable=val_var, width=15)
+    
+            col_entry_start = ttk.Entry(self.filter_frame, textvariable=col_start_var, width=8, font=FONT_DEFAULT)
+            col_entry_end = ttk.Entry(self.filter_frame, textvariable=col_end_var, width=8, font=FONT_DEFAULT)
+            col_menu = (col_entry_start, col_entry_end)
+    
+            val_entry = ttk.Entry(self.filter_frame, textvariable=val_var, width=15, font=FONT_DEFAULT)
             op_menu = ttk.OptionMenu(self.filter_frame, op_var, op_var.get(), "=", "!=", ">", "<", ">=", "<=", "~", "!~")
+            op_menu.config(width=3)
+            op_menu["menu"].config(font=FONT_DEFAULT)
     
         # Inserisci nella griglia
         if isinstance(col_menu, tuple):
             for i, w in enumerate(col_menu):
                 w.grid(row=row_idx, column=i, padx=5, pady=2)
             val_entry.grid(row=row_idx, column=2, padx=5, pady=2)
-            op_menu.grid(row=row_idx, column=3, padx=5, pady=2)
+            if op_menu:
+                op_menu.grid(row=row_idx, column=3, padx=5, pady=2)
         else:
             col_menu.grid(row=row_idx, column=0, padx=5, pady=2)
             val_entry.grid(row=row_idx, column=1, padx=5, pady=2)
             if op_menu:
                 op_menu.grid(row=row_idx, column=3, padx=5, pady=2)
     
-        # Bottone ❌
-        btn_remove = ttk.Button(self.filter_frame, text="❌")
+        # Bottone ❌ con font moderno
+        btn_remove = ttk.Button(self.filter_frame, text="❌", style="My.TButton")
         btn_remove.grid(row=row_idx, column=99, padx=5, pady=2)
     
         # Riga come dizionario
@@ -162,9 +201,8 @@ class TestoMaestroGUI:
             "btn_remove": btn_remove
         }
     
-        # Assegna comando al bottone ora che row_dict esiste
+        # Assegna comando al bottone
         btn_remove.config(command=lambda r=row_dict: self.remove_filter_row_by_object(r))
-    
         self.filter_rows.append(row_dict)
 
     def remove_filter_row_by_object(self, row):
@@ -259,19 +297,22 @@ class TestoMaestroGUI:
     # ===== Multi-ordinamento =====
     def add_sort_row(self):
         row_idx = len(self.sort_rows) + 1 if self.file_type.get() != "csv" else len(self.sort_rows)
-
-
+    
         if self.file_type.get() == "csv":
-            # CSV: singola colonna
             col_var = tk.StringVar()
             order_var = tk.StringVar(value="Crescente")
-            col_entry = ttk.Entry(self.sort_frame, textvariable=col_var, width=15)
+    
+            col_entry = ttk.Entry(self.sort_frame, textvariable=col_var, width=15, font=FONT_DEFAULT)
             col_entry.grid(row=row_idx, column=0, padx=5, pady=2)
+    
             order_menu = ttk.OptionMenu(self.sort_frame, order_var, order_var.get(), "Crescente", "Decrescente")
+            order_menu.config(width=10)
+            order_menu["menu"].config(font=FONT_DEFAULT)
             order_menu.grid(row=row_idx, column=1, padx=5, pady=2)
-            btn_remove = ttk.Button(self.sort_frame, text="❌")
+    
+            btn_remove = ttk.Button(self.sort_frame, text="❌", style="My.TButton")
             btn_remove.grid(row=row_idx, column=2, padx=5, pady=2)
-
+    
             row_dict = {
                 "col_var": col_var,
                 "order_var": order_var,
@@ -281,24 +322,25 @@ class TestoMaestroGUI:
             }
             btn_remove.config(command=lambda r=row_dict: self.remove_sort_row_by_object(r))
             self.sort_rows.append(row_dict)
-
+    
         else:
-            # Fisso: due colonne Da-A
             col_start_var = tk.StringVar()
             col_end_var = tk.StringVar()
             order_var = tk.StringVar(value="Crescente")
-
-            col_entry_start = ttk.Entry(self.sort_frame, textvariable=col_start_var, width=8)
-            col_entry_end = ttk.Entry(self.sort_frame, textvariable=col_end_var, width=8)
+    
+            col_entry_start = ttk.Entry(self.sort_frame, textvariable=col_start_var, width=8, font=FONT_DEFAULT)
+            col_entry_end = ttk.Entry(self.sort_frame, textvariable=col_end_var, width=8, font=FONT_DEFAULT)
             col_entry_start.grid(row=row_idx, column=0, padx=5, pady=2)
             col_entry_end.grid(row=row_idx, column=1, padx=5, pady=2)
-
+    
             order_menu = ttk.OptionMenu(self.sort_frame, order_var, order_var.get(), "Crescente", "Decrescente")
+            order_menu.config(width=10)
+            order_menu["menu"].config(font=FONT_DEFAULT)
             order_menu.grid(row=row_idx, column=2, padx=5, pady=2)
-
-            btn_remove = ttk.Button(self.sort_frame, text="❌")
+    
+            btn_remove = ttk.Button(self.sort_frame, text="❌", style="My.TButton")
             btn_remove.grid(row=row_idx, column=5, padx=5, pady=2)
-
+    
             row_dict = {
                 "col_start_var": col_start_var,
                 "col_end_var": col_end_var,
@@ -719,7 +761,7 @@ class TestoMaestroGUI:
                     for line in lines:
                         f.write(line + "\n")
 
-            messagebox.showinfo("Esegui", f"Esecuzione completata.\nFile scritto: {out_file}\nFiltri: {filters_list}\nOrdinamenti: {sorts_list}")
+            messagebox.showinfo("Esegui", f"File prodotto: {out_file}")
 
         except Exception as e:
             self.show_error(f"Errore durante l'esecuzione:\n{e}")
@@ -779,15 +821,13 @@ class TestoMaestroGUI:
         return error_list
 
     def update_sort_labels(self):
-        # Distruggi eventuali etichette precedenti
         for widget in self.sort_frame.grid_slaves(row=0):
             widget.destroy()
-
-        # Solo per file fisso
+    
         if self.file_type.get() != "csv":
-            ttk.Label(self.sort_frame, text="Da").grid(row=0, column=0, padx=5, pady=2)
-            ttk.Label(self.sort_frame, text="A").grid(row=0, column=1, padx=5, pady=2)
-            ttk.Label(self.sort_frame, text="Ordinamento").grid(row=0, column=2, padx=5, pady=2)
+            ttk.Label(self.sort_frame, text="Da", style="My.TLabel").grid(row=0, column=0, padx=5, pady=2)
+            ttk.Label(self.sort_frame, text="A", style="My.TLabel").grid(row=0, column=1, padx=5, pady=2)
+            ttk.Label(self.sort_frame, text="Ordinamento", style="My.TLabel").grid(row=0, column=2, padx=5, pady=2)
 
 if __name__ == "__main__":
     root = tk.Tk()
