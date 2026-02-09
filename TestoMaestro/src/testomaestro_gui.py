@@ -76,12 +76,21 @@ class TestoMaestroGUI:
         self.csv_frame = ttk.Frame(type_frame)
         self.csv_frame.grid(row=1, column=0, columnspan=2, sticky="ew", padx=5, pady=5)
 
-        self.chk_header = ttk.Checkbutton(self.csv_frame, text="Header", variable=self.csv_header, command=self.update_filters_dropdown)
+        self.chk_header = ttk.Checkbutton(
+            self.csv_frame,
+            text="Header",
+            variable=self.csv_header,
+            command=lambda: [self.update_filters_dropdown(), self.load_file()]
+        )
         self.chk_header.grid(row=0, column=0, padx=5, pady=2)
 
         ttk.Label(self.csv_frame, text="Separatore:").grid(row=0, column=1, padx=5, pady=2)
         self.sep_menu = ttk.OptionMenu(
-            self.csv_frame, self.csv_separator, self.csv_separator.get(), ",", ";", "\\t", "|"
+            self.csv_frame,
+            self.csv_separator,
+            self.csv_separator.get(),
+            ",", ";", "\\t", "|",
+            command=lambda _: self.load_file()
         )
         self.sep_menu.grid(row=0, column=2, padx=5, pady=2)
 
@@ -486,10 +495,32 @@ class TestoMaestroGUI:
                 sep = self.csv_separator.get()
                 if sep == "\\t":
                     sep = "\t"
-                df = pd.read_csv(path, sep=sep, header=0 if self.csv_header.get() else None)
-                self.csv_columns = list(df.columns) if self.csv_header.get() else [str(i+1) for i in range(len(df.columns))]
-                self.update_filters_dropdown()
-                self.show_preview(df)
+                try:
+                    # Prova a leggere con pandas
+                    df = pd.read_csv(path, sep=sep, header=0 if self.csv_header.get() else None)
+    
+                    # ===== PATCH: verifica parsing reale =====
+                    if len(df.columns) == 1 and sep not in str(df.columns[0]):
+                        raise ValueError("Separatore non valido, fallback raw")
+                    # ===== FINE PATCH =====
+    
+                    self.csv_columns = (
+                        list(df.columns)
+                        if self.csv_header.get()
+                        else [str(i + 1) for i in range(len(df.columns))]
+                    )
+                    self.update_filters_dropdown()
+                    self.show_preview(df)
+    
+                except Exception:
+                    # Fallback: mostra file raw
+                    with open(path, "r", encoding="utf-8") as f:
+                        lines = [f.readline().rstrip("\n") for _ in range(10)]
+                    preview = "\n".join(lines)
+                    self.preview_text.config(state="normal")
+                    self.preview_text.delete(1.0, tk.END)
+                    self.preview_text.insert(tk.END, preview)
+                    self.preview_text.config(state="disabled")
             else:
                 with open(path, "r", encoding="utf-8") as f:
                     lines = [f.readline().rstrip("\n") for _ in range(10)]
@@ -498,8 +529,11 @@ class TestoMaestroGUI:
                 self.preview_text.delete(1.0, tk.END)
                 self.preview_text.insert(tk.END, preview)
                 self.preview_text.config(state="disabled")
+    
+            # Mostra pulsanti esegui e anteprima
             self.btn_execute.grid()
             self.btn_preview_out.grid()
+    
         except Exception as e:
             self.show_error(f"Errore nel caricamento del file:\n{e}")
 
@@ -617,9 +651,12 @@ class TestoMaestroGUI:
         filters_list = []
         for row in self.filter_rows:
             if self.file_type.get() == "csv":
-                col = row["col_var"].get()
-                val = row["val_var"].get()
-                if col and val:
+                col = row["col_var"].get().strip()
+                val = row["val_var"].get().strip()
+                if col and not val:
+                    self.show_error(f"Filtro mancante per colonna '{col}'")
+                    return
+                elif col and val:
                     filters_list.append((col, val))
             else:  # file fisso
                 start = row["col_var"][0].get()
