@@ -12,10 +12,10 @@ class TestoMaestroGUI:
         # Variabili
         self.file_path = tk.StringVar()
         self.last_folder = os.getcwd()
-        self.file_type = tk.StringVar(value="fisso")
+        self.file_type = tk.StringVar(value="fisso")  # default fisso
         self.csv_header = tk.BooleanVar(value=True)
         self.csv_separator = tk.StringVar(value=",")
-        
+
         self.preview_text = None
 
         # Liste dinamiche per multi-filtro e multi-ordinamento
@@ -45,6 +45,9 @@ class TestoMaestroGUI:
                         command=lambda value=c, v=col_var: v.set(value)
                     )
 
+                if self.csv_columns:
+                    col_var.set(self.csv_columns[0])
+
     def create_widgets(self):
         # ===== Selezione file =====
         file_frame = ttk.LabelFrame(self.root, text="File di input")
@@ -61,85 +64,41 @@ class TestoMaestroGUI:
         btn_browse = ttk.Button(file_frame, text="Sfoglia...", command=self.browse_file)
         btn_browse.grid(row=0, column=1, padx=5, pady=5)
 
-        # ===== Tipo file =====
-        type_frame = ttk.LabelFrame(self.root, text="Tipo file")
-        type_frame.grid(row=1, column=0, padx=10, pady=5, sticky="ew")
-
-        ttk.Label(type_frame, text="Seleziona tipo:").grid(row=0, column=0, padx=5, pady=5)
-        type_menu = ttk.OptionMenu(
-            type_frame, self.file_type, self.file_type.get(),
-            "fisso", "csv", command=self.update_csv_options
-        )
-        type_menu.grid(row=0, column=1, padx=5, pady=5)
-
-        # CSV options
-        self.csv_frame = ttk.Frame(type_frame)
-        self.csv_frame.grid(row=1, column=0, columnspan=2, sticky="ew", padx=5, pady=5)
-
-        self.chk_header = ttk.Checkbutton(
-            self.csv_frame,
-            text="Header",
-            variable=self.csv_header,
-            command=lambda: [self.update_filters_dropdown(), self.load_file()]
-        )
-        self.chk_header.grid(row=0, column=0, padx=5, pady=2)
-
-        ttk.Label(self.csv_frame, text="Separatore:").grid(row=0, column=1, padx=5, pady=2)
-        self.sep_menu = ttk.OptionMenu(
-            self.csv_frame,
-            self.csv_separator,
-            self.csv_separator.get(),
-            ",", ";", "\\t", "|",
-            command=lambda _: self.load_file()
-        )
-        self.sep_menu.grid(row=0, column=2, padx=5, pady=2)
-
-        self.csv_frame.grid_remove()  # nascosto inizialmente se file fisso
-
-        # ===== Sezione Filtri =====
+        # ===== Filtri =====
         self.filter_frame = ttk.LabelFrame(self.root, text="Filtri (multi)")
-        self.filter_frame.grid(row=2, column=0, padx=10, pady=5, sticky="ew")
-
-        # Label guida filtri
+        self.filter_frame.grid(row=1, column=0, padx=10, pady=5, sticky="ew")
         self.update_filter_labels()
-
-        # Prima riga filtro
         self.add_filter_row(start_row=1)
         btn_add_filter = ttk.Button(self.filter_frame, text="+ Aggiungi filtro", command=self.add_filter_row)
         btn_add_filter.grid(row=99, column=0, columnspan=5, pady=5, sticky="w")
 
-        # ===== Sezione Ordinamento =====
+        # ===== Ordinamenti =====
         self.sort_frame = ttk.LabelFrame(self.root, text="Ordinamenti (multi)")
-        self.sort_frame.grid(row=3, column=0, padx=10, pady=5, sticky="ew")
-
-        # Label guida ordinamenti (solo per file fisso)
-        if self.file_type.get() != "csv":
-            self.update_sort_labels()
-
+        self.sort_frame.grid(row=2, column=0, padx=10, pady=5, sticky="ew")
+        self.update_sort_labels()
         self.add_sort_row()
         btn_add_sort = ttk.Button(self.sort_frame, text="+ Aggiungi ordinamento", command=self.add_sort_row)
         btn_add_sort.grid(row=99, column=0, columnspan=3, pady=5, sticky="w")
 
         # ===== Anteprima =====
         preview_frame = ttk.LabelFrame(self.root, text="Anteprima (prime 10 righe)")
-        preview_frame.grid(row=4, column=0, padx=10, pady=5, sticky="nsew")
+        preview_frame.grid(row=3, column=0, padx=10, pady=5, sticky="nsew")
 
         self.preview_text = tk.Text(preview_frame, height=10, width=80, state="disabled")
         self.preview_text.grid(row=0, column=0, padx=5, pady=5)
 
-        # ===== Pulsanti Esegui e Anteprima Output =====
+        # ===== Pulsanti =====
         self.btn_execute = ttk.Button(self.root, text="Esegui", command=self.execute)
-        self.btn_execute.grid(row=5, column=0, padx=10, pady=5, sticky="ew")
+        self.btn_execute.grid(row=4, column=0, padx=10, pady=5, sticky="ew")
         self.btn_execute.grid_remove()
 
         self.btn_preview_out = ttk.Button(self.root, text="Mostra anteprima output", command=self.show_output_preview)
-        self.btn_preview_out.grid(row=6, column=0, padx=10, pady=5, sticky="ew")
+        self.btn_preview_out.grid(row=5, column=0, padx=10, pady=5, sticky="ew")
         self.btn_preview_out.grid_remove()
 
         # Espandi anteprima quando finestra ridimensionata
-        self.root.grid_rowconfigure(4, weight=1)
+        self.root.grid_rowconfigure(3, weight=1)
         self.root.grid_columnconfigure(0, weight=1)
-
     # ===== Label guida dinamica per filtri =====
     # ===== Label guida dinamica per filtri =====
     def update_filter_labels(self):
@@ -497,7 +456,7 @@ class TestoMaestroGUI:
                     sep = "\t"
                 try:
                     # Prova a leggere con pandas
-                    df = pd.read_csv(path, sep=sep, header=0 if self.csv_header.get() else None)
+                    df = pd.read_csv(path, sep=sep, header=0 if self.csv_header.get() else None, dtype=str)
     
                     # ===== PATCH: verifica parsing reale =====
                     if len(df.columns) == 1 and sep not in str(df.columns[0]):
@@ -558,12 +517,15 @@ class TestoMaestroGUI:
                 if sep == "\\t":
                     sep = "\t"
                 import pandas as pd
-                df = pd.read_csv(path, sep=sep, header=0 if self.csv_header.get() else None)
+
+                df = pd.read_csv(path, sep=sep, header=0 if self.csv_header.get() else None, dtype=str)
+                
                 for row in self.filter_rows:
                     col = row["col_var"].get()
                     val = row["val_var"].get()
-                    if col and val:
-                        df = df[df[col].astype(str).str.contains(val)]
+                    if col and val and col in df.columns:
+                        df = df[df[col].astype(str) == str(val)]
+                
                 preview = df.head(10).to_string(index=False)
 
             else:  # file fisso
