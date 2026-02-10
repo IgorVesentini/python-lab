@@ -18,7 +18,7 @@ LABEL_BG_COLOR = "#e0e0e0"
 class TestoMaestroGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("TestoMaestro - GUI")
+        self.root.title("TestoMaestro")
 
         # ===== Step 1: sfondo chiaro e dimensione finestra =====
         BG_COLOR = "#f5f5f5"
