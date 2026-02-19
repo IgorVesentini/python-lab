@@ -1,8 +1,13 @@
+# TestoMaestro
+# Diritti d'autore (c) 2026 Igor Vesentini
+# Licenza: MIT
+
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 import os
 import pandas as pd
 from datetime import datetime
+from info_app import APP_NAME, APP_VERSION, APP_AUTHOR, APP_YEAR, APP_LICENSE
 
 # ===== Theme e font moderni =====
 BG_COLOR = "#f5f5f5"            # Sfondo finestra
@@ -18,7 +23,8 @@ LABEL_BG_COLOR = "#e0e0e0"
 class TestoMaestroGUI:
     def __init__(self, root):
         self.root = root
-        self.root.title("TestoMaestro")
+        self.root.title(f"{APP_NAME} v.{APP_VERSION}")
+
 
         # ===== Step 1: sfondo chiaro e dimensione finestra =====
         BG_COLOR = "#f5f5f5"
@@ -88,6 +94,17 @@ class TestoMaestroGUI:
         btn_browse = ttk.Button(file_frame, text="Sfoglia...", command=self.browse_file, style="My.TButton")
         btn_browse.grid(row=0, column=1, padx=5, pady=5)
     
+        # ===== Bottone Info in alto a destra =====
+        self.btn_info = ttk.Button(
+            self.root,
+            text="Info",
+            width=6,                   # compatto
+            command=self.show_app_info, # funzione che mostrerà nome, versione, licenza ecc.
+            style="My.TButton"
+        )
+        # posizionato sopra tutto, ancorato in alto a destra
+        self.btn_info.place(relx=1.0, x=-10, y=10, anchor="ne")   
+        
         # ===== Filtri =====
         self.filter_frame = ttk.LabelFrame(self.root, text="Filtri (multi)", style="My.TLabelframe")
         self.filter_frame.grid(row=1, column=0, padx=10, pady=5, sticky="ew")
@@ -828,6 +845,10 @@ class TestoMaestroGUI:
             ttk.Label(self.sort_frame, text="Da", style="My.TLabel").grid(row=0, column=0, padx=5, pady=2)
             ttk.Label(self.sort_frame, text="A", style="My.TLabel").grid(row=0, column=1, padx=5, pady=2)
             ttk.Label(self.sort_frame, text="Ordinamento", style="My.TLabel").grid(row=0, column=2, padx=5, pady=2)
+
+    def show_app_info(self):
+        info_text = f"{APP_NAME} v.{APP_VERSION}\n© {APP_YEAR} {APP_AUTHOR}\nLicenza: {APP_LICENSE}"
+        messagebox.showinfo("Informazioni App", info_text)
 
 if __name__ == "__main__":
     root = tk.Tk()

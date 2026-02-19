@@ -1,3 +1,7 @@
+# TestoMaestro
+# Diritti d'autore (c) 2026 Igor Vesentini
+# Licenza: MIT
+
 import os
 from typing import List
 from datetime import datetime

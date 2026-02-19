@@ -18,7 +18,7 @@ TestoMaestro è pensato per chi ha bisogno di manipolare file di testo complessi
 ### 1. Caricamento file
 - Selezione file da percorso locale.
 - Supporto per file a larghezza fissa o delimitati (CSV/TSV).
-- Preview delle prime **20 righe** nel widget dedicato.
+- Preview delle prime **10 righe** nel widget dedicato.
 - Rilevazione automatica delle colonne per CSV (con header) o possibilità di impostare manualmente.
 - GUI reattiva con scroll verticale e orizzontale in base al contenuto del box di anteprima.
 
@@ -35,7 +35,7 @@ TestoMaestro è pensato per chi ha bisogno di manipolare file di testo complessi
 - Supporta operatori di confronto per file a larghezza fissa (`=`, `!=`, `>`, `<`, `>=`, `<=`, `~`, `!~`).
 
 ### 4. Anteprima
-- Visualizzazione delle prime **20 righe** prima e dopo le trasformazioni.
+- Visualizzazione delle prime **10 righe** prima e dopo le trasformazioni.
 - Evidenziazione delle colonne interessate dai filtri e dagli ordinamenti.
 - Scroll verticale e orizzontale automatico se necessario.
 - La sezione anteprima è **responsive**, si ridimensiona con la finestra.
@@ -59,8 +59,7 @@ TestoMaestro/
 ├── screenshots/ # immagini della GUI
 ├── README.md # questa documentazione
 ├── requirements.txt # eventuali dipendenze Python
-└── LICENSE # licenza open source
-
+└── LICENSE # licenza MIT
 
 ## Considerazioni tecniche
 
@@ -80,3 +79,6 @@ TestoMaestro/
 ---
 
 **TestoMaestro** è pensato per la gestione pratica e professionale di file testuali, con un’interfaccia **chiara**, **moderna** e **responsiva**, pronta per uso personale o distribuzione.  
+
+**Licenza:** MIT (vedi `LICENSE`)  
+**Copyright:** (c) 2026 Igor Vesentini

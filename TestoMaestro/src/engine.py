@@ -1,3 +1,7 @@
+# TestoMaestro
+# Diritti d'autore (c) 2026 Igor Vesentini
+# Licenza: MIT
+
 from typing import List, Tuple
 from utils import read_file_lines, preview_lines, cast_value, split_csv_line, DEFAULT_MAX_FILE_SIZE_MB, compare, auto_cast
 
