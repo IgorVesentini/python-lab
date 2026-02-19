@@ -1,7 +1,13 @@
 # Cache di Python
 __pycache__/
 *.pyc
-# Altro
+
+# Log, PDF, TXT temporanei
 *.log
 *.pdf
 *.txt
+
+# PyInstaller
+build/
+dist/
+*.spec
